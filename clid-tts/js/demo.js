@@ -12,7 +12,7 @@
     : [];
   const modelColumns = [
     { key: "gt", label: "GT" },
-    { key: "gemini", label: "Gemini" },
+    { key: "gemini", label: "Gemini 3.1 Flash-TTS" },
     { key: "voxcpm2", label: "VoxCPM2" },
     { key: "qwen3VoiceDesign", label: "Qwen3-TTS-VoiceDesign" },
     { key: "clidNoCfg", label: "CLID w/o CFG" },
