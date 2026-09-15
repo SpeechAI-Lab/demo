@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title></title>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <main class="page">
+    <section class="paper-card intro-card" aria-label="Project information">
+      <header class="hero">
+        <!-- Fill in title and links in data/samples.js. -->
+        <h1 class="wordmark" id="page-title"></h1>
+        <p class="project-links" id="project-links" hidden></p>
+      </header>
+      <div class="abstract">
+        <strong>Abstract</strong>
+        <p id="abstract-text"></p>
+      </div>
+    </section>
+
+    <section class="paper-card demo-section" id="model-overview" aria-labelledby="model-overview-title">
+      <h2 id="model-overview-title">Model Overview</h2>
+      <!-- Add a figure to pics/ and set its path in data/samples.js. -->
+      <figure class="overview-figure empty-slot" id="overview-figure">
+        <img class="overview-image" id="overview-image" alt="" hidden>
+        <figcaption class="overview-caption" id="overview-caption" hidden></figcaption>
+      </figure>
+    </section>
+
+    <section class="paper-card demo-section" id="demo-samples" aria-labelledby="samples-title">
+      <h2 id="samples-title">Audio Samples</h2>
+      <!-- Add files to audio/ and entries to samples in data/samples.js. -->
+      <div class="sample-list empty-slot" id="demo-sample-list"></div>
+    </section>
+  </main>
+  <script src="data/samples.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>
