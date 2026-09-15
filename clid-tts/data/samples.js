@@ -1,6 +1,7 @@
 // Add every demo sample to this single list.
 // Audio paths are relative to the repository root.
-// Fields: emotion, instructionKo, instructionEn, text, and five paths in audio.
+// Fields: emotion, instructionKo, instructionEn, text, and six model entries in audio.
+// Gemini samples use gemini-3.1-flash-tts-preview with the same Korean instructions and texts.
 // Source: Hugging Face dataset SailAjou/korean-mos-audio
 // Revision: 745dcf069552ee3bf397bd273751becd4dded4a0
 // Generated-audio pack: 09dbb99a098348af86a691e13b863391
@@ -18,6 +19,7 @@ window.CLID_TTS_SAMPLES = [
     text: "줄기가 둘로 갈라진 채 땅에 주저앉고 말았습니다.",
     audio: {
       gt: "audio/sec1_neutral_1_gt.wav",
+      gemini: "audio/sec1_neutral_1_gemini.wav",
       voxcpm2: "audio/sec1_neutral_1_voxcpm2.wav",
       qwen3VoiceDesign: "audio/sec1_neutral_1_qwen3_tts_voicedesign.wav",
       clidNoCfg: "audio/sec1_neutral_1_clid_wo_cfg.wav",
@@ -32,6 +34,7 @@ window.CLID_TTS_SAMPLES = [
     text: "그런 건 일일이 얘기 안 해 줘도 돼, 넌 왜 날 따라와서 귀찮게 구는 건데?",
     audio: {
       gt: "audio/sec1_angry_1_gt.wav",
+      gemini: "audio/sec1_angry_1_gemini.wav",
       voxcpm2: "audio/sec1_angry_1_voxcpm2.wav",
       qwen3VoiceDesign: "audio/sec1_angry_1_qwen3_tts_voicedesign.wav",
       clidNoCfg: "audio/sec1_angry_1_clid_wo_cfg.wav",
@@ -46,6 +49,7 @@ window.CLID_TTS_SAMPLES = [
     text: "행복한 꿈을 꾸는지 입가에 미소가 가시지 않았습니다.",
     audio: {
       gt: "audio/sec1_happy_1_gt.wav",
+      gemini: "audio/sec1_happy_1_gemini.wav",
       voxcpm2: "audio/sec1_happy_1_voxcpm2.wav",
       qwen3VoiceDesign: "audio/sec1_happy_1_qwen3_tts_voicedesign.wav",
       clidNoCfg: "audio/sec1_happy_1_clid_wo_cfg.wav",
@@ -60,6 +64,7 @@ window.CLID_TTS_SAMPLES = [
     text: "엄마가 우울증이 있어서 얘기도 충분히 하지 못하고, 다온이가 정말 슬프고 외롭겠다.",
     audio: {
       gt: "audio/sec1_sad_1_gt.wav",
+      gemini: "audio/sec1_sad_1_gemini.wav",
       voxcpm2: "audio/sec1_sad_1_voxcpm2.wav",
       qwen3VoiceDesign: "audio/sec1_sad_1_qwen3_tts_voicedesign.wav",
       clidNoCfg: "audio/sec1_sad_1_clid_wo_cfg.wav",
@@ -74,6 +79,7 @@ window.CLID_TTS_SAMPLES = [
     text: "아기 오리는 무서워서 숨도 쉴 수 없었어요.",
     audio: {
       gt: "audio/sec1_fearful_1_gt.wav",
+      gemini: "audio/sec1_fearful_1_gemini.wav",
       voxcpm2: "audio/sec1_fearful_1_voxcpm2.wav",
       qwen3VoiceDesign: "audio/sec1_fearful_1_qwen3_tts_voicedesign.wav",
       clidNoCfg: "audio/sec1_fearful_1_clid_wo_cfg.wav",
@@ -88,6 +94,7 @@ window.CLID_TTS_SAMPLES = [
     text: "임금님께서 연회 음식을 다 드셔버렸다고?",
     audio: {
       gt: "audio/sec1_surprised_1_gt.wav",
+      gemini: "audio/sec1_surprised_1_gemini.wav",
       voxcpm2: "audio/sec1_surprised_1_voxcpm2.wav",
       qwen3VoiceDesign: "audio/sec1_surprised_1_qwen3_tts_voicedesign.wav",
       clidNoCfg: "audio/sec1_surprised_1_clid_wo_cfg.wav",

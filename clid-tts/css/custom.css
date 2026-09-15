@@ -132,7 +132,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 .comparison-table {
   width: 100%;
-  min-width: 1220px;
+  min-width: 1440px;
   border-collapse: collapse;
   table-layout: fixed;
 }
