@@ -354,7 +354,7 @@
           const audioPath = `audio/sec3_${instruction.key}_${sampleOrdinal}.wav`;
           const audioCell = makeAudioCell(
             audioPath,
-            `Play CLID-TTS ${group.emotion} variant ${instruction.variant} for ${textItem.sourceId}`,
+            `Play CLID-TTS ${group.emotion} variant ${instruction.variant} for text ${textIndex + 1}`,
             true
           );
 
@@ -364,15 +364,11 @@
 
           if (rowIndex === 0) {
             const textCell = document.createElement("th");
-            const source = document.createElement("span");
             textCell.scope = "rowgroup";
             textCell.rowSpan = sameTextInstructions.length;
             textCell.className = "same-text-copy-cell";
             textCell.lang = "ko";
-            textCell.append(document.createTextNode(textItem.text));
-            source.className = "same-text-source";
-            source.textContent = textItem.sourceId;
-            textCell.append(source);
+            textCell.textContent = textItem.text;
             row.append(textCell);
           }
 

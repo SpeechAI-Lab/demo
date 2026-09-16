@@ -422,14 +422,6 @@ a:hover { text-decoration-thickness: 2px; }
   font-weight: 500;
 }
 
-.same-text-source {
-  display: block;
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 500;
-}
-
 .same-text-emotion-cell {
   color: var(--heading);
   background: #fff;
