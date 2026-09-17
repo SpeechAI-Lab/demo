@@ -224,6 +224,7 @@
       "ko",
       "en",
       "text",
+      "audio",
       "audio"
     ];
     const groups = [];
@@ -239,7 +240,8 @@
       makeBenchmarkHeading("Korean Instruction"),
       makeBenchmarkHeading("English Instruction", "Not used for inference"),
       makeBenchmarkHeading("Text"),
-      makeBenchmarkHeading("Audio")
+      makeBenchmarkHeading("CLID-TTS"),
+      makeBenchmarkHeading("Gemini 3.1 Flash-TTS")
     );
 
     koreanBenchmarkSamples.forEach((sample) => {
@@ -263,6 +265,11 @@
           `Play CLID-TTS audio for ${group.emotion}, sample ${index + 1}`,
           true
         );
+        const geminiAudioCell = makeAudioCell(
+          audio.gemini,
+          `Play Gemini 3.1 Flash-TTS audio for ${group.emotion}, sample ${index + 1}`,
+          false
+        );
 
         if (index === 0) {
           const emotionCell = document.createElement("th");
@@ -283,11 +290,13 @@
         textCell.lang = "ko";
         textCell.textContent = sample.text;
         clidAudioCell.classList.add("benchmark-audio-cell", "benchmark-clid-cell");
+        geminiAudioCell.classList.add("benchmark-audio-cell");
         row.append(
           koCell,
           enCell,
           textCell,
-          clidAudioCell
+          clidAudioCell,
+          geminiAudioCell
         );
         body.append(row);
       });
@@ -295,7 +304,7 @@
 
     head.append(headRow);
     table.className = "benchmark-sample-table";
-    table.setAttribute("aria-label", "Korean benchmark speech samples generated from Korean instructions");
+    table.setAttribute("aria-label", "CLID-TTS and Gemini 3.1 Flash-TTS comparison using the same Korean benchmark texts and instructions");
     table.append(colgroup, head, body);
     wrap.className = "benchmark-sample-wrap";
     wrap.append(table);
@@ -319,7 +328,7 @@
     const body = document.createElement("tbody");
     const emotionGroups = [];
 
-    ["text", "emotion", "instruction", "audio"].forEach((className) => {
+    ["text", "emotion", "instruction", "audio", "audio"].forEach((className) => {
       const column = document.createElement("col");
       column.className = `same-text-${className}-column`;
       colgroup.append(column);
@@ -329,7 +338,8 @@
       makeBenchmarkHeading("Text"),
       makeBenchmarkHeading("Emotion"),
       makeBenchmarkHeading("Korean Instruction"),
-      makeBenchmarkHeading("Audio")
+      makeBenchmarkHeading("CLID-TTS"),
+      makeBenchmarkHeading("Gemini 3.1 Flash-TTS")
     );
 
     sameTextInstructions.forEach((instruction) => {
@@ -356,6 +366,11 @@
             audioPath,
             `Play CLID-TTS ${group.emotion} variant ${instruction.variant} for text ${textIndex + 1}`,
             true
+          );
+          const geminiAudioCell = makeAudioCell(
+            `audio/sec3_${instruction.key}_${sampleOrdinal}_gemini.wav`,
+            `Play Gemini 3.1 Flash-TTS ${group.emotion} variant ${instruction.variant} for text ${textIndex + 1}`,
+            false
           );
 
           if (textIndex > 0 && rowIndex === 0) {
@@ -385,7 +400,8 @@
           instructionCell.lang = "ko";
           instructionCell.textContent = instruction.instructionKo;
           audioCell.classList.add("same-text-audio-cell");
-          row.append(instructionCell, audioCell);
+          geminiAudioCell.classList.add("same-text-audio-cell");
+          row.append(instructionCell, audioCell, geminiAudioCell);
           body.append(row);
           rowIndex += 1;
         });
@@ -396,7 +412,7 @@
     table.className = "same-text-table";
     table.setAttribute(
       "aria-label",
-      "CLID-TTS samples generated from two fixed Korean texts and two Korean instructions per emotion"
+      "CLID-TTS and Gemini 3.1 Flash-TTS comparison using two fixed Korean texts and two Korean instructions per emotion"
     );
     table.append(colgroup, head, body);
     wrap.className = "same-text-wrap";

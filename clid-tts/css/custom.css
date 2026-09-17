@@ -299,7 +299,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 .benchmark-sample-table {
   width: 100%;
-  min-width: 1180px;
+  min-width: 1410px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -386,7 +386,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 .same-text-table {
   width: 100%;
-  min-width: 1120px;
+  min-width: 1350px;
   border-collapse: collapse;
   table-layout: fixed;
 }

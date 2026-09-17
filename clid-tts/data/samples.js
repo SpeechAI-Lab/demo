@@ -121,7 +121,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a formal and neat tone, clearly conveying calm emotions in a composed and serious manner with clear articulation.",
     "text": "치료보다 예방에 투자를 해야 한다.",
     "audio": {
-      "clidTts": "audio/sec2_neutral_2.wav"
+      "clidTts": "audio/sec2_neutral_2.wav",
+      "gemini": "audio/sec2_neutral_2_gemini.wav"
     }
   },
   {
@@ -132,7 +133,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An elderly male speaker speaks in a formal and neat tone, maintaining a weak sense of calm emotion and speaking slowly in a calm and composed manner.",
     "text": "왼쪽 나라와 오른쪽 나라는 서로 마주 보고 있는 작은 나라로 걸핏하면 전쟁을 하였습니다.",
     "audio": {
-      "clidTts": "audio/sec2_neutral_3.wav"
+      "clidTts": "audio/sec2_neutral_3.wav",
+      "gemini": "audio/sec2_neutral_3_gemini.wav"
     }
   },
   {
@@ -143,7 +145,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a formal and neat tone, maintaining a weak neutral emotion and delivering information in a calm and plain manner.",
     "text": "코로나로 거리를 띄우고, 이른바 건전한 유희의 장을 마련하자.",
     "audio": {
-      "clidTts": "audio/sec2_neutral_4.wav"
+      "clidTts": "audio/sec2_neutral_4.wav",
+      "gemini": "audio/sec2_neutral_4_gemini.wav"
     }
   },
   {
@@ -154,7 +157,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An elderly male speaker speaks in a formal and neat tone, delivering information in a calm and serious manner with clearly conveyed calm emotions.",
     "text": "부자 영감 같은 악당도 어떤 경우에는 보리 한 가마니를 빌려주는 법입니다.",
     "audio": {
-      "clidTts": "audio/sec2_neutral_5.wav"
+      "clidTts": "audio/sec2_neutral_5.wav",
+      "gemini": "audio/sec2_neutral_5_gemini.wav"
     }
   },
   {
@@ -165,7 +169,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult female speaker speaks in a medium-toned voice, maintaining a weak neutral emotion and speaking plainly at a normal speed with moderate energy.",
     "text": "갑자기 정신이 번쩍 들었다.",
     "audio": {
-      "clidTts": "audio/sec2_neutral_6.wav"
+      "clidTts": "audio/sec2_neutral_6.wav",
+      "gemini": "audio/sec2_neutral_6_gemini.wav"
     }
   },
   {
@@ -176,7 +181,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult female speaker speaks in a medium-toned voice, speaking firmly with a strong tone that conveys intense anger and a sense of tension.",
     "text": "만약 내가 내일까지 그의 집에 노동자를 이사시키지 않으면 나는 죽을 것이다.",
     "audio": {
-      "clidTts": "audio/sec2_angry_2.wav"
+      "clidTts": "audio/sec2_angry_2.wav",
+      "gemini": "audio/sec2_angry_2_gemini.wav"
     }
   },
   {
@@ -187,7 +193,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult female speaker speaks in a firm tone, pushing the listener strongly with an agitated voice that carries intense anger as if rebuking them.",
     "text": "어서 저 옷들을 가지고 줄어들라 하지 않았느냐.",
     "audio": {
-      "clidTts": "audio/sec2_angry_3.wav"
+      "clidTts": "audio/sec2_angry_3.wav",
+      "gemini": "audio/sec2_angry_3_gemini.wav"
     }
   },
   {
@@ -198,7 +205,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult female speaker speaks in a firm tone, shouting with intense anger and speaking in a forceful, pressing manner.",
     "text": "남의 집 귀한 딸 망쳐놓고 이제 와서 무슨 큰소리야?",
     "audio": {
-      "clidTts": "audio/sec2_angry_4.wav"
+      "clidTts": "audio/sec2_angry_4.wav",
+      "gemini": "audio/sec2_angry_4_gemini.wav"
     }
   },
   {
@@ -209,7 +217,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "A man in his 20s speaks with a firm tone, expressing strong anger and speaking in a resolute, powerful manner to stop the other person's actions while revealing his displeasure.",
     "text": "이건 더러운 짓이에요. 이쯤에서 그만두세요 제발.",
     "audio": {
-      "clidTts": "audio/sec2_angry_5.wav"
+      "clidTts": "audio/sec2_angry_5.wav",
+      "gemini": "audio/sec2_angry_5_gemini.wav"
     }
   },
   {
@@ -220,7 +229,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a firm tone, clearly conveying anger and speaking in a strong, tense manner as if rebuking the listener.",
     "text": "고객님, 만기일 얼마 안 남았는데 왜 해지하세요?",
     "audio": {
-      "clidTts": "audio/sec2_angry_6.wav"
+      "clidTts": "audio/sec2_angry_6.wav",
+      "gemini": "audio/sec2_angry_6_gemini.wav"
     }
   },
   {
@@ -231,7 +241,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a high-pitched tone, clearly conveying joy with a bright and energetic voice, emphasizing the words by raising the pitch at the end of the sentences.",
     "text": "개그콘서트, 그쪽에서 완전히 뜨셨잖아요.",
     "audio": {
-      "clidTts": "audio/sec2_happy_2.wav"
+      "clidTts": "audio/sec2_happy_2.wav",
+      "gemini": "audio/sec2_happy_2_gemini.wav"
     }
   },
   {
@@ -242,7 +253,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a high-pitched tone, clearly expressing joy with a bright and cheerful voice.",
     "text": "그녀는 어찌나 기쁘고 기특한지 뛰며 춤출 것 같았습니다.",
     "audio": {
-      "clidTts": "audio/sec2_happy_3.wav"
+      "clidTts": "audio/sec2_happy_3.wav",
+      "gemini": "audio/sec2_happy_3_gemini.wav"
     }
   },
   {
@@ -253,7 +265,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult female speaker speaks in a cute tone, expressing strong joy with a bright and cheerful voice filled with affection.",
     "text": "너는 귀여운 나의 보물이야.",
     "audio": {
-      "clidTts": "audio/sec2_happy_4.wav"
+      "clidTts": "audio/sec2_happy_4.wav",
+      "gemini": "audio/sec2_happy_4_gemini.wav"
     }
   },
   {
@@ -264,7 +277,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "A woman in her 30s speaks in a medium-toned voice, clearly conveying joy with a soft and gentle tone that expresses a sense of satisfaction.",
     "text": "그래, 내 아들이 좋아하는 여자라니 나도 좋구나. 돈 있고 힘 있어 좋은 게 뭐겠니.",
     "audio": {
-      "clidTts": "audio/sec2_happy_5.wav"
+      "clidTts": "audio/sec2_happy_5.wav",
+      "gemini": "audio/sec2_happy_5_gemini.wav"
     }
   },
   {
@@ -275,7 +289,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "A man in his 30s speaks in a medium-toned voice, clearly conveying joy with a bright and cheerful tone.",
     "text": "요즘 제가 제일 좋아하는 재료가 바로 시래기예요.",
     "audio": {
-      "clidTts": "audio/sec2_happy_6.wav"
+      "clidTts": "audio/sec2_happy_6.wav",
+      "gemini": "audio/sec2_happy_6_gemini.wav"
     }
   },
   {
@@ -286,7 +301,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a low-toned voice, clearly conveying a sad emotion and speaking weakly and slowly in a low pitch.",
     "text": "아, 만나던 분이 있으셨네요, 오래 만나고 많이 좋아하신 것 같은데 헤어졌으니 살맛이 안 날 만하죠.",
     "audio": {
-      "clidTts": "audio/sec2_sad_2.wav"
+      "clidTts": "audio/sec2_sad_2.wav",
+      "gemini": "audio/sec2_sad_2_gemini.wav"
     }
   },
   {
@@ -297,7 +313,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a low-toned voice, clearly conveying a sad emotion with a low pitch and a slow, sorrowful delivery.",
     "text": "왕이 아무리 애를 써도 슬픈 표정만 지었습니다.",
     "audio": {
-      "clidTts": "audio/sec2_sad_3.wav"
+      "clidTts": "audio/sec2_sad_3.wav",
+      "gemini": "audio/sec2_sad_3_gemini.wav"
     }
   },
   {
@@ -308,7 +325,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a low-toned voice, sobbing with strong sadness and speaking slowly while conveying a sorrowful emotion.",
     "text": "아버지가 보고 싶어서 또 울어요?",
     "audio": {
-      "clidTts": "audio/sec2_sad_4.wav"
+      "clidTts": "audio/sec2_sad_4.wav",
+      "gemini": "audio/sec2_sad_4_gemini.wav"
     }
   },
   {
@@ -319,7 +337,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult female speaker speaks in a medium-toned voice, clearly conveying a sad emotion with low energy and a breathy quality, speaking in a calm and sad manner.",
     "text": "엄마가 고생하는 게 안쓰럽지만, 착한 딸이 되기 싫은 맘이 있구나.",
     "audio": {
-      "clidTts": "audio/sec2_sad_5.wav"
+      "clidTts": "audio/sec2_sad_5.wav",
+      "gemini": "audio/sec2_sad_5_gemini.wav"
     }
   },
   {
@@ -330,7 +349,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a low-toned voice, conveying clear sadness while speaking calmly and seriously in a low pitch.",
     "text": "어머니, 그 사람 제게 뭘 많이 숨기고 있어요.",
     "audio": {
-      "clidTts": "audio/sec2_sad_6.wav"
+      "clidTts": "audio/sec2_sad_6.wav",
+      "gemini": "audio/sec2_sad_6_gemini.wav"
     }
   },
   {
@@ -341,7 +361,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a medium-toned voice, expressing strong feelings of anxiety with a tense and trembling voice as if terrified.",
     "text": "무서움에 정신이 아찔하여 고꾸라지고 말았다.",
     "audio": {
-      "clidTts": "audio/sec2_fearful_2.wav"
+      "clidTts": "audio/sec2_fearful_2.wav",
+      "gemini": "audio/sec2_fearful_2_gemini.wav"
     }
   },
   {
@@ -352,7 +373,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a medium-toned voice, speaking urgently with a strong sense of anxiety in a voice mixed with horror and tension.",
     "text": "마시기만 하면 죽을 것이니 얼마나 무섭습니까?",
     "audio": {
-      "clidTts": "audio/sec2_fearful_3.wav"
+      "clidTts": "audio/sec2_fearful_3.wav",
+      "gemini": "audio/sec2_fearful_3_gemini.wav"
     }
   },
   {
@@ -363,7 +385,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult female speaker speaks in a medium-toned voice, clearly conveying feelings of anxiety and tension as she speaks cautiously.",
     "text": "이상한 느낌에 가슴이 두근거리기 시작하였습니다.",
     "audio": {
-      "clidTts": "audio/sec2_fearful_4.wav"
+      "clidTts": "audio/sec2_fearful_4.wav",
+      "gemini": "audio/sec2_fearful_4_gemini.wav"
     }
   },
   {
@@ -374,7 +397,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult female speaker speaks in a medium-toned voice, expressing strong feelings of anxiety and speaking with a tense, trembling voice filled with fear.",
     "text": "아기 오리는 무서워서 숨도 쉴 수 없었어요.",
     "audio": {
-      "clidTts": "audio/sec2_fearful_5.wav"
+      "clidTts": "audio/sec2_fearful_5.wav",
+      "gemini": "audio/sec2_fearful_5_gemini.wav"
     }
   },
   {
@@ -385,7 +409,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult male speaker speaks in a medium-toned voice, speaking calmly with a tense voice that clearly conveys a sense of anxiety.",
     "text": "발자취 소리가 크게 나기 시작하였습니다.",
     "audio": {
-      "clidTts": "audio/sec2_fearful_6.wav"
+      "clidTts": "audio/sec2_fearful_6.wav",
+      "gemini": "audio/sec2_fearful_6_gemini.wav"
     }
   },
   {
@@ -396,7 +421,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "A female speaker in her 20s speaks in a medium-toned voice, clearly conveying a sense of surprise and asking a question by slightly raising the pitch at the end of the sentence.",
     "text": "의상하는 윤정선이하고 연애한다며?",
     "audio": {
-      "clidTts": "audio/sec2_surprised_2.wav"
+      "clidTts": "audio/sec2_surprised_2.wav",
+      "gemini": "audio/sec2_surprised_2_gemini.wav"
     }
   },
   {
@@ -407,7 +433,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "A female speaker in her teens speaks in a high-pitched tone, clearly conveying a sense of surprise as she asks the other person how they are doing.",
     "text": "어머, 아저씨 비랑 친구예요? 지금 비 왔어요? 어디요?",
     "audio": {
-      "clidTts": "audio/sec2_surprised_3.wav"
+      "clidTts": "audio/sec2_surprised_3.wav",
+      "gemini": "audio/sec2_surprised_3_gemini.wav"
     }
   },
   {
@@ -418,7 +445,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "A female speaker in her 20s speaks in a medium-toned voice, naturally expressing a clear sense of surprise.",
     "text": "어머나, 멋쟁이 할아버지가 오시는 줄 알았는데~",
     "audio": {
-      "clidTts": "audio/sec2_surprised_4.wav"
+      "clidTts": "audio/sec2_surprised_4.wav",
+      "gemini": "audio/sec2_surprised_4_gemini.wav"
     }
   },
   {
@@ -429,7 +457,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "A man in his 20s speaks in a medium-toned voice, clearly conveying a sense of surprise while asking a question in a calm and serious manner.",
     "text": "진짜야? 우리나라 동성애 역사가 그렇게 깊단 말이야?",
     "audio": {
-      "clidTts": "audio/sec2_surprised_5.wav"
+      "clidTts": "audio/sec2_surprised_5.wav",
+      "gemini": "audio/sec2_surprised_5_gemini.wav"
     }
   },
   {
@@ -440,7 +469,8 @@ window.CLID_TTS_KOREAN_BENCHMARK_SAMPLES = [
     "instructionEn": "An adult female speaker speaks in a high-pitched tone, clearly conveying a sense of surprise as she asks a question in an urgent and high-pitched voice, appearing shocked by the other person's actions.",
     "text": "모두 어디를 이렇게 급하게 가십니까?",
     "audio": {
-      "clidTts": "audio/sec2_surprised_6.wav"
+      "clidTts": "audio/sec2_surprised_6.wav",
+      "gemini": "audio/sec2_surprised_6_gemini.wav"
     }
   }
 ];
