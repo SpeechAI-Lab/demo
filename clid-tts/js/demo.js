@@ -367,8 +367,11 @@
             `Play CLID-TTS ${group.emotion} variant ${instruction.variant} for text ${textIndex + 1}`,
             true
           );
+          const geminiAudioVersion = instruction.key === "sad" && Number(instruction.variant) === 1
+            ? "?v=sad-regen-20260917"
+            : "";
           const geminiAudioCell = makeAudioCell(
-            `audio/sec3_${instruction.key}_${sampleOrdinal}_gemini.wav`,
+            `audio/sec3_${instruction.key}_${sampleOrdinal}_gemini.wav${geminiAudioVersion}`,
             `Play Gemini 3.1 Flash-TTS ${group.emotion} variant ${instruction.variant} for text ${textIndex + 1}`,
             false
           );
