@@ -1,0 +1,1305 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4200" height="1435" viewBox="0 0 4200 1435">
+<title>Objective E2V and Subjective emotion confusion matrices</title>
+<desc>Paired row-normalized confusion matrices for six text-to-speech models. Objective E2V uses six target emotions and seven displayed output labels after merging disgusted, other, and unknown; Subjective uses six target and six listener-selected emotions.</desc>
+<rect x="0" y="0" width="4200" height="1435" fill="white"/>
+<style>text{font-family:"Times New Roman",Times,serif;fill:#19151f}.title{font-size:40px;font-weight:700}.subtitle{font-size:21px;fill:#5f5866}.model{font-size:27px;font-weight:700}.metric{font-size:22px;font-weight:700}.tick{font-size:19px}.axis{font-size:21px;font-weight:700}.value{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}.legend{font-size:18px}.note{font-size:17px;fill:#5f5866}.panel{fill:none;stroke:#c9c2cf;stroke-width:1.4}.cell{stroke:#ddd7e2;stroke-width:1}.diagonal{stroke:#34233e;stroke-width:2.4}</style>
+<text class="title" x="2100.0" y="42" text-anchor="middle">Objective vs Subjective Emotion Confusion</text>
+<text class="subtitle" x="2100.0" y="73" text-anchor="middle">Rows: target emotion · Columns: predicted emotion · row-normalized proportions</text>
+<rect class="panel" x="28" y="90" width="1370" height="592"/>
+<text class="model" x="713.0" y="120" text-anchor="middle">GT</text>
+<text class="metric" x="439.0" y="155" text-anchor="middle">Objective (E2V) · All 60.08%</text>
+<text class="metric" x="1051" y="155" text-anchor="middle">Subjective · All 57.62%</text>
+<text class="axis" transform="translate(48,448) rotate(-90)" text-anchor="middle">Target emotion</text>
+<text class="tick" x="211.0" y="206" text-anchor="start" transform="rotate(-38 211.0 206)">Neutral</text>
+<text class="tick" x="287.0" y="206" text-anchor="start" transform="rotate(-38 287.0 206)">Angry</text>
+<text class="tick" x="363.0" y="206" text-anchor="start" transform="rotate(-38 363.0 206)">Happy</text>
+<text class="tick" x="439.0" y="206" text-anchor="start" transform="rotate(-38 439.0 206)">Sad</text>
+<text class="tick" x="515.0" y="206" text-anchor="start" transform="rotate(-38 515.0 206)">Surprised</text>
+<text class="tick" x="591.0" y="206" text-anchor="start" transform="rotate(-38 591.0 206)">Fearful</text>
+<text class="tick" x="667.0" y="206" text-anchor="start" transform="rotate(-38 667.0 206)">Other</text>
+<text class="tick" x="160" y="264.0" text-anchor="end">Neutral</text>
+<rect class="cell diagonal" x="173" y="220" width="76" height="76" fill="rgb(172,153,217)"/>
+<text class="value" x="211.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.40</text>
+<rect class="cell" x="249" y="220" width="76" height="76" fill="rgb(220,212,238)"/>
+<text class="value" x="287.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell" x="325" y="220" width="76" height="76" fill="rgb(183,167,222)"/>
+<text class="value" x="363.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.32</text>
+<rect class="cell" x="401" y="220" width="76" height="76" fill="rgb(235,230,245)"/>
+<text class="value" x="439.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="477" y="220" width="76" height="76" fill="rgb(215,206,236)"/>
+<text class="value" x="515.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.14</text>
+<rect class="cell" x="553" y="220" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="591.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="629" y="220" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="667.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="160" y="340.0" text-anchor="end">Angry</text>
+<rect class="cell" x="173" y="296" width="76" height="76" fill="rgb(239,235,247)"/>
+<text class="value" x="211.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell diagonal" x="249" y="296" width="76" height="76" fill="rgb(130,101,198)"/>
+<text class="value" x="287.0" y="339.0" text-anchor="middle" style="fill:white">0.69</text>
+<rect class="cell" x="325" y="296" width="76" height="76" fill="rgb(222,214,239)"/>
+<text class="value" x="363.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="401" y="296" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="439.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="477" y="296" width="76" height="76" fill="rgb(209,198,233)"/>
+<text class="value" x="515.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.17</text>
+<rect class="cell" x="553" y="296" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="591.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="629" y="296" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="667.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="160" y="416.0" text-anchor="end">Happy</text>
+<rect class="cell" x="173" y="372" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="211.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="249" y="372" width="76" height="76" fill="rgb(232,226,244)"/>
+<text class="value" x="287.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell diagonal" x="325" y="372" width="76" height="76" fill="rgb(124,94,196)"/>
+<text class="value" x="363.0" y="415.0" text-anchor="middle" style="fill:white">0.74</text>
+<rect class="cell" x="401" y="372" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="439.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="477" y="372" width="76" height="76" fill="rgb(205,193,232)"/>
+<text class="value" x="515.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.19</text>
+<rect class="cell" x="553" y="372" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="591.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="629" y="372" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="667.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="160" y="492.0" text-anchor="end">Sad</text>
+<rect class="cell" x="173" y="448" width="76" height="76" fill="rgb(226,219,241)"/>
+<text class="value" x="211.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.08</text>
+<rect class="cell" x="249" y="448" width="76" height="76" fill="rgb(239,235,247)"/>
+<text class="value" x="287.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="325" y="448" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="363.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell diagonal" x="401" y="448" width="76" height="76" fill="rgb(123,93,195)"/>
+<text class="value" x="439.0" y="491.0" text-anchor="middle" style="fill:white">0.74</text>
+<rect class="cell" x="477" y="448" width="76" height="76" fill="rgb(224,217,240)"/>
+<text class="value" x="515.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="553" y="448" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="591.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="629" y="448" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="667.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="160" y="568.0" text-anchor="end">Surprised</text>
+<rect class="cell" x="173" y="524" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="211.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="249" y="524" width="76" height="76" fill="rgb(234,229,245)"/>
+<text class="value" x="287.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="325" y="524" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="363.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="401" y="524" width="76" height="76" fill="rgb(237,232,246)"/>
+<text class="value" x="439.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell diagonal" x="477" y="524" width="76" height="76" fill="rgb(107,74,188)"/>
+<text class="value" x="515.0" y="567.0" text-anchor="middle" style="fill:white">0.87</text>
+<rect class="cell" x="553" y="524" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="591.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="629" y="524" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="667.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="160" y="644.0" text-anchor="end">Fearful</text>
+<rect class="cell" x="173" y="600" width="76" height="76" fill="rgb(237,232,246)"/>
+<text class="value" x="211.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="249" y="600" width="76" height="76" fill="rgb(234,229,245)"/>
+<text class="value" x="287.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="325" y="600" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="363.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="401" y="600" width="76" height="76" fill="rgb(180,163,221)"/>
+<text class="value" x="439.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.34</text>
+<rect class="cell" x="477" y="600" width="76" height="76" fill="rgb(173,154,217)"/>
+<text class="value" x="515.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.39</text>
+<rect class="cell diagonal" x="553" y="600" width="76" height="76" fill="rgb(210,200,234)"/>
+<text class="value" x="591.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.16</text>
+<rect class="cell" x="629" y="600" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="667.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="861.0" y="206" text-anchor="start" transform="rotate(-38 861.0 206)">Neutral</text>
+<text class="tick" x="937.0" y="206" text-anchor="start" transform="rotate(-38 937.0 206)">Angry</text>
+<text class="tick" x="1013.0" y="206" text-anchor="start" transform="rotate(-38 1013.0 206)">Happy</text>
+<text class="tick" x="1089.0" y="206" text-anchor="start" transform="rotate(-38 1089.0 206)">Sad</text>
+<text class="tick" x="1165.0" y="206" text-anchor="start" transform="rotate(-38 1165.0 206)">Surprised</text>
+<text class="tick" x="1241.0" y="206" text-anchor="start" transform="rotate(-38 1241.0 206)">Fearful</text>
+<rect class="cell diagonal" x="823" y="220" width="76" height="76" fill="rgb(47,134,151)"/>
+<text class="value" x="861.0" y="263.0" text-anchor="middle" style="fill:white">0.80</text>
+<rect class="cell" x="899" y="220" width="76" height="76" fill="rgb(232,244,245)"/>
+<text class="value" x="937.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="975" y="220" width="76" height="76" fill="rgb(197,223,227)"/>
+<text class="value" x="1013.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.12</text>
+<rect class="cell" x="1051" y="220" width="76" height="76" fill="rgb(221,237,239)"/>
+<text class="value" x="1089.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="1127" y="220" width="76" height="76" fill="rgb(232,244,245)"/>
+<text class="value" x="1165.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="1203" y="220" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="1241.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="823" y="296" width="76" height="76" fill="rgb(175,210,216)"/>
+<text class="value" x="861.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.20</text>
+<rect class="cell diagonal" x="899" y="296" width="76" height="76" fill="rgb(77,151,166)"/>
+<text class="value" x="937.0" y="339.0" text-anchor="middle" style="fill:white">0.65</text>
+<rect class="cell" x="975" y="296" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="1013.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1051" y="296" width="76" height="76" fill="rgb(230,243,244)"/>
+<text class="value" x="1089.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="1127" y="296" width="76" height="76" fill="rgb(204,227,231)"/>
+<text class="value" x="1165.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="1203" y="296" width="76" height="76" fill="rgb(224,239,241)"/>
+<text class="value" x="1241.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="823" y="372" width="76" height="76" fill="rgb(144,192,200)"/>
+<text class="value" x="861.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.33</text>
+<rect class="cell" x="899" y="372" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="937.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="975" y="372" width="76" height="76" fill="rgb(75,150,165)"/>
+<text class="value" x="1013.0" y="415.0" text-anchor="middle" style="fill:white">0.66</text>
+<rect class="cell" x="1051" y="372" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="1089.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1127" y="372" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="1165.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1203" y="372" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="1241.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="823" y="448" width="76" height="76" fill="rgb(164,204,211)"/>
+<text class="value" x="861.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.24</text>
+<rect class="cell" x="899" y="448" width="76" height="76" fill="rgb(224,239,241)"/>
+<text class="value" x="937.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="975" y="448" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="1013.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="1051" y="448" width="76" height="76" fill="rgb(80,154,168)"/>
+<text class="value" x="1089.0" y="491.0" text-anchor="middle" style="fill:white">0.63</text>
+<rect class="cell" x="1127" y="448" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="1165.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="1203" y="448" width="76" height="76" fill="rgb(214,233,235)"/>
+<text class="value" x="1241.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="823" y="524" width="76" height="76" fill="rgb(135,186,196)"/>
+<text class="value" x="861.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.37</text>
+<rect class="cell" x="899" y="524" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="937.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="975" y="524" width="76" height="76" fill="rgb(230,243,244)"/>
+<text class="value" x="1013.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="1051" y="524" width="76" height="76" fill="rgb(207,229,232)"/>
+<text class="value" x="1089.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.08</text>
+<rect class="cell diagonal" x="1127" y="524" width="76" height="76" fill="rgb(144,192,201)"/>
+<text class="value" x="1165.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.33</text>
+<rect class="cell" x="1203" y="524" width="76" height="76" fill="rgb(176,210,216)"/>
+<text class="value" x="1241.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.20</text>
+<rect class="cell" x="823" y="600" width="76" height="76" fill="rgb(133,185,195)"/>
+<text class="value" x="861.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.38</text>
+<rect class="cell" x="899" y="600" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="937.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="975" y="600" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="1013.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1051" y="600" width="76" height="76" fill="rgb(179,212,218)"/>
+<text class="value" x="1089.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.18</text>
+<rect class="cell" x="1127" y="600" width="76" height="76" fill="rgb(222,238,240)"/>
+<text class="value" x="1165.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell diagonal" x="1203" y="600" width="76" height="76" fill="rgb(128,182,192)"/>
+<text class="value" x="1241.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.40</text>
+<line x1="629" y1="188" x2="629" y2="676" stroke="#756d7b" stroke-width="2"/>
+<rect class="panel" x="1415" y="90" width="1370" height="592"/>
+<text class="model" x="2100.0" y="120" text-anchor="middle">Gemini 3.1 Flash TTS</text>
+<text class="metric" x="1826.0" y="155" text-anchor="middle">Objective (E2V) · All 60.25%</text>
+<text class="metric" x="2438" y="155" text-anchor="middle">Subjective · All 80.25%</text>
+<text class="axis" transform="translate(1435,448) rotate(-90)" text-anchor="middle">Target emotion</text>
+<text class="tick" x="1598.0" y="206" text-anchor="start" transform="rotate(-38 1598.0 206)">Neutral</text>
+<text class="tick" x="1674.0" y="206" text-anchor="start" transform="rotate(-38 1674.0 206)">Angry</text>
+<text class="tick" x="1750.0" y="206" text-anchor="start" transform="rotate(-38 1750.0 206)">Happy</text>
+<text class="tick" x="1826.0" y="206" text-anchor="start" transform="rotate(-38 1826.0 206)">Sad</text>
+<text class="tick" x="1902.0" y="206" text-anchor="start" transform="rotate(-38 1902.0 206)">Surprised</text>
+<text class="tick" x="1978.0" y="206" text-anchor="start" transform="rotate(-38 1978.0 206)">Fearful</text>
+<text class="tick" x="2054.0" y="206" text-anchor="start" transform="rotate(-38 2054.0 206)">Other</text>
+<text class="tick" x="1547" y="264.0" text-anchor="end">Neutral</text>
+<rect class="cell diagonal" x="1560" y="220" width="76" height="76" fill="rgb(167,147,215)"/>
+<text class="value" x="1598.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.43</text>
+<rect class="cell" x="1636" y="220" width="76" height="76" fill="rgb(210,200,234)"/>
+<text class="value" x="1674.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.16</text>
+<rect class="cell" x="1712" y="220" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="1750.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="1788" y="220" width="76" height="76" fill="rgb(222,214,239)"/>
+<text class="value" x="1826.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="1864" y="220" width="76" height="76" fill="rgb(191,177,226)"/>
+<text class="value" x="1902.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.27</text>
+<rect class="cell" x="1940" y="220" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="1978.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2016" y="220" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="2054.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="1547" y="340.0" text-anchor="end">Angry</text>
+<rect class="cell" x="1560" y="296" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="1598.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="1636" y="296" width="76" height="76" fill="rgb(143,118,204)"/>
+<text class="value" x="1674.0" y="339.0" text-anchor="middle" style="fill:white">0.59</text>
+<rect class="cell" x="1712" y="296" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="1750.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="1788" y="296" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="1826.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1864" y="296" width="76" height="76" fill="rgb(176,159,219)"/>
+<text class="value" x="1902.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.36</text>
+<rect class="cell" x="1940" y="296" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="1978.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2016" y="296" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="2054.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<text class="tick" x="1547" y="416.0" text-anchor="end">Happy</text>
+<rect class="cell" x="1560" y="372" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="1598.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1636" y="372" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="1674.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell diagonal" x="1712" y="372" width="76" height="76" fill="rgb(200,187,230)"/>
+<text class="value" x="1750.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.22</text>
+<rect class="cell" x="1788" y="372" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="1826.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1864" y="372" width="76" height="76" fill="rgb(122,92,195)"/>
+<text class="value" x="1902.0" y="415.0" text-anchor="middle" style="fill:white">0.76</text>
+<rect class="cell" x="1940" y="372" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="1978.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2016" y="372" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="2054.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="1547" y="492.0" text-anchor="end">Sad</text>
+<rect class="cell" x="1560" y="448" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="1598.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1636" y="448" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="1674.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1712" y="448" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="1750.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell diagonal" x="1788" y="448" width="76" height="76" fill="rgb(101,66,185)"/>
+<text class="value" x="1826.0" y="491.0" text-anchor="middle" style="fill:white">0.92</text>
+<rect class="cell" x="1864" y="448" width="76" height="76" fill="rgb(237,232,246)"/>
+<text class="value" x="1902.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="1940" y="448" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="1978.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="2016" y="448" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="2054.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="1547" y="568.0" text-anchor="end">Surprised</text>
+<rect class="cell" x="1560" y="524" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="1598.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="1636" y="524" width="76" height="76" fill="rgb(229,223,243)"/>
+<text class="value" x="1674.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="1712" y="524" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="1750.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="1788" y="524" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="1826.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="1864" y="524" width="76" height="76" fill="rgb(107,74,188)"/>
+<text class="value" x="1902.0" y="567.0" text-anchor="middle" style="fill:white">0.87</text>
+<rect class="cell" x="1940" y="524" width="76" height="76" fill="rgb(237,232,246)"/>
+<text class="value" x="1978.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="2016" y="524" width="76" height="76" fill="rgb(241,237,248)"/>
+<text class="value" x="2054.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<text class="tick" x="1547" y="644.0" text-anchor="end">Fearful</text>
+<rect class="cell" x="1560" y="600" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="1598.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1636" y="600" width="76" height="76" fill="rgb(228,222,242)"/>
+<text class="value" x="1674.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="1712" y="600" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="1750.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="1788" y="600" width="76" height="76" fill="rgb(202,189,230)"/>
+<text class="value" x="1826.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.21</text>
+<rect class="cell" x="1864" y="600" width="76" height="76" fill="rgb(220,212,238)"/>
+<text class="value" x="1902.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell diagonal" x="1940" y="600" width="76" height="76" fill="rgb(145,120,205)"/>
+<text class="value" x="1978.0" y="643.0" text-anchor="middle" style="fill:white">0.58</text>
+<rect class="cell" x="2016" y="600" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="2054.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="2248.0" y="206" text-anchor="start" transform="rotate(-38 2248.0 206)">Neutral</text>
+<text class="tick" x="2324.0" y="206" text-anchor="start" transform="rotate(-38 2324.0 206)">Angry</text>
+<text class="tick" x="2400.0" y="206" text-anchor="start" transform="rotate(-38 2400.0 206)">Happy</text>
+<text class="tick" x="2476.0" y="206" text-anchor="start" transform="rotate(-38 2476.0 206)">Sad</text>
+<text class="tick" x="2552.0" y="206" text-anchor="start" transform="rotate(-38 2552.0 206)">Surprised</text>
+<text class="tick" x="2628.0" y="206" text-anchor="start" transform="rotate(-38 2628.0 206)">Fearful</text>
+<rect class="cell diagonal" x="2210" y="220" width="76" height="76" fill="rgb(43,131,149)"/>
+<text class="value" x="2248.0" y="263.0" text-anchor="middle" style="fill:white">0.82</text>
+<rect class="cell" x="2286" y="220" width="76" height="76" fill="rgb(228,241,243)"/>
+<text class="value" x="2324.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="2362" y="220" width="76" height="76" fill="rgb(232,244,245)"/>
+<text class="value" x="2400.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2438" y="220" width="76" height="76" fill="rgb(206,228,231)"/>
+<text class="value" x="2476.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="2514" y="220" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="2552.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="2590" y="220" width="76" height="76" fill="rgb(230,243,244)"/>
+<text class="value" x="2628.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="2210" y="296" width="76" height="76" fill="rgb(230,243,244)"/>
+<text class="value" x="2248.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell diagonal" x="2286" y="296" width="76" height="76" fill="rgb(35,127,146)"/>
+<text class="value" x="2324.0" y="339.0" text-anchor="middle" style="fill:white">0.86</text>
+<rect class="cell" x="2362" y="296" width="76" height="76" fill="rgb(232,244,245)"/>
+<text class="value" x="2400.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2438" y="296" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="2476.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2514" y="296" width="76" height="76" fill="rgb(204,227,231)"/>
+<text class="value" x="2552.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="2590" y="296" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="2628.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="2210" y="372" width="76" height="76" fill="rgb(210,231,234)"/>
+<text class="value" x="2248.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="2286" y="372" width="76" height="76" fill="rgb(221,237,239)"/>
+<text class="value" x="2324.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell diagonal" x="2362" y="372" width="76" height="76" fill="rgb(55,139,156)"/>
+<text class="value" x="2400.0" y="415.0" text-anchor="middle" style="fill:white">0.76</text>
+<rect class="cell" x="2438" y="372" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="2476.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2514" y="372" width="76" height="76" fill="rgb(201,225,229)"/>
+<text class="value" x="2552.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="2590" y="372" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="2628.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2210" y="448" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="2248.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2286" y="448" width="76" height="76" fill="rgb(215,234,236)"/>
+<text class="value" x="2324.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="2362" y="448" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="2400.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="2438" y="448" width="76" height="76" fill="rgb(46,133,151)"/>
+<text class="value" x="2476.0" y="491.0" text-anchor="middle" style="fill:white">0.81</text>
+<rect class="cell" x="2514" y="448" width="76" height="76" fill="rgb(228,241,243)"/>
+<text class="value" x="2552.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="2590" y="448" width="76" height="76" fill="rgb(203,226,230)"/>
+<text class="value" x="2628.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="2210" y="524" width="76" height="76" fill="rgb(221,237,239)"/>
+<text class="value" x="2248.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="2286" y="524" width="76" height="76" fill="rgb(232,244,245)"/>
+<text class="value" x="2324.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="2362" y="524" width="76" height="76" fill="rgb(214,233,235)"/>
+<text class="value" x="2400.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="2438" y="524" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="2476.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="2514" y="524" width="76" height="76" fill="rgb(46,133,151)"/>
+<text class="value" x="2552.0" y="567.0" text-anchor="middle" style="fill:white">0.81</text>
+<rect class="cell" x="2590" y="524" width="76" height="76" fill="rgb(214,233,235)"/>
+<text class="value" x="2628.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="2210" y="600" width="76" height="76" fill="rgb(224,239,241)"/>
+<text class="value" x="2248.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="2286" y="600" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="2324.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="2362" y="600" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="2400.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="2438" y="600" width="76" height="76" fill="rgb(191,220,224)"/>
+<text class="value" x="2476.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.14</text>
+<rect class="cell" x="2514" y="600" width="76" height="76" fill="rgb(217,235,237)"/>
+<text class="value" x="2552.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.05</text>
+<rect class="cell diagonal" x="2590" y="600" width="76" height="76" fill="rgb(54,138,155)"/>
+<text class="value" x="2628.0" y="643.0" text-anchor="middle" style="fill:white">0.76</text>
+<line x1="2016" y1="188" x2="2016" y2="676" stroke="#756d7b" stroke-width="2"/>
+<rect class="panel" x="2802" y="90" width="1370" height="592"/>
+<text class="model" x="3487.0" y="120" text-anchor="middle">VoxCPM2</text>
+<text class="metric" x="3213.0" y="155" text-anchor="middle">Objective (E2V) · All 23.67%</text>
+<text class="metric" x="3825" y="155" text-anchor="middle">Subjective · All 35.01%</text>
+<text class="axis" transform="translate(2822,448) rotate(-90)" text-anchor="middle">Target emotion</text>
+<text class="tick" x="2985.0" y="206" text-anchor="start" transform="rotate(-38 2985.0 206)">Neutral</text>
+<text class="tick" x="3061.0" y="206" text-anchor="start" transform="rotate(-38 3061.0 206)">Angry</text>
+<text class="tick" x="3137.0" y="206" text-anchor="start" transform="rotate(-38 3137.0 206)">Happy</text>
+<text class="tick" x="3213.0" y="206" text-anchor="start" transform="rotate(-38 3213.0 206)">Sad</text>
+<text class="tick" x="3289.0" y="206" text-anchor="start" transform="rotate(-38 3289.0 206)">Surprised</text>
+<text class="tick" x="3365.0" y="206" text-anchor="start" transform="rotate(-38 3365.0 206)">Fearful</text>
+<text class="tick" x="3441.0" y="206" text-anchor="start" transform="rotate(-38 3441.0 206)">Other</text>
+<text class="tick" x="2934" y="264.0" text-anchor="end">Neutral</text>
+<rect class="cell diagonal" x="2947" y="220" width="76" height="76" fill="rgb(183,166,222)"/>
+<text class="value" x="2985.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.33</text>
+<rect class="cell" x="3023" y="220" width="76" height="76" fill="rgb(173,154,217)"/>
+<text class="value" x="3061.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.39</text>
+<rect class="cell" x="3099" y="220" width="76" height="76" fill="rgb(209,199,234)"/>
+<text class="value" x="3137.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.17</text>
+<rect class="cell" x="3175" y="220" width="76" height="76" fill="rgb(237,232,246)"/>
+<text class="value" x="3213.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="3251" y="220" width="76" height="76" fill="rgb(232,226,244)"/>
+<text class="value" x="3289.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="3327" y="220" width="76" height="76" fill="rgb(241,237,248)"/>
+<text class="value" x="3365.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="3403" y="220" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="3441.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="2934" y="340.0" text-anchor="end">Angry</text>
+<rect class="cell" x="2947" y="296" width="76" height="76" fill="rgb(217,208,237)"/>
+<text class="value" x="2985.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.12</text>
+<rect class="cell diagonal" x="3023" y="296" width="76" height="76" fill="rgb(145,120,205)"/>
+<text class="value" x="3061.0" y="339.0" text-anchor="middle" style="fill:white">0.58</text>
+<rect class="cell" x="3099" y="296" width="76" height="76" fill="rgb(222,214,239)"/>
+<text class="value" x="3137.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="3175" y="296" width="76" height="76" fill="rgb(235,230,245)"/>
+<text class="value" x="3213.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="3251" y="296" width="76" height="76" fill="rgb(218,209,238)"/>
+<text class="value" x="3289.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.12</text>
+<rect class="cell" x="3327" y="296" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="3365.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3403" y="296" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="3441.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="2934" y="416.0" text-anchor="end">Happy</text>
+<rect class="cell" x="2947" y="372" width="76" height="76" fill="rgb(204,192,231)"/>
+<text class="value" x="2985.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.20</text>
+<rect class="cell" x="3023" y="372" width="76" height="76" fill="rgb(174,156,218)"/>
+<text class="value" x="3061.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.38</text>
+<rect class="cell diagonal" x="3099" y="372" width="76" height="76" fill="rgb(208,197,233)"/>
+<text class="value" x="3137.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.17</text>
+<rect class="cell" x="3175" y="372" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="3213.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="3251" y="372" width="76" height="76" fill="rgb(209,199,234)"/>
+<text class="value" x="3289.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.17</text>
+<rect class="cell" x="3327" y="372" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="3365.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="3403" y="372" width="76" height="76" fill="rgb(239,235,247)"/>
+<text class="value" x="3441.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<text class="tick" x="2934" y="492.0" text-anchor="end">Sad</text>
+<rect class="cell" x="2947" y="448" width="76" height="76" fill="rgb(187,171,224)"/>
+<text class="value" x="2985.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.30</text>
+<rect class="cell" x="3023" y="448" width="76" height="76" fill="rgb(193,179,227)"/>
+<text class="value" x="3061.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.26</text>
+<rect class="cell" x="3099" y="448" width="76" height="76" fill="rgb(217,208,237)"/>
+<text class="value" x="3137.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.12</text>
+<rect class="cell diagonal" x="3175" y="448" width="76" height="76" fill="rgb(220,212,238)"/>
+<text class="value" x="3213.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell" x="3251" y="448" width="76" height="76" fill="rgb(215,206,236)"/>
+<text class="value" x="3289.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.14</text>
+<rect class="cell" x="3327" y="448" width="76" height="76" fill="rgb(232,226,244)"/>
+<text class="value" x="3365.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="3403" y="448" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="3441.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="2934" y="568.0" text-anchor="end">Surprised</text>
+<rect class="cell" x="2947" y="524" width="76" height="76" fill="rgb(222,214,239)"/>
+<text class="value" x="2985.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="3023" y="524" width="76" height="76" fill="rgb(157,135,211)"/>
+<text class="value" x="3061.0" y="567.0" text-anchor="middle" style="fill:white">0.49</text>
+<rect class="cell" x="3099" y="524" width="76" height="76" fill="rgb(211,201,235)"/>
+<text class="value" x="3137.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.15</text>
+<rect class="cell" x="3175" y="524" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="3213.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell diagonal" x="3251" y="524" width="76" height="76" fill="rgb(202,189,230)"/>
+<text class="value" x="3289.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.21</text>
+<rect class="cell" x="3327" y="524" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="3365.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3403" y="524" width="76" height="76" fill="rgb(241,237,248)"/>
+<text class="value" x="3441.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<text class="tick" x="2934" y="644.0" text-anchor="end">Fearful</text>
+<rect class="cell" x="2947" y="600" width="76" height="76" fill="rgb(179,161,220)"/>
+<text class="value" x="2985.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.35</text>
+<rect class="cell" x="3023" y="600" width="76" height="76" fill="rgb(192,178,226)"/>
+<text class="value" x="3061.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.27</text>
+<rect class="cell" x="3099" y="600" width="76" height="76" fill="rgb(213,203,235)"/>
+<text class="value" x="3137.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.14</text>
+<rect class="cell" x="3175" y="600" width="76" height="76" fill="rgb(223,215,240)"/>
+<text class="value" x="3213.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="3251" y="600" width="76" height="76" fill="rgb(221,213,239)"/>
+<text class="value" x="3289.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell diagonal" x="3327" y="600" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="3365.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3403" y="600" width="76" height="76" fill="rgb(239,235,247)"/>
+<text class="value" x="3441.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<text class="tick" x="3635.0" y="206" text-anchor="start" transform="rotate(-38 3635.0 206)">Neutral</text>
+<text class="tick" x="3711.0" y="206" text-anchor="start" transform="rotate(-38 3711.0 206)">Angry</text>
+<text class="tick" x="3787.0" y="206" text-anchor="start" transform="rotate(-38 3787.0 206)">Happy</text>
+<text class="tick" x="3863.0" y="206" text-anchor="start" transform="rotate(-38 3863.0 206)">Sad</text>
+<text class="tick" x="3939.0" y="206" text-anchor="start" transform="rotate(-38 3939.0 206)">Surprised</text>
+<text class="tick" x="4015.0" y="206" text-anchor="start" transform="rotate(-38 4015.0 206)">Fearful</text>
+<rect class="cell diagonal" x="3597" y="220" width="76" height="76" fill="rgb(64,144,160)"/>
+<text class="value" x="3635.0" y="263.0" text-anchor="middle" style="fill:white">0.71</text>
+<rect class="cell" x="3673" y="220" width="76" height="76" fill="rgb(207,229,232)"/>
+<text class="value" x="3711.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.08</text>
+<rect class="cell" x="3749" y="220" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="3787.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="3825" y="220" width="76" height="76" fill="rgb(206,228,231)"/>
+<text class="value" x="3863.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="3901" y="220" width="76" height="76" fill="rgb(224,239,241)"/>
+<text class="value" x="3939.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="3977" y="220" width="76" height="76" fill="rgb(219,236,238)"/>
+<text class="value" x="4015.0" y="263.0" text-anchor="middle" style="fill:#211a27">0.05</text>
+<rect class="cell" x="3597" y="296" width="76" height="76" fill="rgb(140,189,198)"/>
+<text class="value" x="3635.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.35</text>
+<rect class="cell diagonal" x="3673" y="296" width="76" height="76" fill="rgb(113,173,185)"/>
+<text class="value" x="3711.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.47</text>
+<rect class="cell" x="3749" y="296" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="3787.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="3825" y="296" width="76" height="76" fill="rgb(200,225,228)"/>
+<text class="value" x="3863.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell" x="3901" y="296" width="76" height="76" fill="rgb(228,241,243)"/>
+<text class="value" x="3939.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="3977" y="296" width="76" height="76" fill="rgb(230,243,244)"/>
+<text class="value" x="4015.0" y="339.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="3597" y="372" width="76" height="76" fill="rgb(93,161,175)"/>
+<text class="value" x="3635.0" y="415.0" text-anchor="middle" style="fill:white">0.56</text>
+<rect class="cell" x="3673" y="372" width="76" height="76" fill="rgb(200,225,228)"/>
+<text class="value" x="3711.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell diagonal" x="3749" y="372" width="76" height="76" fill="rgb(173,209,215)"/>
+<text class="value" x="3787.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.21</text>
+<rect class="cell" x="3825" y="372" width="76" height="76" fill="rgb(219,236,238)"/>
+<text class="value" x="3863.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.05</text>
+<rect class="cell" x="3901" y="372" width="76" height="76" fill="rgb(222,238,240)"/>
+<text class="value" x="3939.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="3977" y="372" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="4015.0" y="415.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="3597" y="448" width="76" height="76" fill="rgb(128,182,192)"/>
+<text class="value" x="3635.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.40</text>
+<rect class="cell" x="3673" y="448" width="76" height="76" fill="rgb(177,211,217)"/>
+<text class="value" x="3711.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.19</text>
+<rect class="cell" x="3749" y="448" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="3787.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell diagonal" x="3825" y="448" width="76" height="76" fill="rgb(161,201,209)"/>
+<text class="value" x="3863.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.26</text>
+<rect class="cell" x="3901" y="448" width="76" height="76" fill="rgb(204,227,231)"/>
+<text class="value" x="3939.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="3977" y="448" width="76" height="76" fill="rgb(221,237,239)"/>
+<text class="value" x="4015.0" y="491.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="3597" y="524" width="76" height="76" fill="rgb(92,161,174)"/>
+<text class="value" x="3635.0" y="567.0" text-anchor="middle" style="fill:white">0.57</text>
+<rect class="cell" x="3673" y="524" width="76" height="76" fill="rgb(214,233,235)"/>
+<text class="value" x="3711.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="3749" y="524" width="76" height="76" fill="rgb(214,233,235)"/>
+<text class="value" x="3787.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="3825" y="524" width="76" height="76" fill="rgb(230,243,244)"/>
+<text class="value" x="3863.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell diagonal" x="3901" y="524" width="76" height="76" fill="rgb(181,213,219)"/>
+<text class="value" x="3939.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.18</text>
+<rect class="cell" x="3977" y="524" width="76" height="76" fill="rgb(201,226,229)"/>
+<text class="value" x="4015.0" y="567.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="3597" y="600" width="76" height="76" fill="rgb(88,158,172)"/>
+<text class="value" x="3635.0" y="643.0" text-anchor="middle" style="fill:white">0.59</text>
+<rect class="cell" x="3673" y="600" width="76" height="76" fill="rgb(206,228,231)"/>
+<text class="value" x="3711.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="3749" y="600" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="3787.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3825" y="600" width="76" height="76" fill="rgb(232,244,245)"/>
+<text class="value" x="3863.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3901" y="600" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="3939.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell diagonal" x="3977" y="600" width="76" height="76" fill="rgb(156,199,206)"/>
+<text class="value" x="4015.0" y="643.0" text-anchor="middle" style="fill:#211a27">0.28</text>
+<line x1="3403" y1="188" x2="3403" y2="676" stroke="#756d7b" stroke-width="2"/>
+<rect class="panel" x="28" y="692" width="1370" height="592"/>
+<text class="model" x="713.0" y="722" text-anchor="middle">Qwen3-TTS-12Hz-1.7B-VD (EN)</text>
+<text class="metric" x="439.0" y="757" text-anchor="middle">Objective (E2V) · All 58.50%</text>
+<text class="metric" x="1051" y="757" text-anchor="middle">Subjective · All 57.72%</text>
+<text class="axis" transform="translate(48,1050) rotate(-90)" text-anchor="middle">Target emotion</text>
+<text class="tick" x="211.0" y="808" text-anchor="start" transform="rotate(-38 211.0 808)">Neutral</text>
+<text class="tick" x="287.0" y="808" text-anchor="start" transform="rotate(-38 287.0 808)">Angry</text>
+<text class="tick" x="363.0" y="808" text-anchor="start" transform="rotate(-38 363.0 808)">Happy</text>
+<text class="tick" x="439.0" y="808" text-anchor="start" transform="rotate(-38 439.0 808)">Sad</text>
+<text class="tick" x="515.0" y="808" text-anchor="start" transform="rotate(-38 515.0 808)">Surprised</text>
+<text class="tick" x="591.0" y="808" text-anchor="start" transform="rotate(-38 591.0 808)">Fearful</text>
+<text class="tick" x="667.0" y="808" text-anchor="start" transform="rotate(-38 667.0 808)">Other</text>
+<text class="tick" x="160" y="866.0" text-anchor="end">Neutral</text>
+<rect class="cell diagonal" x="173" y="822" width="76" height="76" fill="rgb(187,172,224)"/>
+<text class="value" x="211.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.29</text>
+<rect class="cell" x="249" y="822" width="76" height="76" fill="rgb(223,215,240)"/>
+<text class="value" x="287.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="325" y="822" width="76" height="76" fill="rgb(225,218,241)"/>
+<text class="value" x="363.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="401" y="822" width="76" height="76" fill="rgb(159,138,212)"/>
+<text class="value" x="439.0" y="865.0" text-anchor="middle" style="fill:white">0.48</text>
+<rect class="cell" x="477" y="822" width="76" height="76" fill="rgb(237,232,246)"/>
+<text class="value" x="515.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="553" y="822" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="591.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="629" y="822" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="667.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="160" y="942.0" text-anchor="end">Angry</text>
+<rect class="cell" x="173" y="898" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="211.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="249" y="898" width="76" height="76" fill="rgb(118,87,193)"/>
+<text class="value" x="287.0" y="941.0" text-anchor="middle" style="fill:white">0.79</text>
+<rect class="cell" x="325" y="898" width="76" height="76" fill="rgb(239,235,247)"/>
+<text class="value" x="363.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="401" y="898" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="439.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="477" y="898" width="76" height="76" fill="rgb(213,203,235)"/>
+<text class="value" x="515.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.14</text>
+<rect class="cell" x="553" y="898" width="76" height="76" fill="rgb(235,230,245)"/>
+<text class="value" x="591.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="629" y="898" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="667.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="160" y="1018.0" text-anchor="end">Happy</text>
+<rect class="cell" x="173" y="974" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="211.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="249" y="974" width="76" height="76" fill="rgb(216,207,237)"/>
+<text class="value" x="287.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.13</text>
+<rect class="cell diagonal" x="325" y="974" width="76" height="76" fill="rgb(156,133,210)"/>
+<text class="value" x="363.0" y="1017.0" text-anchor="middle" style="fill:white">0.51</text>
+<rect class="cell" x="401" y="974" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="439.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="477" y="974" width="76" height="76" fill="rgb(184,168,223)"/>
+<text class="value" x="515.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.32</text>
+<rect class="cell" x="553" y="974" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="591.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="629" y="974" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="667.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="160" y="1094.0" text-anchor="end">Sad</text>
+<rect class="cell" x="173" y="1050" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="211.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="249" y="1050" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="287.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="325" y="1050" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="363.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell diagonal" x="401" y="1050" width="76" height="76" fill="rgb(100,65,185)"/>
+<text class="value" x="439.0" y="1093.0" text-anchor="middle" style="fill:white">0.93</text>
+<rect class="cell" x="477" y="1050" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="515.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="553" y="1050" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="591.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="629" y="1050" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="667.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="160" y="1170.0" text-anchor="end">Surprised</text>
+<rect class="cell" x="173" y="1126" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="211.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="249" y="1126" width="76" height="76" fill="rgb(205,193,232)"/>
+<text class="value" x="287.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.19</text>
+<rect class="cell" x="325" y="1126" width="76" height="76" fill="rgb(224,217,240)"/>
+<text class="value" x="363.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="401" y="1126" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="439.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell diagonal" x="477" y="1126" width="76" height="76" fill="rgb(141,115,203)"/>
+<text class="value" x="515.0" y="1169.0" text-anchor="middle" style="fill:white">0.61</text>
+<rect class="cell" x="553" y="1126" width="76" height="76" fill="rgb(226,219,241)"/>
+<text class="value" x="591.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.08</text>
+<rect class="cell" x="629" y="1126" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="667.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="160" y="1246.0" text-anchor="end">Fearful</text>
+<rect class="cell" x="173" y="1202" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="211.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="249" y="1202" width="76" height="76" fill="rgb(218,209,238)"/>
+<text class="value" x="287.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.12</text>
+<rect class="cell" x="325" y="1202" width="76" height="76" fill="rgb(223,215,240)"/>
+<text class="value" x="363.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="401" y="1202" width="76" height="76" fill="rgb(192,178,226)"/>
+<text class="value" x="439.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.27</text>
+<rect class="cell" x="477" y="1202" width="76" height="76" fill="rgb(228,222,242)"/>
+<text class="value" x="515.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell diagonal" x="553" y="1202" width="76" height="76" fill="rgb(174,156,218)"/>
+<text class="value" x="591.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.38</text>
+<rect class="cell" x="629" y="1202" width="76" height="76" fill="rgb(235,230,245)"/>
+<text class="value" x="667.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<text class="tick" x="861.0" y="808" text-anchor="start" transform="rotate(-38 861.0 808)">Neutral</text>
+<text class="tick" x="937.0" y="808" text-anchor="start" transform="rotate(-38 937.0 808)">Angry</text>
+<text class="tick" x="1013.0" y="808" text-anchor="start" transform="rotate(-38 1013.0 808)">Happy</text>
+<text class="tick" x="1089.0" y="808" text-anchor="start" transform="rotate(-38 1089.0 808)">Sad</text>
+<text class="tick" x="1165.0" y="808" text-anchor="start" transform="rotate(-38 1165.0 808)">Surprised</text>
+<text class="tick" x="1241.0" y="808" text-anchor="start" transform="rotate(-38 1241.0 808)">Fearful</text>
+<rect class="cell diagonal" x="823" y="822" width="76" height="76" fill="rgb(106,169,181)"/>
+<text class="value" x="861.0" y="865.0" text-anchor="middle" style="fill:white">0.50</text>
+<rect class="cell" x="899" y="822" width="76" height="76" fill="rgb(215,234,236)"/>
+<text class="value" x="937.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="975" y="822" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="1013.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1051" y="822" width="76" height="76" fill="rgb(141,189,199)"/>
+<text class="value" x="1089.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.34</text>
+<rect class="cell" x="1127" y="822" width="76" height="76" fill="rgb(230,243,244)"/>
+<text class="value" x="1165.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="1203" y="822" width="76" height="76" fill="rgb(212,232,234)"/>
+<text class="value" x="1241.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="823" y="898" width="76" height="76" fill="rgb(219,236,238)"/>
+<text class="value" x="861.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.05</text>
+<rect class="cell diagonal" x="899" y="898" width="76" height="76" fill="rgb(51,136,154)"/>
+<text class="value" x="937.0" y="941.0" text-anchor="middle" style="fill:white">0.78</text>
+<rect class="cell" x="975" y="898" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="1013.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="1051" y="898" width="76" height="76" fill="rgb(221,237,239)"/>
+<text class="value" x="1089.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="1127" y="898" width="76" height="76" fill="rgb(211,231,234)"/>
+<text class="value" x="1165.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="1203" y="898" width="76" height="76" fill="rgb(228,241,243)"/>
+<text class="value" x="1241.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="823" y="974" width="76" height="76" fill="rgb(192,220,224)"/>
+<text class="value" x="861.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.14</text>
+<rect class="cell" x="899" y="974" width="76" height="76" fill="rgb(212,232,235)"/>
+<text class="value" x="937.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell diagonal" x="975" y="974" width="76" height="76" fill="rgb(86,157,171)"/>
+<text class="value" x="1013.0" y="1017.0" text-anchor="middle" style="fill:white">0.60</text>
+<rect class="cell" x="1051" y="974" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="1089.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="1127" y="974" width="76" height="76" fill="rgb(187,217,222)"/>
+<text class="value" x="1165.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.15</text>
+<rect class="cell" x="1203" y="974" width="76" height="76" fill="rgb(224,239,241)"/>
+<text class="value" x="1241.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="823" y="1050" width="76" height="76" fill="rgb(181,213,219)"/>
+<text class="value" x="861.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.18</text>
+<rect class="cell" x="899" y="1050" width="76" height="76" fill="rgb(199,224,228)"/>
+<text class="value" x="937.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell" x="975" y="1050" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="1013.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="1051" y="1050" width="76" height="76" fill="rgb(81,154,169)"/>
+<text class="value" x="1089.0" y="1093.0" text-anchor="middle" style="fill:white">0.62</text>
+<rect class="cell" x="1127" y="1050" width="76" height="76" fill="rgb(228,241,243)"/>
+<text class="value" x="1165.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="1203" y="1050" width="76" height="76" fill="rgb(215,234,236)"/>
+<text class="value" x="1241.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="823" y="1126" width="76" height="76" fill="rgb(183,215,220)"/>
+<text class="value" x="861.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.17</text>
+<rect class="cell" x="899" y="1126" width="76" height="76" fill="rgb(214,233,235)"/>
+<text class="value" x="937.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="975" y="1126" width="76" height="76" fill="rgb(215,234,236)"/>
+<text class="value" x="1013.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="1051" y="1126" width="76" height="76" fill="rgb(219,236,238)"/>
+<text class="value" x="1089.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.05</text>
+<rect class="cell diagonal" x="1127" y="1126" width="76" height="76" fill="rgb(131,184,194)"/>
+<text class="value" x="1165.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.39</text>
+<rect class="cell" x="1203" y="1126" width="76" height="76" fill="rgb(157,199,207)"/>
+<text class="value" x="1241.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.27</text>
+<rect class="cell" x="823" y="1202" width="76" height="76" fill="rgb(177,211,217)"/>
+<text class="value" x="861.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.19</text>
+<rect class="cell" x="899" y="1202" width="76" height="76" fill="rgb(228,241,243)"/>
+<text class="value" x="937.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="975" y="1202" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="1013.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="1051" y="1202" width="76" height="76" fill="rgb(187,217,222)"/>
+<text class="value" x="1089.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.15</text>
+<rect class="cell" x="1127" y="1202" width="76" height="76" fill="rgb(221,237,239)"/>
+<text class="value" x="1165.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell diagonal" x="1203" y="1202" width="76" height="76" fill="rgb(91,160,174)"/>
+<text class="value" x="1241.0" y="1245.0" text-anchor="middle" style="fill:white">0.57</text>
+<line x1="629" y1="790" x2="629" y2="1278" stroke="#756d7b" stroke-width="2"/>
+<rect class="panel" x="1415" y="692" width="1370" height="592"/>
+<text class="model" x="2100.0" y="722" text-anchor="middle">Qwen3-TTS-12Hz-1.7B-VD (KO)</text>
+<text class="metric" x="1826.0" y="757" text-anchor="middle">Objective (E2V) · All 28.67%</text>
+<text class="metric" x="2438" y="757" text-anchor="middle">Subjective · All 36.20%</text>
+<text class="axis" transform="translate(1435,1050) rotate(-90)" text-anchor="middle">Target emotion</text>
+<text class="tick" x="1598.0" y="808" text-anchor="start" transform="rotate(-38 1598.0 808)">Neutral</text>
+<text class="tick" x="1674.0" y="808" text-anchor="start" transform="rotate(-38 1674.0 808)">Angry</text>
+<text class="tick" x="1750.0" y="808" text-anchor="start" transform="rotate(-38 1750.0 808)">Happy</text>
+<text class="tick" x="1826.0" y="808" text-anchor="start" transform="rotate(-38 1826.0 808)">Sad</text>
+<text class="tick" x="1902.0" y="808" text-anchor="start" transform="rotate(-38 1902.0 808)">Surprised</text>
+<text class="tick" x="1978.0" y="808" text-anchor="start" transform="rotate(-38 1978.0 808)">Fearful</text>
+<text class="tick" x="2054.0" y="808" text-anchor="start" transform="rotate(-38 2054.0 808)">Other</text>
+<text class="tick" x="1547" y="866.0" text-anchor="end">Neutral</text>
+<rect class="cell diagonal" x="1560" y="822" width="76" height="76" fill="rgb(197,184,228)"/>
+<text class="value" x="1598.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.23</text>
+<rect class="cell" x="1636" y="822" width="76" height="76" fill="rgb(222,214,239)"/>
+<text class="value" x="1674.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="1712" y="822" width="76" height="76" fill="rgb(212,202,235)"/>
+<text class="value" x="1750.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.15</text>
+<rect class="cell" x="1788" y="822" width="76" height="76" fill="rgb(181,164,221)"/>
+<text class="value" x="1826.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.34</text>
+<rect class="cell" x="1864" y="822" width="76" height="76" fill="rgb(211,201,235)"/>
+<text class="value" x="1902.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.15</text>
+<rect class="cell" x="1940" y="822" width="76" height="76" fill="rgb(241,237,248)"/>
+<text class="value" x="1978.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="2016" y="822" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="2054.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="1547" y="942.0" text-anchor="end">Angry</text>
+<rect class="cell" x="1560" y="898" width="76" height="76" fill="rgb(229,223,243)"/>
+<text class="value" x="1598.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell diagonal" x="1636" y="898" width="76" height="76" fill="rgb(181,164,221)"/>
+<text class="value" x="1674.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.34</text>
+<rect class="cell" x="1712" y="898" width="76" height="76" fill="rgb(221,213,239)"/>
+<text class="value" x="1750.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="1788" y="898" width="76" height="76" fill="rgb(200,187,230)"/>
+<text class="value" x="1826.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.22</text>
+<rect class="cell" x="1864" y="898" width="76" height="76" fill="rgb(206,195,232)"/>
+<text class="value" x="1902.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.18</text>
+<rect class="cell" x="1940" y="898" width="76" height="76" fill="rgb(232,226,244)"/>
+<text class="value" x="1978.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="2016" y="898" width="76" height="76" fill="rgb(237,232,246)"/>
+<text class="value" x="2054.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<text class="tick" x="1547" y="1018.0" text-anchor="end">Happy</text>
+<rect class="cell" x="1560" y="974" width="76" height="76" fill="rgb(227,221,242)"/>
+<text class="value" x="1598.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="1636" y="974" width="76" height="76" fill="rgb(215,206,236)"/>
+<text class="value" x="1674.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.14</text>
+<rect class="cell diagonal" x="1712" y="974" width="76" height="76" fill="rgb(211,201,235)"/>
+<text class="value" x="1750.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.15</text>
+<rect class="cell" x="1788" y="974" width="76" height="76" fill="rgb(182,165,222)"/>
+<text class="value" x="1826.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.33</text>
+<rect class="cell" x="1864" y="974" width="76" height="76" fill="rgb(202,189,230)"/>
+<text class="value" x="1902.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.21</text>
+<rect class="cell" x="1940" y="974" width="76" height="76" fill="rgb(229,223,243)"/>
+<text class="value" x="1978.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="2016" y="974" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="2054.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<text class="tick" x="1547" y="1094.0" text-anchor="end">Sad</text>
+<rect class="cell" x="1560" y="1050" width="76" height="76" fill="rgb(234,229,245)"/>
+<text class="value" x="1598.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="1636" y="1050" width="76" height="76" fill="rgb(218,209,238)"/>
+<text class="value" x="1674.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.12</text>
+<rect class="cell" x="1712" y="1050" width="76" height="76" fill="rgb(222,214,239)"/>
+<text class="value" x="1750.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell diagonal" x="1788" y="1050" width="76" height="76" fill="rgb(157,135,211)"/>
+<text class="value" x="1826.0" y="1093.0" text-anchor="middle" style="fill:white">0.49</text>
+<rect class="cell" x="1864" y="1050" width="76" height="76" fill="rgb(213,203,235)"/>
+<text class="value" x="1902.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.14</text>
+<rect class="cell" x="1940" y="1050" width="76" height="76" fill="rgb(225,218,241)"/>
+<text class="value" x="1978.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="2016" y="1050" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="2054.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="1547" y="1170.0" text-anchor="end">Surprised</text>
+<rect class="cell" x="1560" y="1126" width="76" height="76" fill="rgb(220,212,238)"/>
+<text class="value" x="1598.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell" x="1636" y="1126" width="76" height="76" fill="rgb(223,215,240)"/>
+<text class="value" x="1674.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="1712" y="1126" width="76" height="76" fill="rgb(217,208,237)"/>
+<text class="value" x="1750.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.12</text>
+<rect class="cell" x="1788" y="1126" width="76" height="76" fill="rgb(194,180,227)"/>
+<text class="value" x="1826.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.26</text>
+<rect class="cell diagonal" x="1864" y="1126" width="76" height="76" fill="rgb(180,163,221)"/>
+<text class="value" x="1902.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.34</text>
+<rect class="cell" x="1940" y="1126" width="76" height="76" fill="rgb(229,223,243)"/>
+<text class="value" x="1978.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="2016" y="1126" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="2054.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="1547" y="1246.0" text-anchor="end">Fearful</text>
+<rect class="cell" x="1560" y="1202" width="76" height="76" fill="rgb(227,221,242)"/>
+<text class="value" x="1598.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="1636" y="1202" width="76" height="76" fill="rgb(215,206,236)"/>
+<text class="value" x="1674.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.14</text>
+<rect class="cell" x="1712" y="1202" width="76" height="76" fill="rgb(234,229,245)"/>
+<text class="value" x="1750.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="1788" y="1202" width="76" height="76" fill="rgb(154,132,209)"/>
+<text class="value" x="1826.0" y="1245.0" text-anchor="middle" style="fill:white">0.52</text>
+<rect class="cell" x="1864" y="1202" width="76" height="76" fill="rgb(235,230,245)"/>
+<text class="value" x="1902.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell diagonal" x="1940" y="1202" width="76" height="76" fill="rgb(210,200,234)"/>
+<text class="value" x="1978.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.16</text>
+<rect class="cell" x="2016" y="1202" width="76" height="76" fill="rgb(238,234,246)"/>
+<text class="value" x="2054.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<text class="tick" x="2248.0" y="808" text-anchor="start" transform="rotate(-38 2248.0 808)">Neutral</text>
+<text class="tick" x="2324.0" y="808" text-anchor="start" transform="rotate(-38 2324.0 808)">Angry</text>
+<text class="tick" x="2400.0" y="808" text-anchor="start" transform="rotate(-38 2400.0 808)">Happy</text>
+<text class="tick" x="2476.0" y="808" text-anchor="start" transform="rotate(-38 2476.0 808)">Sad</text>
+<text class="tick" x="2552.0" y="808" text-anchor="start" transform="rotate(-38 2552.0 808)">Surprised</text>
+<text class="tick" x="2628.0" y="808" text-anchor="start" transform="rotate(-38 2628.0 808)">Fearful</text>
+<rect class="cell diagonal" x="2210" y="822" width="76" height="76" fill="rgb(67,146,162)"/>
+<text class="value" x="2248.0" y="865.0" text-anchor="middle" style="fill:white">0.70</text>
+<rect class="cell" x="2286" y="822" width="76" height="76" fill="rgb(215,234,236)"/>
+<text class="value" x="2324.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="2362" y="822" width="76" height="76" fill="rgb(222,238,240)"/>
+<text class="value" x="2400.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="2438" y="822" width="76" height="76" fill="rgb(189,218,223)"/>
+<text class="value" x="2476.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.15</text>
+<rect class="cell" x="2514" y="822" width="76" height="76" fill="rgb(228,241,242)"/>
+<text class="value" x="2552.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="2590" y="822" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="2628.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="2210" y="898" width="76" height="76" fill="rgb(149,194,203)"/>
+<text class="value" x="2248.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.31</text>
+<rect class="cell diagonal" x="2286" y="898" width="76" height="76" fill="rgb(122,179,189)"/>
+<text class="value" x="2324.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.43</text>
+<rect class="cell" x="2362" y="898" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="2400.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="2438" y="898" width="76" height="76" fill="rgb(176,210,216)"/>
+<text class="value" x="2476.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.20</text>
+<rect class="cell" x="2514" y="898" width="76" height="76" fill="rgb(222,238,240)"/>
+<text class="value" x="2552.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="2590" y="898" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="2628.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="2210" y="974" width="76" height="76" fill="rgb(133,185,195)"/>
+<text class="value" x="2248.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.38</text>
+<rect class="cell" x="2286" y="974" width="76" height="76" fill="rgb(206,228,231)"/>
+<text class="value" x="2324.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell diagonal" x="2362" y="974" width="76" height="76" fill="rgb(177,211,217)"/>
+<text class="value" x="2400.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.19</text>
+<rect class="cell" x="2438" y="974" width="76" height="76" fill="rgb(189,218,223)"/>
+<text class="value" x="2476.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.15</text>
+<rect class="cell" x="2514" y="974" width="76" height="76" fill="rgb(214,233,235)"/>
+<text class="value" x="2552.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="2590" y="974" width="76" height="76" fill="rgb(196,222,226)"/>
+<text class="value" x="2628.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.12</text>
+<rect class="cell" x="2210" y="1050" width="76" height="76" fill="rgb(135,186,196)"/>
+<text class="value" x="2248.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.37</text>
+<rect class="cell" x="2286" y="1050" width="76" height="76" fill="rgb(189,218,223)"/>
+<text class="value" x="2324.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.15</text>
+<rect class="cell" x="2362" y="1050" width="76" height="76" fill="rgb(232,244,245)"/>
+<text class="value" x="2400.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell diagonal" x="2438" y="1050" width="76" height="76" fill="rgb(127,181,192)"/>
+<text class="value" x="2476.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.41</text>
+<rect class="cell" x="2514" y="1050" width="76" height="76" fill="rgb(230,243,244)"/>
+<text class="value" x="2552.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="2590" y="1050" width="76" height="76" fill="rgb(221,237,239)"/>
+<text class="value" x="2628.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="2210" y="1126" width="76" height="76" fill="rgb(104,168,180)"/>
+<text class="value" x="2248.0" y="1169.0" text-anchor="middle" style="fill:white">0.51</text>
+<rect class="cell" x="2286" y="1126" width="76" height="76" fill="rgb(222,238,240)"/>
+<text class="value" x="2324.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="2362" y="1126" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="2400.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="2438" y="1126" width="76" height="76" fill="rgb(186,216,221)"/>
+<text class="value" x="2476.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.16</text>
+<rect class="cell diagonal" x="2514" y="1126" width="76" height="76" fill="rgb(182,214,219)"/>
+<text class="value" x="2552.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.17</text>
+<rect class="cell" x="2590" y="1126" width="76" height="76" fill="rgb(199,224,228)"/>
+<text class="value" x="2628.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell" x="2210" y="1202" width="76" height="76" fill="rgb(138,188,197)"/>
+<text class="value" x="2248.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.36</text>
+<rect class="cell" x="2286" y="1202" width="76" height="76" fill="rgb(222,238,240)"/>
+<text class="value" x="2324.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="2362" y="1202" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="2400.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="2438" y="1202" width="76" height="76" fill="rgb(147,193,202)"/>
+<text class="value" x="2476.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.32</text>
+<rect class="cell" x="2514" y="1202" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="2552.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell diagonal" x="2590" y="1202" width="76" height="76" fill="rgb(156,199,206)"/>
+<text class="value" x="2628.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.28</text>
+<line x1="2016" y1="790" x2="2016" y2="1278" stroke="#756d7b" stroke-width="2"/>
+<rect class="panel" x="2802" y="692" width="1370" height="592"/>
+<text class="model" x="3487.0" y="722" text-anchor="middle">CLID-TTS (s=2.0)</text>
+<text class="metric" x="3213.0" y="757" text-anchor="middle">Objective (E2V) · All 52.17%</text>
+<text class="metric" x="3825" y="757" text-anchor="middle">Subjective · All 70.74%</text>
+<text class="axis" transform="translate(2822,1050) rotate(-90)" text-anchor="middle">Target emotion</text>
+<text class="tick" x="2985.0" y="808" text-anchor="start" transform="rotate(-38 2985.0 808)">Neutral</text>
+<text class="tick" x="3061.0" y="808" text-anchor="start" transform="rotate(-38 3061.0 808)">Angry</text>
+<text class="tick" x="3137.0" y="808" text-anchor="start" transform="rotate(-38 3137.0 808)">Happy</text>
+<text class="tick" x="3213.0" y="808" text-anchor="start" transform="rotate(-38 3213.0 808)">Sad</text>
+<text class="tick" x="3289.0" y="808" text-anchor="start" transform="rotate(-38 3289.0 808)">Surprised</text>
+<text class="tick" x="3365.0" y="808" text-anchor="start" transform="rotate(-38 3365.0 808)">Fearful</text>
+<text class="tick" x="3441.0" y="808" text-anchor="start" transform="rotate(-38 3441.0 808)">Other</text>
+<text class="tick" x="2934" y="866.0" text-anchor="end">Neutral</text>
+<rect class="cell diagonal" x="2947" y="822" width="76" height="76" fill="rgb(184,168,223)"/>
+<text class="value" x="2985.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.32</text>
+<rect class="cell" x="3023" y="822" width="76" height="76" fill="rgb(210,200,234)"/>
+<text class="value" x="3061.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.16</text>
+<rect class="cell" x="3099" y="822" width="76" height="76" fill="rgb(172,153,217)"/>
+<text class="value" x="3137.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.40</text>
+<rect class="cell" x="3175" y="822" width="76" height="76" fill="rgb(239,235,247)"/>
+<text class="value" x="3213.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="3251" y="822" width="76" height="76" fill="rgb(221,213,239)"/>
+<text class="value" x="3289.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="3327" y="822" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3365.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3403" y="822" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3441.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="2934" y="942.0" text-anchor="end">Angry</text>
+<rect class="cell" x="2947" y="898" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="2985.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="3023" y="898" width="76" height="76" fill="rgb(101,66,185)"/>
+<text class="value" x="3061.0" y="941.0" text-anchor="middle" style="fill:white">0.92</text>
+<rect class="cell" x="3099" y="898" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3137.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3175" y="898" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3213.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3251" y="898" width="76" height="76" fill="rgb(226,219,241)"/>
+<text class="value" x="3289.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.08</text>
+<rect class="cell" x="3327" y="898" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3365.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3403" y="898" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3441.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="2934" y="1018.0" text-anchor="end">Happy</text>
+<rect class="cell" x="2947" y="974" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="2985.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3023" y="974" width="76" height="76" fill="rgb(221,213,239)"/>
+<text class="value" x="3061.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell diagonal" x="3099" y="974" width="76" height="76" fill="rgb(221,213,239)"/>
+<text class="value" x="3137.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="3175" y="974" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3213.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3251" y="974" width="76" height="76" fill="rgb(118,87,193)"/>
+<text class="value" x="3289.0" y="1017.0" text-anchor="middle" style="fill:white">0.79</text>
+<rect class="cell" x="3327" y="974" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="3365.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3403" y="974" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3441.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="2934" y="1094.0" text-anchor="end">Sad</text>
+<rect class="cell" x="2947" y="1050" width="76" height="76" fill="rgb(210,200,234)"/>
+<text class="value" x="2985.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.16</text>
+<rect class="cell" x="3023" y="1050" width="76" height="76" fill="rgb(234,229,245)"/>
+<text class="value" x="3061.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="3099" y="1050" width="76" height="76" fill="rgb(241,237,248)"/>
+<text class="value" x="3137.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell diagonal" x="3175" y="1050" width="76" height="76" fill="rgb(144,119,205)"/>
+<text class="value" x="3213.0" y="1093.0" text-anchor="middle" style="fill:white">0.59</text>
+<rect class="cell" x="3251" y="1050" width="76" height="76" fill="rgb(221,213,239)"/>
+<text class="value" x="3289.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.10</text>
+<rect class="cell" x="3327" y="1050" width="76" height="76" fill="rgb(227,221,242)"/>
+<text class="value" x="3365.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="3403" y="1050" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="3441.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<text class="tick" x="2934" y="1170.0" text-anchor="end">Surprised</text>
+<rect class="cell" x="2947" y="1126" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="2985.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3023" y="1126" width="76" height="76" fill="rgb(225,218,241)"/>
+<text class="value" x="3061.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="3099" y="1126" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="3137.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3175" y="1126" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3213.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="3251" y="1126" width="76" height="76" fill="rgb(105,71,187)"/>
+<text class="value" x="3289.0" y="1169.0" text-anchor="middle" style="fill:white">0.89</text>
+<rect class="cell" x="3327" y="1126" width="76" height="76" fill="rgb(244,241,249)"/>
+<text class="value" x="3365.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3403" y="1126" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3441.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="2934" y="1246.0" text-anchor="end">Fearful</text>
+<rect class="cell" x="2947" y="1202" width="76" height="76" fill="rgb(242,239,248)"/>
+<text class="value" x="2985.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3023" y="1202" width="76" height="76" fill="rgb(209,199,234)"/>
+<text class="value" x="3061.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.17</text>
+<rect class="cell" x="3099" y="1202" width="76" height="76" fill="rgb(245,243,250)"/>
+<text class="value" x="3137.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3175" y="1202" width="76" height="76" fill="rgb(225,218,241)"/>
+<text class="value" x="3213.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="3251" y="1202" width="76" height="76" fill="rgb(168,148,215)"/>
+<text class="value" x="3289.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.42</text>
+<rect class="cell diagonal" x="3327" y="1202" width="76" height="76" fill="rgb(185,169,223)"/>
+<text class="value" x="3365.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.31</text>
+<rect class="cell" x="3403" y="1202" width="76" height="76" fill="rgb(248,246,251)"/>
+<text class="value" x="3441.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<text class="tick" x="3635.0" y="808" text-anchor="start" transform="rotate(-38 3635.0 808)">Neutral</text>
+<text class="tick" x="3711.0" y="808" text-anchor="start" transform="rotate(-38 3711.0 808)">Angry</text>
+<text class="tick" x="3787.0" y="808" text-anchor="start" transform="rotate(-38 3787.0 808)">Happy</text>
+<text class="tick" x="3863.0" y="808" text-anchor="start" transform="rotate(-38 3863.0 808)">Sad</text>
+<text class="tick" x="3939.0" y="808" text-anchor="start" transform="rotate(-38 3939.0 808)">Surprised</text>
+<text class="tick" x="4015.0" y="808" text-anchor="start" transform="rotate(-38 4015.0 808)">Fearful</text>
+<rect class="cell diagonal" x="3597" y="822" width="76" height="76" fill="rgb(48,135,152)"/>
+<text class="value" x="3635.0" y="865.0" text-anchor="middle" style="fill:white">0.79</text>
+<rect class="cell" x="3673" y="822" width="76" height="76" fill="rgb(217,235,237)"/>
+<text class="value" x="3711.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.05</text>
+<rect class="cell" x="3749" y="822" width="76" height="76" fill="rgb(230,243,244)"/>
+<text class="value" x="3787.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="3825" y="822" width="76" height="76" fill="rgb(211,231,234)"/>
+<text class="value" x="3863.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="3901" y="822" width="76" height="76" fill="rgb(221,237,239)"/>
+<text class="value" x="3939.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="3977" y="822" width="76" height="76" fill="rgb(232,244,245)"/>
+<text class="value" x="4015.0" y="865.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3597" y="898" width="76" height="76" fill="rgb(219,236,238)"/>
+<text class="value" x="3635.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.05</text>
+<rect class="cell diagonal" x="3673" y="898" width="76" height="76" fill="rgb(36,128,146)"/>
+<text class="value" x="3711.0" y="941.0" text-anchor="middle" style="fill:white">0.86</text>
+<rect class="cell" x="3749" y="898" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="3787.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3825" y="898" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="3863.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3901" y="898" width="76" height="76" fill="rgb(211,231,234)"/>
+<text class="value" x="3939.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="3977" y="898" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="4015.0" y="941.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3597" y="974" width="76" height="76" fill="rgb(211,231,234)"/>
+<text class="value" x="3635.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="3673" y="974" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="3711.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell diagonal" x="3749" y="974" width="76" height="76" fill="rgb(34,127,145)"/>
+<text class="value" x="3787.0" y="1017.0" text-anchor="middle" style="fill:white">0.87</text>
+<rect class="cell" x="3825" y="974" width="76" height="76" fill="rgb(235,245,246)"/>
+<text class="value" x="3863.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.01</text>
+<rect class="cell" x="3901" y="974" width="76" height="76" fill="rgb(222,238,240)"/>
+<text class="value" x="3939.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="3977" y="974" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="4015.0" y="1017.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3597" y="1050" width="76" height="76" fill="rgb(150,195,203)"/>
+<text class="value" x="3635.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.30</text>
+<rect class="cell" x="3673" y="1050" width="76" height="76" fill="rgb(198,224,228)"/>
+<text class="value" x="3711.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell" x="3749" y="1050" width="76" height="76" fill="rgb(241,249,249)"/>
+<text class="value" x="3787.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="3825" y="1050" width="76" height="76" fill="rgb(110,171,183)"/>
+<text class="value" x="3863.0" y="1093.0" text-anchor="middle" style="fill:white">0.48</text>
+<rect class="cell" x="3901" y="1050" width="76" height="76" fill="rgb(226,240,242)"/>
+<text class="value" x="3939.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.03</text>
+<rect class="cell" x="3977" y="1050" width="76" height="76" fill="rgb(212,232,234)"/>
+<text class="value" x="4015.0" y="1093.0" text-anchor="middle" style="fill:#211a27">0.07</text>
+<rect class="cell" x="3597" y="1126" width="76" height="76" fill="rgb(185,216,221)"/>
+<text class="value" x="3635.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.16</text>
+<rect class="cell" x="3673" y="1126" width="76" height="76" fill="rgb(228,241,242)"/>
+<text class="value" x="3711.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.02</text>
+<rect class="cell" x="3749" y="1126" width="76" height="76" fill="rgb(196,222,226)"/>
+<text class="value" x="3787.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.12</text>
+<rect class="cell" x="3825" y="1126" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="3863.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell diagonal" x="3901" y="1126" width="76" height="76" fill="rgb(88,158,172)"/>
+<text class="value" x="3939.0" y="1169.0" text-anchor="middle" style="fill:white">0.59</text>
+<rect class="cell" x="3977" y="1126" width="76" height="76" fill="rgb(206,228,231)"/>
+<text class="value" x="4015.0" y="1169.0" text-anchor="middle" style="fill:#211a27">0.09</text>
+<rect class="cell" x="3597" y="1202" width="76" height="76" fill="rgb(194,221,226)"/>
+<text class="value" x="3635.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.13</text>
+<rect class="cell" x="3673" y="1202" width="76" height="76" fill="rgb(215,234,236)"/>
+<text class="value" x="3711.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.06</text>
+<rect class="cell" x="3749" y="1202" width="76" height="76" fill="rgb(237,247,247)"/>
+<text class="value" x="3787.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.00</text>
+<rect class="cell" x="3825" y="1202" width="76" height="76" fill="rgb(221,237,239)"/>
+<text class="value" x="3863.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.04</text>
+<rect class="cell" x="3901" y="1202" width="76" height="76" fill="rgb(200,225,228)"/>
+<text class="value" x="3939.0" y="1245.0" text-anchor="middle" style="fill:#211a27">0.11</text>
+<rect class="cell diagonal" x="3977" y="1202" width="76" height="76" fill="rgb(75,151,166)"/>
+<text class="value" x="4015.0" y="1245.0" text-anchor="middle" style="fill:white">0.65</text>
+<line x1="3403" y1="790" x2="3403" y2="1278" stroke="#756d7b" stroke-width="2"/>
+<text class="legend" x="1490.0" y="1300" text-anchor="middle">Objective (E2V) row proportion</text>
+<rect x="1180.00" y="1312" width="6.60" height="24" fill="rgb(248,246,251)"/>
+<rect x="1186.20" y="1312" width="6.60" height="24" fill="rgb(244,241,249)"/>
+<rect x="1192.40" y="1312" width="6.60" height="24" fill="rgb(241,237,248)"/>
+<rect x="1198.60" y="1312" width="6.60" height="24" fill="rgb(238,233,246)"/>
+<rect x="1204.80" y="1312" width="6.60" height="24" fill="rgb(235,230,245)"/>
+<rect x="1211.00" y="1312" width="6.60" height="24" fill="rgb(233,227,244)"/>
+<rect x="1217.20" y="1312" width="6.60" height="24" fill="rgb(230,224,243)"/>
+<rect x="1223.40" y="1312" width="6.60" height="24" fill="rgb(228,222,242)"/>
+<rect x="1229.60" y="1312" width="6.60" height="24" fill="rgb(226,219,241)"/>
+<rect x="1235.80" y="1312" width="6.60" height="24" fill="rgb(224,216,240)"/>
+<rect x="1242.00" y="1312" width="6.60" height="24" fill="rgb(222,214,239)"/>
+<rect x="1248.20" y="1312" width="6.60" height="24" fill="rgb(220,211,238)"/>
+<rect x="1254.40" y="1312" width="6.60" height="24" fill="rgb(218,209,238)"/>
+<rect x="1260.60" y="1312" width="6.60" height="24" fill="rgb(216,207,237)"/>
+<rect x="1266.80" y="1312" width="6.60" height="24" fill="rgb(214,204,236)"/>
+<rect x="1273.00" y="1312" width="6.60" height="24" fill="rgb(212,202,235)"/>
+<rect x="1279.20" y="1312" width="6.60" height="24" fill="rgb(210,200,234)"/>
+<rect x="1285.40" y="1312" width="6.60" height="24" fill="rgb(208,197,233)"/>
+<rect x="1291.60" y="1312" width="6.60" height="24" fill="rgb(206,195,232)"/>
+<rect x="1297.80" y="1312" width="6.60" height="24" fill="rgb(205,193,232)"/>
+<rect x="1304.00" y="1312" width="6.60" height="24" fill="rgb(203,191,231)"/>
+<rect x="1310.20" y="1312" width="6.60" height="24" fill="rgb(201,189,230)"/>
+<rect x="1316.40" y="1312" width="6.60" height="24" fill="rgb(199,187,229)"/>
+<rect x="1322.60" y="1312" width="6.60" height="24" fill="rgb(198,185,229)"/>
+<rect x="1328.80" y="1312" width="6.60" height="24" fill="rgb(196,182,228)"/>
+<rect x="1335.00" y="1312" width="6.60" height="24" fill="rgb(194,180,227)"/>
+<rect x="1341.20" y="1312" width="6.60" height="24" fill="rgb(193,178,226)"/>
+<rect x="1347.40" y="1312" width="6.60" height="24" fill="rgb(191,176,226)"/>
+<rect x="1353.60" y="1312" width="6.60" height="24" fill="rgb(189,174,225)"/>
+<rect x="1359.80" y="1312" width="6.60" height="24" fill="rgb(188,172,224)"/>
+<rect x="1366.00" y="1312" width="6.60" height="24" fill="rgb(186,170,223)"/>
+<rect x="1372.20" y="1312" width="6.60" height="24" fill="rgb(185,168,223)"/>
+<rect x="1378.40" y="1312" width="6.60" height="24" fill="rgb(183,166,222)"/>
+<rect x="1384.60" y="1312" width="6.60" height="24" fill="rgb(181,165,221)"/>
+<rect x="1390.80" y="1312" width="6.60" height="24" fill="rgb(180,163,221)"/>
+<rect x="1397.00" y="1312" width="6.60" height="24" fill="rgb(178,161,220)"/>
+<rect x="1403.20" y="1312" width="6.60" height="24" fill="rgb(177,159,219)"/>
+<rect x="1409.40" y="1312" width="6.60" height="24" fill="rgb(175,157,219)"/>
+<rect x="1415.60" y="1312" width="6.60" height="24" fill="rgb(174,155,218)"/>
+<rect x="1421.80" y="1312" width="6.60" height="24" fill="rgb(172,153,217)"/>
+<rect x="1428.00" y="1312" width="6.60" height="24" fill="rgb(171,151,216)"/>
+<rect x="1434.20" y="1312" width="6.60" height="24" fill="rgb(169,149,216)"/>
+<rect x="1440.40" y="1312" width="6.60" height="24" fill="rgb(168,148,215)"/>
+<rect x="1446.60" y="1312" width="6.60" height="24" fill="rgb(166,146,214)"/>
+<rect x="1452.80" y="1312" width="6.60" height="24" fill="rgb(165,144,214)"/>
+<rect x="1459.00" y="1312" width="6.60" height="24" fill="rgb(163,142,213)"/>
+<rect x="1465.20" y="1312" width="6.60" height="24" fill="rgb(162,140,213)"/>
+<rect x="1471.40" y="1312" width="6.60" height="24" fill="rgb(160,139,212)"/>
+<rect x="1477.60" y="1312" width="6.60" height="24" fill="rgb(159,137,211)"/>
+<rect x="1483.80" y="1312" width="6.60" height="24" fill="rgb(157,135,211)"/>
+<rect x="1490.00" y="1312" width="6.60" height="24" fill="rgb(156,133,210)"/>
+<rect x="1496.20" y="1312" width="6.60" height="24" fill="rgb(154,132,209)"/>
+<rect x="1502.40" y="1312" width="6.60" height="24" fill="rgb(153,130,209)"/>
+<rect x="1508.60" y="1312" width="6.60" height="24" fill="rgb(152,128,208)"/>
+<rect x="1514.80" y="1312" width="6.60" height="24" fill="rgb(150,126,207)"/>
+<rect x="1521.00" y="1312" width="6.60" height="24" fill="rgb(149,125,207)"/>
+<rect x="1527.20" y="1312" width="6.60" height="24" fill="rgb(147,123,206)"/>
+<rect x="1533.40" y="1312" width="6.60" height="24" fill="rgb(146,121,205)"/>
+<rect x="1539.60" y="1312" width="6.60" height="24" fill="rgb(145,119,205)"/>
+<rect x="1545.80" y="1312" width="6.60" height="24" fill="rgb(143,118,204)"/>
+<rect x="1552.00" y="1312" width="6.60" height="24" fill="rgb(142,116,204)"/>
+<rect x="1558.20" y="1312" width="6.60" height="24" fill="rgb(140,114,203)"/>
+<rect x="1564.40" y="1312" width="6.60" height="24" fill="rgb(139,113,202)"/>
+<rect x="1570.60" y="1312" width="6.60" height="24" fill="rgb(138,111,202)"/>
+<rect x="1576.80" y="1312" width="6.60" height="24" fill="rgb(136,109,201)"/>
+<rect x="1583.00" y="1312" width="6.60" height="24" fill="rgb(135,108,201)"/>
+<rect x="1589.20" y="1312" width="6.60" height="24" fill="rgb(134,106,200)"/>
+<rect x="1595.40" y="1312" width="6.60" height="24" fill="rgb(132,104,199)"/>
+<rect x="1601.60" y="1312" width="6.60" height="24" fill="rgb(131,103,199)"/>
+<rect x="1607.80" y="1312" width="6.60" height="24" fill="rgb(130,101,198)"/>
+<rect x="1614.00" y="1312" width="6.60" height="24" fill="rgb(128,99,198)"/>
+<rect x="1620.20" y="1312" width="6.60" height="24" fill="rgb(127,98,197)"/>
+<rect x="1626.40" y="1312" width="6.60" height="24" fill="rgb(126,96,196)"/>
+<rect x="1632.60" y="1312" width="6.60" height="24" fill="rgb(124,95,196)"/>
+<rect x="1638.80" y="1312" width="6.60" height="24" fill="rgb(123,93,195)"/>
+<rect x="1645.00" y="1312" width="6.60" height="24" fill="rgb(122,91,195)"/>
+<rect x="1651.20" y="1312" width="6.60" height="24" fill="rgb(120,90,194)"/>
+<rect x="1657.40" y="1312" width="6.60" height="24" fill="rgb(119,88,193)"/>
+<rect x="1663.60" y="1312" width="6.60" height="24" fill="rgb(118,87,193)"/>
+<rect x="1669.80" y="1312" width="6.60" height="24" fill="rgb(116,85,192)"/>
+<rect x="1676.00" y="1312" width="6.60" height="24" fill="rgb(115,83,192)"/>
+<rect x="1682.20" y="1312" width="6.60" height="24" fill="rgb(114,82,191)"/>
+<rect x="1688.40" y="1312" width="6.60" height="24" fill="rgb(112,80,191)"/>
+<rect x="1694.60" y="1312" width="6.60" height="24" fill="rgb(111,79,190)"/>
+<rect x="1700.80" y="1312" width="6.60" height="24" fill="rgb(110,77,189)"/>
+<rect x="1707.00" y="1312" width="6.60" height="24" fill="rgb(109,76,189)"/>
+<rect x="1713.20" y="1312" width="6.60" height="24" fill="rgb(107,74,188)"/>
+<rect x="1719.40" y="1312" width="6.60" height="24" fill="rgb(106,72,188)"/>
+<rect x="1725.60" y="1312" width="6.60" height="24" fill="rgb(105,71,187)"/>
+<rect x="1731.80" y="1312" width="6.60" height="24" fill="rgb(104,69,187)"/>
+<rect x="1738.00" y="1312" width="6.60" height="24" fill="rgb(102,68,186)"/>
+<rect x="1744.20" y="1312" width="6.60" height="24" fill="rgb(101,66,185)"/>
+<rect x="1750.40" y="1312" width="6.60" height="24" fill="rgb(100,65,185)"/>
+<rect x="1756.60" y="1312" width="6.60" height="24" fill="rgb(98,63,184)"/>
+<rect x="1762.80" y="1312" width="6.60" height="24" fill="rgb(97,62,184)"/>
+<rect x="1769.00" y="1312" width="6.60" height="24" fill="rgb(96,60,183)"/>
+<rect x="1775.20" y="1312" width="6.60" height="24" fill="rgb(95,59,183)"/>
+<rect x="1781.40" y="1312" width="6.60" height="24" fill="rgb(93,57,182)"/>
+<rect x="1787.60" y="1312" width="6.60" height="24" fill="rgb(92,56,182)"/>
+<rect x="1793.80" y="1312" width="6.60" height="24" fill="rgb(91,54,181)"/>
+<rect x="1180" y="1312" width="620" height="24" fill="none" stroke="#8d8492"/>
+<text class="legend" x="1180" y="1360" text-anchor="middle">0.0</text>
+<text class="legend" x="1490.0" y="1360" text-anchor="middle">0.5</text>
+<text class="legend" x="1800" y="1360" text-anchor="middle">1.0</text>
+<text class="legend" x="2710.0" y="1300" text-anchor="middle">Subjective row proportion</text>
+<rect x="2400.00" y="1312" width="6.60" height="24" fill="rgb(241,249,249)"/>
+<rect x="2406.20" y="1312" width="6.60" height="24" fill="rgb(235,245,246)"/>
+<rect x="2412.40" y="1312" width="6.60" height="24" fill="rgb(230,242,243)"/>
+<rect x="2418.60" y="1312" width="6.60" height="24" fill="rgb(226,240,241)"/>
+<rect x="2424.80" y="1312" width="6.60" height="24" fill="rgb(222,238,240)"/>
+<rect x="2431.00" y="1312" width="6.60" height="24" fill="rgb(218,236,238)"/>
+<rect x="2437.20" y="1312" width="6.60" height="24" fill="rgb(215,234,236)"/>
+<rect x="2443.40" y="1312" width="6.60" height="24" fill="rgb(212,232,234)"/>
+<rect x="2449.60" y="1312" width="6.60" height="24" fill="rgb(209,230,233)"/>
+<rect x="2455.80" y="1312" width="6.60" height="24" fill="rgb(205,228,231)"/>
+<rect x="2462.00" y="1312" width="6.60" height="24" fill="rgb(202,226,230)"/>
+<rect x="2468.20" y="1312" width="6.60" height="24" fill="rgb(199,224,228)"/>
+<rect x="2474.40" y="1312" width="6.60" height="24" fill="rgb(196,223,227)"/>
+<rect x="2480.60" y="1312" width="6.60" height="24" fill="rgb(194,221,225)"/>
+<rect x="2486.80" y="1312" width="6.60" height="24" fill="rgb(191,219,224)"/>
+<rect x="2493.00" y="1312" width="6.60" height="24" fill="rgb(188,218,222)"/>
+<rect x="2499.20" y="1312" width="6.60" height="24" fill="rgb(185,216,221)"/>
+<rect x="2505.40" y="1312" width="6.60" height="24" fill="rgb(183,214,220)"/>
+<rect x="2511.60" y="1312" width="6.60" height="24" fill="rgb(180,213,218)"/>
+<rect x="2517.80" y="1312" width="6.60" height="24" fill="rgb(177,211,217)"/>
+<rect x="2524.00" y="1312" width="6.60" height="24" fill="rgb(175,210,216)"/>
+<rect x="2530.20" y="1312" width="6.60" height="24" fill="rgb(172,208,214)"/>
+<rect x="2536.40" y="1312" width="6.60" height="24" fill="rgb(170,207,213)"/>
+<rect x="2542.60" y="1312" width="6.60" height="24" fill="rgb(167,205,212)"/>
+<rect x="2548.80" y="1312" width="6.60" height="24" fill="rgb(165,204,211)"/>
+<rect x="2555.00" y="1312" width="6.60" height="24" fill="rgb(162,202,209)"/>
+<rect x="2561.20" y="1312" width="6.60" height="24" fill="rgb(160,201,208)"/>
+<rect x="2567.40" y="1312" width="6.60" height="24" fill="rgb(157,199,207)"/>
+<rect x="2573.60" y="1312" width="6.60" height="24" fill="rgb(155,198,206)"/>
+<rect x="2579.80" y="1312" width="6.60" height="24" fill="rgb(152,196,204)"/>
+<rect x="2586.00" y="1312" width="6.60" height="24" fill="rgb(150,195,203)"/>
+<rect x="2592.20" y="1312" width="6.60" height="24" fill="rgb(148,194,202)"/>
+<rect x="2598.40" y="1312" width="6.60" height="24" fill="rgb(145,192,201)"/>
+<rect x="2604.60" y="1312" width="6.60" height="24" fill="rgb(143,191,200)"/>
+<rect x="2610.80" y="1312" width="6.60" height="24" fill="rgb(141,189,199)"/>
+<rect x="2617.00" y="1312" width="6.60" height="24" fill="rgb(138,188,197)"/>
+<rect x="2623.20" y="1312" width="6.60" height="24" fill="rgb(136,187,196)"/>
+<rect x="2629.40" y="1312" width="6.60" height="24" fill="rgb(134,185,195)"/>
+<rect x="2635.60" y="1312" width="6.60" height="24" fill="rgb(132,184,194)"/>
+<rect x="2641.80" y="1312" width="6.60" height="24" fill="rgb(129,183,193)"/>
+<rect x="2648.00" y="1312" width="6.60" height="24" fill="rgb(127,181,192)"/>
+<rect x="2654.20" y="1312" width="6.60" height="24" fill="rgb(125,180,191)"/>
+<rect x="2660.40" y="1312" width="6.60" height="24" fill="rgb(123,179,190)"/>
+<rect x="2666.60" y="1312" width="6.60" height="24" fill="rgb(120,178,188)"/>
+<rect x="2672.80" y="1312" width="6.60" height="24" fill="rgb(118,176,187)"/>
+<rect x="2679.00" y="1312" width="6.60" height="24" fill="rgb(116,175,186)"/>
+<rect x="2685.20" y="1312" width="6.60" height="24" fill="rgb(114,174,185)"/>
+<rect x="2691.40" y="1312" width="6.60" height="24" fill="rgb(112,172,184)"/>
+<rect x="2697.60" y="1312" width="6.60" height="24" fill="rgb(110,171,183)"/>
+<rect x="2703.80" y="1312" width="6.60" height="24" fill="rgb(108,170,182)"/>
+<rect x="2710.00" y="1312" width="6.60" height="24" fill="rgb(105,169,181)"/>
+<rect x="2716.20" y="1312" width="6.60" height="24" fill="rgb(103,167,180)"/>
+<rect x="2722.40" y="1312" width="6.60" height="24" fill="rgb(101,166,179)"/>
+<rect x="2728.60" y="1312" width="6.60" height="24" fill="rgb(99,165,178)"/>
+<rect x="2734.80" y="1312" width="6.60" height="24" fill="rgb(97,164,177)"/>
+<rect x="2741.00" y="1312" width="6.60" height="24" fill="rgb(95,162,176)"/>
+<rect x="2747.20" y="1312" width="6.60" height="24" fill="rgb(93,161,175)"/>
+<rect x="2753.40" y="1312" width="6.60" height="24" fill="rgb(91,160,174)"/>
+<rect x="2759.60" y="1312" width="6.60" height="24" fill="rgb(89,159,173)"/>
+<rect x="2765.80" y="1312" width="6.60" height="24" fill="rgb(87,158,172)"/>
+<rect x="2772.00" y="1312" width="6.60" height="24" fill="rgb(85,156,171)"/>
+<rect x="2778.20" y="1312" width="6.60" height="24" fill="rgb(83,155,169)"/>
+<rect x="2784.40" y="1312" width="6.60" height="24" fill="rgb(81,154,168)"/>
+<rect x="2790.60" y="1312" width="6.60" height="24" fill="rgb(79,153,167)"/>
+<rect x="2796.80" y="1312" width="6.60" height="24" fill="rgb(77,152,166)"/>
+<rect x="2803.00" y="1312" width="6.60" height="24" fill="rgb(75,150,165)"/>
+<rect x="2809.20" y="1312" width="6.60" height="24" fill="rgb(73,149,164)"/>
+<rect x="2815.40" y="1312" width="6.60" height="24" fill="rgb(71,148,163)"/>
+<rect x="2821.60" y="1312" width="6.60" height="24" fill="rgb(69,147,162)"/>
+<rect x="2827.80" y="1312" width="6.60" height="24" fill="rgb(67,146,161)"/>
+<rect x="2834.00" y="1312" width="6.60" height="24" fill="rgb(65,144,160)"/>
+<rect x="2840.20" y="1312" width="6.60" height="24" fill="rgb(63,143,159)"/>
+<rect x="2846.40" y="1312" width="6.60" height="24" fill="rgb(61,142,159)"/>
+<rect x="2852.60" y="1312" width="6.60" height="24" fill="rgb(59,141,158)"/>
+<rect x="2858.80" y="1312" width="6.60" height="24" fill="rgb(57,140,157)"/>
+<rect x="2865.00" y="1312" width="6.60" height="24" fill="rgb(55,139,156)"/>
+<rect x="2871.20" y="1312" width="6.60" height="24" fill="rgb(53,138,155)"/>
+<rect x="2877.40" y="1312" width="6.60" height="24" fill="rgb(51,136,154)"/>
+<rect x="2883.60" y="1312" width="6.60" height="24" fill="rgb(49,135,153)"/>
+<rect x="2889.80" y="1312" width="6.60" height="24" fill="rgb(47,134,152)"/>
+<rect x="2896.00" y="1312" width="6.60" height="24" fill="rgb(45,133,151)"/>
+<rect x="2902.20" y="1312" width="6.60" height="24" fill="rgb(43,132,150)"/>
+<rect x="2908.40" y="1312" width="6.60" height="24" fill="rgb(42,131,149)"/>
+<rect x="2914.60" y="1312" width="6.60" height="24" fill="rgb(40,130,148)"/>
+<rect x="2920.80" y="1312" width="6.60" height="24" fill="rgb(38,128,147)"/>
+<rect x="2927.00" y="1312" width="6.60" height="24" fill="rgb(36,127,146)"/>
+<rect x="2933.20" y="1312" width="6.60" height="24" fill="rgb(34,126,145)"/>
+<rect x="2939.40" y="1312" width="6.60" height="24" fill="rgb(32,125,144)"/>
+<rect x="2945.60" y="1312" width="6.60" height="24" fill="rgb(30,124,143)"/>
+<rect x="2951.80" y="1312" width="6.60" height="24" fill="rgb(28,123,142)"/>
+<rect x="2958.00" y="1312" width="6.60" height="24" fill="rgb(27,122,141)"/>
+<rect x="2964.20" y="1312" width="6.60" height="24" fill="rgb(25,121,140)"/>
+<rect x="2970.40" y="1312" width="6.60" height="24" fill="rgb(23,120,139)"/>
+<rect x="2976.60" y="1312" width="6.60" height="24" fill="rgb(21,119,139)"/>
+<rect x="2982.80" y="1312" width="6.60" height="24" fill="rgb(19,117,138)"/>
+<rect x="2989.00" y="1312" width="6.60" height="24" fill="rgb(17,116,137)"/>
+<rect x="2995.20" y="1312" width="6.60" height="24" fill="rgb(15,115,136)"/>
+<rect x="3001.40" y="1312" width="6.60" height="24" fill="rgb(14,114,135)"/>
+<rect x="3007.60" y="1312" width="6.60" height="24" fill="rgb(12,113,134)"/>
+<rect x="3013.80" y="1312" width="6.60" height="24" fill="rgb(10,112,133)"/>
+<rect x="2400" y="1312" width="620" height="24" fill="none" stroke="#8d8492"/>
+<text class="legend" x="2400" y="1360" text-anchor="middle">0.0</text>
+<text class="legend" x="2710.0" y="1360" text-anchor="middle">0.5</text>
+<text class="legend" x="3020" y="1360" text-anchor="middle">1.0</text>
+<text class="note" x="32" y="1410">Objective (E2V): Disgusted, Other, and Unknown are merged into Other; Subjective has six listener-selectable labels. Cell values are row proportions.</text>
+</svg>

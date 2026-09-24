@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="CLID: Cross-Lingual Instruction Distillation for Low-Resource Expressive Emotional Text-to-Speech.">
   <title>CLID: Cross-Lingual Instruction Distillation for Low-Resource Expressive Emotional Text-to-Speech</title>
-  <link rel="stylesheet" href="css/custom.css?v=gemini-expanded-20260917">
+  <link rel="stylesheet" href="css/custom.css?v=emotion-results-20260924">
 </head>
 <body>
   <main class="page">
@@ -18,12 +18,13 @@
         </p>
       </header>
 
-      <p class="abstract"><strong>Abstract</strong> Despite rapid progress, instruction-guided text-to-speech (TTS) systems still rely on paired expressive speech-instruction datasets for emotional speech generation. To alleviate this burden, we introduce a cross-lingual instruction distillation (CLID) method, which transfers the instruction-following capability of a pretrained TTS model across instruction language. Using semantically aligned English-Korean instructions with the same spoken text, CLID distills the teacher's speech-token distributions into a student while updating. We further apply CFG to construct guided teacher targets and distill them into a Korean-SFT student, yielding CLID-TTS with improved emotion controllability and speech quality. The experimental results demonstrated that the CLID improves Korean instruction following without Korean Instruction-speech pair data, while CLID-TTS further improves emotion accuracy and speech intelligibility. Audio samples are available at <a href="https://speechai-lab.github.io/demo/clid-tts/">https://speechai-lab.github.io/demo/clid-tts/</a>.</p>
+      <p class="abstract"><strong>Abstract</strong> Despite rapid progress, instruction-guided text-to-speech (TTS) systems still rely on paired expressive speech-instruction datasets for emotional speech generation. To alleviate this burden, we introduce a cross-lingual instruction distillation (CLID) method, which transfers the instruction-following capability of a pretrained TTS model across instruction languages. Using semantically aligned English-Korean instructions with the same spoken text, CLID distills the teacher’s speech-token distributions into a student. We further apply CFG to construct guided teacher targets and distill them into a Korean-SFT student, yielding CLID-TTS with improved emotion controllability and speech quality. Experimental results demonstrate that CLID improves Korean instruction following without paired Korean instruction-speech data, while CLID-TTS further improves emotion classification accuracy and speech intelligibility. Audio samples are available at <a href="https://speechai-lab.github.io/demo/clid-tts/">https://speechai-lab.github.io/demo/clid-tts/</a>.</p>
 
       <nav class="contents" aria-label="Demo contents">
         <p class="contents-title">Contents</p>
         <ul>
           <li><a href="#model-overview">Model Overview</a></li>
+          <li><a href="#emotion-classification-results">Objective and Subjective Emotion Classification</a></li>
           <li><a href="#demo-samples">Model Comparison with Korean Instruction</a></li>
           <li><a href="#korean-benchmark-samples">Korean Instruction-following TTS</a></li>
           <li><a href="#same-text-different-emotions">Same Text, Different Emotions</a></li>
@@ -42,6 +43,24 @@
           alt="Overview of CLID-TTS data construction, cross-lingual instruction distillation, and CFG-guided distillation"
         >
         <figcaption class="overview-caption"><strong>Fig. 1.</strong> Overview framework of CLID-TTS. (a) Construction of bilingual Korean-English instruction pairs from Korean emotional speech. (b) CLID aligns the teacher’s and student’s speech-token distributions under English and Korean instructions. (c) CFG-guided target construction</figcaption>
+      </figure>
+    </section>
+
+    <section class="paper-card demo-section results-figure-section" id="emotion-classification-results" aria-labelledby="emotion-classification-results-title">
+      <h2 id="emotion-classification-results-title">Objective and Subjective Emotion Classification</h2>
+      <p class="section-intro">Row-normalized confusion matrices compare objective emotion2vec (E2V) predictions with subjective listener judgments for all six systems.</p>
+      <figure class="results-figure">
+        <div class="results-image-viewport">
+          <a class="results-image-link" href="pics/emo2vec_mos_confusion_comparison.svg?v=20260924" target="_blank" rel="noopener" aria-label="Open the emotion classification results figure at full size">
+            <img
+              class="results-image"
+              src="pics/emo2vec_mos_confusion_comparison.svg?v=20260924"
+              alt="Objective E2V and subjective emotion confusion matrices for GT, Gemini 3.1 Flash TTS, VoxCPM2, Qwen3-TTS VoiceDesign in English and Korean, and CLID-TTS"
+            >
+          </a>
+        </div>
+        <div class="figure-actions"><a href="pics/emo2vec_mos_confusion_comparison.svg?v=20260924" target="_blank" rel="noopener">Open full-size figure</a></div>
+        <figcaption class="overview-caption"><strong>Fig. 2.</strong> Objective (E2V) and subjective emotion classification results. Disgusted, Other, and Unknown E2V outputs are merged into Other; subjective judgments use the six listener-selectable emotion labels. Each cell shows a row-normalized proportion.</figcaption>
       </figure>
     </section>
 
