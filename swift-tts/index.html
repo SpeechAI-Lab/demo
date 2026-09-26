@@ -1,42 +1,144 @@
 <!doctype html>
+<!-- Swift demo page begin -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <title></title>
+  <meta name="description" content="Swift-TTS: Efficient Text-to-Speech via Self-supervised Flow Matching. Model overview, experimental results, and audio comparisons.">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Swift-TTS: Efficient Text-to-Speech via Self-supervised Flow Matching</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="css/custom.css">
+  <script src="data/samples.js" defer></script>
+  <script src="js/demo.js" defer></script>
 </head>
 <body>
-  <main class="page">
-    <section class="paper-card intro-card" aria-label="Project information">
-      <header class="hero">
-        <!-- Fill in title and links in data/samples.js. -->
-        <h1 class="wordmark" id="page-title"></h1>
-        <p class="project-links" id="project-links" hidden></p>
-      </header>
-      <div class="abstract">
-        <strong>Abstract</strong>
+  <a class="skip-link" href="#demo-samples">Skip to audio samples</a>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Research project · Audio demo</p>
+      <h1 id="page-title">
+        <span class="wordmark" id="page-name">Swift-TTS</span>
+        <span class="subtitle" id="page-subtitle">Efficient Text-to-Speech via Self-supervised Flow Matching</span>
+      </h1>
+      <p class="project-links">
+        <a id="code-link" href="https://github.com/SpeechAI-Lab/CLID-TTS">Code</a>
+        <span class="link-separator" aria-hidden="true">;</span>
+        <span id="paper-link">Paper (coming soon)</span>
+      </p>
+      <nav class="contents" aria-label="Page contents">
+        <a href="#abstract">Abstract</a>
+        <a href="#model-overview">Model overview</a>
+        <a href="#results">Results</a>
+        <a href="#demo-samples">Swift-TTS samples</a>
+        <a href="#distill-samples">Distilled samples</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section abstract-section" id="abstract" aria-labelledby="abstract-title">
+      <div class="reading-width">
+        <h2 id="abstract-title">Abstract</h2>
         <p id="abstract-text"></p>
       </div>
     </section>
 
-    <section class="paper-card demo-section" id="model-overview" aria-labelledby="model-overview-title">
-      <h2 id="model-overview-title">Model Overview</h2>
-      <!-- Add a figure to pics/ and set its path in data/samples.js. -->
-      <figure class="overview-figure empty-slot" id="overview-figure">
-        <img class="overview-image" id="overview-image" alt="" hidden>
-        <figcaption class="overview-caption" id="overview-caption" hidden></figcaption>
-      </figure>
+    <section class="section overview-section" id="model-overview" aria-labelledby="overview-title">
+      <div class="page-width">
+        <div class="section-heading">
+          <p class="eyebrow">The framework</p>
+          <h2 id="overview-title">Model Overview</h2>
+        </div>
+        <figure class="overview-figure">
+          <a id="overview-original" href="pics/OverAll_Architecture.pdf" target="_blank" rel="noopener" aria-label="Open the model architecture PDF in a new tab">
+            <img id="overview-image" src="pics/overall-architecture.png" width="3200" height="845" alt="Swift-TTS architecture with dual-timestep noising, an EMA teacher and a student DiT." loading="lazy">
+          </a>
+          <figcaption>
+            <span id="overview-caption"></span>
+            <a href="pics/OverAll_Architecture.pdf" target="_blank" rel="noopener">View original PDF <span aria-hidden="true">↗</span></a>
+          </figcaption>
+        </figure>
+        <!-- Training overview begin -->
+        <figure class="comparison-overview-figure">
+          <a href="pics/overview.png" target="_blank" rel="noopener" aria-label="Open the full-size model design and training efficiency comparison in a new tab">
+            <img id="training-overview-image" src="pics/overview.png" width="1536" height="1024" alt="Comparison of F5-TTS, LDM with REPA, and Swift-TTS model designs, with word error rate plotted against training time." loading="lazy">
+          </a>
+          <figcaption>
+            <span>Comparison of model designs and training efficiency.</span>
+            <a href="pics/overview.png" target="_blank" rel="noopener">View full-size figure <span aria-hidden="true">↗</span></a>
+          </figcaption>
+        </figure>
+        <!-- Training overview end -->
+      </div>
     </section>
 
-    <section class="paper-card demo-section" id="demo-samples" aria-labelledby="samples-title">
-      <h2 id="samples-title">Audio Samples</h2>
-      <!-- Add files to audio/ and entries to samples in data/samples.js. -->
-      <div class="sample-list empty-slot" id="demo-sample-list"></div>
+    <section class="section results-section" id="results" aria-labelledby="results-title">
+      <div class="page-width">
+        <div class="section-heading">
+          <p class="eyebrow">Experiments</p>
+          <h2 id="results-title">Results</h2>
+          <p>Speech quality, model size, and inference efficiency, followed by the effects of Self-Flow and flow distillation.</p>
+        </div>
+        <figure class="results-figure">
+          <a href="pics/table.png" target="_blank" rel="noopener" aria-label="Open the full-size results tables in a new tab">
+            <img id="results-image" src="pics/table.png" alt="Experimental results on Seed-TTS test-en and LibriSpeech-PC test-clean, and ablations at two model sizes." loading="lazy">
+          </a>
+          <figcaption>
+            <span>Tables 1–2. Main comparison and ablation results.</span>
+            <a href="pics/table.png" target="_blank" rel="noopener">View full-size tables <span aria-hidden="true">↗</span></a>
+          </figcaption>
+        </figure>
+      </div>
     </section>
+
+    <section class="section audio-section" id="demo-samples" aria-labelledby="swift-title">
+      <div class="page-width">
+        <div class="section-heading audio-heading">
+          <div>
+            <p class="eyebrow">Audio comparison · 01</p>
+            <h2 id="swift-title">Swift-TTS</h2>
+          </div>
+          <span class="step-label">16 sampling steps</span>
+        </div>
+        <p class="section-intro">Five selected examples from Seed-TTS test-en. Each row compares the same target text across systems; the reference audio is the speaker prompt.</p>
+        <details class="selection-note">
+          <summary>Sample selection and inference settings</summary>
+          <div>
+            <p>For each of Swift-TTS and Swift-TTS-Distill, we rank the 20 Gradio listening-study utterances by UTMOS and SIM-O separately, then select the five lowest sums of the two ranks. Both metrics have equal weight. Rank-sum ties are resolved by higher UTMOS, then utterance ID. The two selections may overlap.</p>
+            <p>The original 20-utterance pool was selected by Swift-TTS UTMOS. These are selected listening examples. The scores beside each target text belong to the featured Swift model in that section.</p>
+            <p>Swift-TTS: Base 600K, 16 steps, temperature 0.5. Swift-TTS-Distill: Base flow-only 60K, 4 steps, temperature 0.5. ZipVoice and F5-TTS use 16 steps and temperature 1.0. Reconstruction is the target recording encoded and decoded by the Pocket continuous VAE. Audio files are the existing Gradio playback files.</p>
+            <a href="data/selection.tsv" download>Download sample scores (TSV)</a>
+          </div>
+        </details>
+        <p class="table-hint">Compare the players across each row. On smaller screens, scroll the table horizontally.</p>
+        <div id="swift-sample-list"></div>
+      </div>
+    </section>
+
+    <section class="section audio-section distill-section" id="distill-samples" aria-labelledby="distill-title">
+      <div class="page-width">
+        <div class="section-heading audio-heading">
+          <div>
+            <p class="eyebrow">Audio comparison · 02</p>
+            <h2 id="distill-title">Swift-TTS-Distill</h2>
+          </div>
+          <span class="step-label">4 sampling steps</span>
+        </div>
+        <p class="section-intro">Five examples selected independently using the distilled model’s UTMOS and SIM-O scores, with the same comparison systems and reference prompts.</p>
+        <p class="table-hint">Compare the players across each row. On smaller screens, scroll the table horizontally.</p>
+        <div id="swift-distill-sample-list"></div>
+      </div>
+    </section>
+    <noscript><p class="reading-width">Enable JavaScript to display the abstract and audio comparison tables.</p></noscript>
   </main>
-  <script src="data/samples.js"></script>
-  <script src="js/demo.js"></script>
+
+  <footer class="footer">
+    <div class="page-width footer-inner">
+      <span>Swift-TTS · Research audio demonstration</span>
+      <a href="#page-title">Back to top ↑</a>
+    </div>
+  </footer>
 </body>
 </html>
+<!-- Swift demo page end -->

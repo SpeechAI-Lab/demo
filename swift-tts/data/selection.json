@@ -1,0 +1,407 @@
+{
+  "study": "seed_gt_utmos_top20_cmos_zipvoice_20260924",
+  "study_sha256": "629878b813eba580161fc2b7443ead814a74b13c6a7f1fef1d854b9f7ae39435",
+  "candidate_count": 20,
+  "scope": "The 20 utterances used in the existing Gradio listening study.",
+  "candidate_selection": "Top 20 UTMOS, Self-Flow Base 600K, temperature 0.5, 16 ODE steps, seed 0; selected-case pilot, not random benchmark",
+  "method": "Within the 20 candidates, rank each model by descending UTMOS and SIM-O (utterance ID breaks metric ties). Select the five lowest rank sums. Break rank-sum ties by higher UTMOS, then utterance ID. Select each model independently; overlap is retained.",
+  "audio_processing": "Byte-for-byte copies of the Gradio playback WAVs; no further processing.",
+  "sections": [
+    {
+      "model": "Swift-TTS",
+      "settings": {
+        "checkpoint_step": 600000,
+        "nfe": 16,
+        "temperature": 0.5,
+        "seed": 0
+      },
+      "metrics": {
+        "utmos": {
+          "path": "emilia_self_flow_base_hf/eval/metrics/details/step_00600000_current_temp0p5/nfe_16/seed_0/_utmos_results.jsonl",
+          "sha256": "733aada202c11e69545e02f037490bae8466e4ef13401a9e44a73409a7a1ba58",
+          "evaluated_utterances": 1088
+        },
+        "sim": {
+          "path": "emilia_self_flow_base_hf/eval/metrics/details/step_00600000_current_temp0p5/nfe_16/seed_0/_sim_results.jsonl",
+          "sha256": "f02747275030b7c28a04f1dd8894b06b14587903e73828129f1211246311dc00",
+          "evaluated_utterances": 1088
+        }
+      },
+      "samples": [
+        {
+          "id": "common_voice_en_2586258-common_voice_en_2586259",
+          "position": 1,
+          "utmos": 4.416156768798828,
+          "sim_o": 0.7302289009094238,
+          "utmos_rank": 2,
+          "sim_o_rank": 1,
+          "rank_sum": 3,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_2586258-common_voice_en_2586259.wav",
+              "sha256": "153f5d7f9575f163282e6ac43d23a6536f62d2a38487205c2697b765ba236746"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_2586258-common_voice_en_2586259.wav",
+              "sha256": "197b755a8d5404b6423075b3d3b79750271bace6183c6cd3f3e679742bfb0cf0"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_2586258-common_voice_en_2586259.wav",
+              "sha256": "bd63e090611d8e3a2d6f3c25bd03503f06e4417fea74f86ea165409fe9000048"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_2586258-common_voice_en_2586259.wav",
+              "sha256": "57944fc81708dde2f49f1538d30a98a323cfbcf4b74e7082dc377a20a69b7741"
+            },
+            "swift": {
+              "path": "audio/swift/common_voice_en_2586258-common_voice_en_2586259.wav",
+              "sha256": "3a24e087267a210685598ac9a5d915433cf2a1a9f7b412ab2181a888c9f85fb0"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_2586258-common_voice_en_2586259.wav",
+              "sha256": "6b4744ee00c4619a40cd0172277e9f4c7d949f7d6ff9e7c05f19e71b7ed6eee9"
+            }
+          }
+        },
+        {
+          "id": "common_voice_en_21877403-common_voice_en_21877406",
+          "position": 2,
+          "utmos": 4.415255069732666,
+          "sim_o": 0.6695992946624756,
+          "utmos_rank": 3,
+          "sim_o_rank": 6,
+          "rank_sum": 9,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "2b2866ef89f69056d8724df0ee283537dd62b8b3f7e6ed6930347302b2f924de"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "1d2856289deff0285fbf3c5da7aef8a69fc4da3a9376b3732e6955a36e74ce6a"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "3875231497ece8cb167bb536799edb5e977fda1933bf2a905425c0b6c51feed6"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "75b2e21e786ab802bebcc16df259ecbfa0565dc22f08d347950c00014b3bb783"
+            },
+            "swift": {
+              "path": "audio/swift/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "7c12bff09321f0b4752d8ae2c9e7492ff38762fa76e7f52a95153a95c8ae8449"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "0f7699d02ce3c3f91f2008d123da99644c342ca5d64ca076672c81aa65adec8b"
+            }
+          }
+        },
+        {
+          "id": "common_voice_en_18200641-common_voice_en_18200765",
+          "position": 3,
+          "utmos": 4.404754638671875,
+          "sim_o": 0.6715198755264282,
+          "utmos_rank": 4,
+          "sim_o_rank": 5,
+          "rank_sum": 9,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "965272618398ebefd6fb0e0ae60d528613bf25b5096a1d4344733a0cd30634c5"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "a41ee2197f1cf69b07208615348420d43f1cec7f9ecb4c04ba34b3c2b68edf10"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "a6a08ee0012a1eda1423305596af511ea8c2565257c20bed3d8490121465a0ae"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "3a383371280c51c276c075b20b4970e886a92a2b6e926740ff91b2b6a715865c"
+            },
+            "swift": {
+              "path": "audio/swift/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "6e7f10c9e8327c99e82c98bbd079c5f8fabd57a827939abc77ec6fb2fbd5a214"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "e06da689409bbc0405c4a0983465cde774e84605709d294fa4a70db3fcc77623"
+            }
+          }
+        },
+        {
+          "id": "common_voice_en_19967495-common_voice_en_19967497",
+          "position": 4,
+          "utmos": 4.474839210510254,
+          "sim_o": 0.5875024795532227,
+          "utmos_rank": 1,
+          "sim_o_rank": 13,
+          "rank_sum": 14,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_19967495-common_voice_en_19967497.wav",
+              "sha256": "84e59a53012609267c5bad32506533d48360cf7c2272cf120a8d2ef0d1586160"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_19967495-common_voice_en_19967497.wav",
+              "sha256": "1114db14c83869d9bdbc0e5830141b3eb8da537b5db7965b5b8c8007251fae6d"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_19967495-common_voice_en_19967497.wav",
+              "sha256": "81cb40519e55991d5ffc9fa912eb331e44b8c98209e9e4b29718bdcb63a17f7b"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_19967495-common_voice_en_19967497.wav",
+              "sha256": "22eb43a6a25fda9dd0817491395c3ebf32169bd01da20d945ae3d3e1c08045ad"
+            },
+            "swift": {
+              "path": "audio/swift/common_voice_en_19967495-common_voice_en_19967497.wav",
+              "sha256": "8c9bebd649e76abc44f41839a76ed0eff21e86db70a3d36dd300e8ad032a3fab"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_19967495-common_voice_en_19967497.wav",
+              "sha256": "74c8ee9c969ed307acb0e18c09133e40b769a3ff9515096d6c116620b851b87d"
+            }
+          }
+        },
+        {
+          "id": "common_voice_en_28064064-common_voice_en_28064058",
+          "position": 5,
+          "utmos": 4.324674606323242,
+          "sim_o": 0.7271379232406616,
+          "utmos_rank": 12,
+          "sim_o_rank": 2,
+          "rank_sum": 14,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "d958b02d8ce0739a3de89a2085a261b1d4e67c6ee4e64b1647b8c34bc53a91fe"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "a66064c5657243cbbdeec48182c46b1b3fa93d1bdaf5688e42f279f35807896e"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "03c19aad3a307611e5b22599284a2af240db4d1cf0b2f056cd490894eb081fe7"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "7359ce65f865de445b771ca5e2ba00a58b237d1d697fefed512c2e61a0be06f2"
+            },
+            "swift": {
+              "path": "audio/swift/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "dbcb102634b834f959924fd1ea1f878cba5e3dfccf56bcc84f770ecc21c5166a"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "ea6bf8a4b72e07d7dc142bd2a00c0c414d8c51b2dcfb08bfccd679818cd5ce5a"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "model": "Swift-TTS-Distill",
+      "settings": {
+        "checkpoint_step": 60000,
+        "nfe": 4,
+        "temperature": 0.5,
+        "seed": 0
+      },
+      "metrics": {
+        "utmos": {
+          "path": "emilia_distill_base_flow/eval/metrics/details/step_00060000_current_temp0p5/nfe_4/seed_0/_utmos_results.jsonl",
+          "sha256": "14ba7c3a32ef880114411c7d9cfeff28626492e14fa18413d04c9ef7f9d570bb",
+          "evaluated_utterances": 1088
+        },
+        "sim": {
+          "path": "emilia_distill_base_flow/eval/metrics/details/step_00060000_current_temp0p5/nfe_4/seed_0/_sim_results.jsonl",
+          "sha256": "4b933d192ad06f21733e3675f46fa5e02c27a849941289263871050b34d84109",
+          "evaluated_utterances": 1088
+        }
+      },
+      "samples": [
+        {
+          "id": "common_voice_en_18200641-common_voice_en_18200765",
+          "position": 1,
+          "utmos": 4.399116039276123,
+          "sim_o": 0.6788941621780396,
+          "utmos_rank": 1,
+          "sim_o_rank": 5,
+          "rank_sum": 6,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "965272618398ebefd6fb0e0ae60d528613bf25b5096a1d4344733a0cd30634c5"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "a41ee2197f1cf69b07208615348420d43f1cec7f9ecb4c04ba34b3c2b68edf10"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "a6a08ee0012a1eda1423305596af511ea8c2565257c20bed3d8490121465a0ae"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "3a383371280c51c276c075b20b4970e886a92a2b6e926740ff91b2b6a715865c"
+            },
+            "swift-distill": {
+              "path": "audio/swift-distill/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "9fb4a625ceefc9583a818d9cbba2a074551d4bd40ebccffd3120202b83bed5fa"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_18200641-common_voice_en_18200765.wav",
+              "sha256": "e06da689409bbc0405c4a0983465cde774e84605709d294fa4a70db3fcc77623"
+            }
+          }
+        },
+        {
+          "id": "common_voice_en_21877403-common_voice_en_21877406",
+          "position": 2,
+          "utmos": 4.305018424987793,
+          "sim_o": 0.671019434928894,
+          "utmos_rank": 5,
+          "sim_o_rank": 6,
+          "rank_sum": 11,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "2b2866ef89f69056d8724df0ee283537dd62b8b3f7e6ed6930347302b2f924de"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "1d2856289deff0285fbf3c5da7aef8a69fc4da3a9376b3732e6955a36e74ce6a"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "3875231497ece8cb167bb536799edb5e977fda1933bf2a905425c0b6c51feed6"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "75b2e21e786ab802bebcc16df259ecbfa0565dc22f08d347950c00014b3bb783"
+            },
+            "swift-distill": {
+              "path": "audio/swift-distill/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "0bc5a6107f8fdd4485888c5112d1b2d3dd710f2d65a8a6e5512acafc460a332c"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_21877403-common_voice_en_21877406.wav",
+              "sha256": "0f7699d02ce3c3f91f2008d123da99644c342ca5d64ca076672c81aa65adec8b"
+            }
+          }
+        },
+        {
+          "id": "common_voice_en_19397397-common_voice_en_19397407",
+          "position": 3,
+          "utmos": 4.312839508056641,
+          "sim_o": 0.6315823793411255,
+          "utmos_rank": 4,
+          "sim_o_rank": 9,
+          "rank_sum": 13,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_19397397-common_voice_en_19397407.wav",
+              "sha256": "b60c121aa7efe6b0e883464f8fe2da44177139cb4420a8f0701645bcc1b700ab"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_19397397-common_voice_en_19397407.wav",
+              "sha256": "5c461af83982be0125442586ea19ff23da8660cb56c5950466931b0f54f152d9"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_19397397-common_voice_en_19397407.wav",
+              "sha256": "6bfe138ceb1ada536dd7a869823cd0357e6aac052b0246c2939f82862412092c"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_19397397-common_voice_en_19397407.wav",
+              "sha256": "a1dd3b64aba25ccb91f90dee7432a1649b9d9aa706db21bd86808513244363c9"
+            },
+            "swift-distill": {
+              "path": "audio/swift-distill/common_voice_en_19397397-common_voice_en_19397407.wav",
+              "sha256": "8824778187d2eddbd000ac2b5d5fd0f8e7ba0c648669cba63b1158be0f296771"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_19397397-common_voice_en_19397407.wav",
+              "sha256": "9d17780f645562f05aed38392c77aee4530eb16654683d7e1e269ec812e5184d"
+            }
+          }
+        },
+        {
+          "id": "common_voice_en_17851231-common_voice_en_17851256",
+          "position": 4,
+          "utmos": 4.217850685119629,
+          "sim_o": 0.7056100964546204,
+          "utmos_rank": 10,
+          "sim_o_rank": 4,
+          "rank_sum": 14,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_17851231-common_voice_en_17851256.wav",
+              "sha256": "80cfc0e4420166f6e1984bebac4cd4d3e8c48152be3c2e2e81ce6fc77676dab0"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_17851231-common_voice_en_17851256.wav",
+              "sha256": "aca0ef072126b8315e18629f5b0b590132066c967a7705f2a0cbb5a0318e14f6"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_17851231-common_voice_en_17851256.wav",
+              "sha256": "34f3cd5584729185871bd8445c4510054c011d04dffd0ecbda9463ef09ac64b6"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_17851231-common_voice_en_17851256.wav",
+              "sha256": "9e453f63a87c4f2adc81e8f8ff9b4efb04efc2a355a763950943235cfacdcbbf"
+            },
+            "swift-distill": {
+              "path": "audio/swift-distill/common_voice_en_17851231-common_voice_en_17851256.wav",
+              "sha256": "c0a3c47c640fa077723f0c323f2722c1c11d2a5d5db455468842d82ef7fa9a08"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_17851231-common_voice_en_17851256.wav",
+              "sha256": "99ac625881e0ac0fb1e8591227fe7a07db8e6f5095c48c46a85991d61f27474f"
+            }
+          }
+        },
+        {
+          "id": "common_voice_en_28064064-common_voice_en_28064058",
+          "position": 5,
+          "utmos": 4.190171718597412,
+          "sim_o": 0.7167133092880249,
+          "utmos_rank": 12,
+          "sim_o_rank": 3,
+          "rank_sum": 15,
+          "audio": {
+            "gt": {
+              "path": "audio/gt/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "d958b02d8ce0739a3de89a2085a261b1d4e67c6ee4e64b1647b8c34bc53a91fe"
+            },
+            "reconstruction": {
+              "path": "audio/reconstruction/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "a66064c5657243cbbdeec48182c46b1b3fa93d1bdaf5688e42f279f35807896e"
+            },
+            "zipvoice": {
+              "path": "audio/zipvoice/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "03c19aad3a307611e5b22599284a2af240db4d1cf0b2f056cd490894eb081fe7"
+            },
+            "f5-tts": {
+              "path": "audio/f5-tts/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "7359ce65f865de445b771ca5e2ba00a58b237d1d697fefed512c2e61a0be06f2"
+            },
+            "swift-distill": {
+              "path": "audio/swift-distill/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "9950dcb5609dabf6f7198595e65548af9853bb88644126b1714a4779f40dd33e"
+            },
+            "reference": {
+              "path": "audio/reference/common_voice_en_28064064-common_voice_en_28064058.wav",
+              "sha256": "ea6bf8a4b72e07d7dc142bd2a00c0c414d8c51b2dcfb08bfccd679818cd5ce5a"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
