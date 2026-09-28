@@ -63,8 +63,13 @@
     const copy = element("div", "target-copy");
     copy.append(element("span", "context-label", `Sample ${String(index + 1).padStart(2, "0")} · Target text`));
     copy.append(element("p", "target-text", sample.text));
-    const scoreText = `${section.label}: UTMOS ${sample.scores.utmos.toFixed(3)} · SIM-O ${sample.scores.sim_o.toFixed(3)}`;
-    copy.append(element("span", "sample-scores", scoreText));
+    // Shared model scores begin
+    section.systems.filter((system) => system.ours).forEach((system) => {
+      const score = sample.scores[system.key];
+      const scoreText = `${system.label}: UTMOS ${score.utmos.toFixed(3)} · SIM-O ${score.sim_o.toFixed(3)}`;
+      copy.append(element("span", "sample-scores", scoreText));
+    });
+    // Shared model scores end
     const reference = element("div", "reference-block");
     reference.append(element("span", "context-label", "Reference audio · Speaker prompt"));
     reference.append(audioPlayer(sample.reference, `${section.label}, sample ${index + 1}: speaker reference`));
@@ -82,6 +87,9 @@
     audioRow.append(rowHeading);
     section.systems.forEach((system) => {
       const cell = element("td", system.ours ? "ours-cell" : "");
+      // Comparison system identity begin
+      cell.dataset.system = system.key;
+      // Comparison system identity end
       cell.append(audioPlayer(sample.audio[system.key], `${section.label}, sample ${index + 1}: ${system.label}`));
       audioRow.append(cell);
     });
@@ -89,13 +97,15 @@
     return group;
   }
 
-  function renderSection(section) {
+  // Unified comparison begin
+  function renderComparison(section) {
     const wrapper = element("div", "table-wrap");
     wrapper.tabIndex = 0;
     wrapper.setAttribute("role", "region");
     wrapper.setAttribute("aria-label", `${section.label} audio comparison; scroll horizontally for all systems`);
     const table = element("table", "comparison-table");
-    const caption = element("caption", "visually-hidden", `${section.label}: five selected utterances compared with ground truth, reconstruction, ZipVoice, and F5-TTS.`);
+    const systemNames = section.systems.map((system) => system.label).join(", ");
+    const caption = element("caption", "visually-hidden", `${section.samples.length} selected utterances compared across ${systemNames}.`);
     const columns = element("colgroup");
     columns.append(element("col", "sample-column"));
     section.systems.forEach(() => columns.append(element("col")));
@@ -114,10 +124,11 @@
     table.append(caption, columns, head);
     section.samples.forEach((sample, index) => table.append(sampleRows(section, sample, index)));
     wrapper.append(table);
-    document.getElementById(`${section.id}-sample-list`).replaceChildren(wrapper);
+    document.getElementById("comparison-sample-list").replaceChildren(wrapper);
   }
 
-  demo.sections.forEach(renderSection);
+  renderComparison(demo.comparison);
+  // Unified comparison end
   document.addEventListener("play", (event) => {
     if (!(event.target instanceof HTMLAudioElement)) return;
     document.querySelectorAll("audio").forEach((audio) => {

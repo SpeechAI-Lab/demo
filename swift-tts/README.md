@@ -24,7 +24,9 @@ swift-tts/
     ├── gt/
     ├── reconstruction/
     ├── zipvoice/
+    ├── zipvoice-distill/
     ├── f5-tts/
+    ├── pocket-tts/
     ├── swift/
     └── swift-distill/
 ```
@@ -59,7 +61,11 @@ The supplied result-table PNG is copied without modification.
 The supplied `overview.png` follows the architecture in the Model Overview
 section and includes a full-size link for the model-design and training-efficiency comparison.
 
-The two audio sections contain five samples each, selected independently from
+<!-- Unified comparison guide begin -->
+One comparison table displays all eight systems for each of seven unique
+utterances. The samples combine the five selected Swift-TTS utterances and the
+five selected Swift-TTS-Distill utterances, deduplicating the three shared IDs.
+The original selections are retained and were made independently from
 the 20 utterances in the existing Gradio listening study. That candidate pool
 was originally selected by Swift-TTS UTMOS. Each model's UTMOS and SIM-O values
 are ranked in descending order within those 20 candidates; equal metric scores
@@ -71,17 +77,25 @@ Gradio utterances with existing comparison audio.
 - Swift-TTS: Self-Flow Base 600K, 16 sampling steps, temperature 0.5, seed 0.
 - Swift-TTS-Distill: Base flow-only 60K, 4 sampling steps, temperature 0.5, seed 0.
 - Comparisons: GT, Pocket continuous VAE reconstruction, ZipVoice (16 steps),
-  and F5-TTS v1 Base (16 steps).
+  ZipVoice-Distill (4 steps), F5-TTS v1 Base (16 steps), and Pocket-TTS
+  (autoregressive, one sampling step per frame).
 
-The selections share three utterances: ten displayed samples correspond to
-seven unique target utterances. The 45 WAV files include speaker prompts and
+All eight systems appear on one audio row for each target, with Swift-TTS and
+Swift-TTS-Distill highlighted in adjacent columns. Wide screens show the full
+table; smaller screens support horizontal scrolling. Each target text includes
+both Swift models' UTMOS and SIM-O scores and one speaker reference.
+
+The 63 WAV files contain eight system outputs and one reference for each of the
+seven target utterances. They
 are byte-for-byte copies of the Gradio playback files. Their original 24 kHz,
 mono PCM16 format is retained. No inference or audio post-processing is run.
 The page pauses the previous player when another audio starts.
 
-`data/selection.tsv` records the ten selected rows and their scores and ranks.
-`data/selection.json` records metric-source paths relative to the experiment
-root, source hashes, selection settings, and the SHA-256 of every included WAV.
+`data/selection.tsv` preserves the ten original selection records and their
+scores and ranks. `data/selection.json` records the two model selections and the
+seven unified samples, metric-source paths relative to the experiment root,
+source hashes, selection settings, and the SHA-256 of every included WAV.
+<!-- Unified comparison guide end -->
 
 The local inputs and `_local/` directory are ignored by `.gitignore`. On the
 original workstation, `_local/prepare_demo.py` rebuilds the assets from the

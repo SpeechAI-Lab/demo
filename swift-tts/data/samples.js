@@ -15,208 +15,112 @@ window.SWIFT_TTS_DEMO = {
     "src": "pics/table.png",
     "alt": "Two experimental results tables: model quality, size, and inference efficiency on Seed-TTS test-en and LibriSpeech-PC test-clean; and the effects of Self-Flow and flow distillation at two model sizes."
   },
-  "sections": [
-    {
-      "id": "swift",
-      "label": "Swift-TTS",
-      "steps": 16,
-      "systems": [
-        {
-          "key": "gt",
-          "label": "GT",
-          "note": "Original recording"
+  "comparison": {
+    "label": "All systems",
+    "systems": [
+      {
+        "key": "gt",
+        "label": "GT",
+        "note": "Original recording"
+      },
+      {
+        "key": "reconstruction",
+        "label": "Reconstruction",
+        "note": "Pocket continuous VAE"
+      },
+      {
+        "key": "zipvoice",
+        "label": "ZipVoice",
+        "note": "16 steps"
+      },
+      {
+        "key": "zipvoice-distill",
+        "label": "ZipVoice-Distill",
+        "note": "4 steps"
+      },
+      {
+        "key": "f5-tts",
+        "label": "F5-TTS",
+        "note": "v1 Base · 16 steps"
+      },
+      {
+        "key": "pocket-tts",
+        "label": "Pocket-TTS",
+        "note": "AR · 1 step per frame"
+      },
+      {
+        "key": "swift",
+        "label": "Swift-TTS",
+        "note": "16 steps",
+        "ours": true
+      },
+      {
+        "key": "swift-distill",
+        "label": "Swift-TTS-Distill",
+        "note": "4 steps",
+        "ours": true
+      }
+    ],
+    "samples": [
+      {
+        "id": "common_voice_en_2586258-common_voice_en_2586259",
+        "text": "You can create bookmarks in you web browser to make browsing more convenient.",
+        "promptText": "Romeo and Juliet might be the most famous act of William Shakespeare.",
+        "reference": "audio/reference/common_voice_en_2586258-common_voice_en_2586259.wav",
+        "audio": {
+          "gt": "audio/gt/common_voice_en_2586258-common_voice_en_2586259.wav",
+          "reconstruction": "audio/reconstruction/common_voice_en_2586258-common_voice_en_2586259.wav",
+          "zipvoice": "audio/zipvoice/common_voice_en_2586258-common_voice_en_2586259.wav",
+          "zipvoice-distill": "audio/zipvoice-distill/common_voice_en_2586258-common_voice_en_2586259.wav",
+          "pocket-tts": "audio/pocket-tts/common_voice_en_2586258-common_voice_en_2586259.wav",
+          "f5-tts": "audio/f5-tts/common_voice_en_2586258-common_voice_en_2586259.wav",
+          "swift": "audio/swift/common_voice_en_2586258-common_voice_en_2586259.wav",
+          "swift-distill": "audio/swift-distill/common_voice_en_2586258-common_voice_en_2586259.wav"
         },
-        {
-          "key": "reconstruction",
-          "label": "Reconstruction",
-          "note": "Pocket continuous VAE"
-        },
-        {
-          "key": "zipvoice",
-          "label": "ZipVoice",
-          "note": "16 steps"
-        },
-        {
-          "key": "f5-tts",
-          "label": "F5-TTS",
-          "note": "v1 Base · 16 steps"
-        },
-        {
-          "key": "swift",
-          "label": "Swift-TTS",
-          "note": "16 steps",
-          "ours": true
-        }
-      ],
-      "samples": [
-        {
-          "id": "common_voice_en_2586258-common_voice_en_2586259",
-          "text": "You can create bookmarks in you web browser to make browsing more convenient.",
-          "promptText": "Romeo and Juliet might be the most famous act of William Shakespeare.",
-          "reference": "audio/reference/common_voice_en_2586258-common_voice_en_2586259.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_2586258-common_voice_en_2586259.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_2586258-common_voice_en_2586259.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_2586258-common_voice_en_2586259.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_2586258-common_voice_en_2586259.wav",
-            "swift": "audio/swift/common_voice_en_2586258-common_voice_en_2586259.wav"
-          },
-          "scores": {
+        "scores": {
+          "swift": {
             "utmos": 4.416156768798828,
             "sim_o": 0.7302289009094238,
             "utmos_rank": 2,
             "sim_o_rank": 1,
             "rank_sum": 3
+          },
+          "swift-distill": {
+            "utmos": 3.738262414932251,
+            "sim_o": 0.7252430319786072,
+            "utmos_rank": 19,
+            "sim_o_rank": 1,
+            "rank_sum": 20
           }
         },
-        {
-          "id": "common_voice_en_21877403-common_voice_en_21877406",
-          "text": "She leaves abruptly during the meeting, and is never seen again.",
-          "promptText": "The radio show \"About a Dog\" was based on her last comedy proposal.",
-          "reference": "audio/reference/common_voice_en_21877403-common_voice_en_21877406.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_21877403-common_voice_en_21877406.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_21877403-common_voice_en_21877406.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_21877403-common_voice_en_21877406.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_21877403-common_voice_en_21877406.wav",
-            "swift": "audio/swift/common_voice_en_21877403-common_voice_en_21877406.wav"
-          },
-          "scores": {
+        "selectedBy": [
+          "swift"
+        ]
+      },
+      {
+        "id": "common_voice_en_21877403-common_voice_en_21877406",
+        "text": "She leaves abruptly during the meeting, and is never seen again.",
+        "promptText": "The radio show \"About a Dog\" was based on her last comedy proposal.",
+        "reference": "audio/reference/common_voice_en_21877403-common_voice_en_21877406.wav",
+        "audio": {
+          "gt": "audio/gt/common_voice_en_21877403-common_voice_en_21877406.wav",
+          "reconstruction": "audio/reconstruction/common_voice_en_21877403-common_voice_en_21877406.wav",
+          "zipvoice": "audio/zipvoice/common_voice_en_21877403-common_voice_en_21877406.wav",
+          "zipvoice-distill": "audio/zipvoice-distill/common_voice_en_21877403-common_voice_en_21877406.wav",
+          "pocket-tts": "audio/pocket-tts/common_voice_en_21877403-common_voice_en_21877406.wav",
+          "f5-tts": "audio/f5-tts/common_voice_en_21877403-common_voice_en_21877406.wav",
+          "swift": "audio/swift/common_voice_en_21877403-common_voice_en_21877406.wav",
+          "swift-distill": "audio/swift-distill/common_voice_en_21877403-common_voice_en_21877406.wav"
+        },
+        "scores": {
+          "swift": {
             "utmos": 4.415255069732666,
             "sim_o": 0.6695992946624756,
             "utmos_rank": 3,
             "sim_o_rank": 6,
             "rank_sum": 9
-          }
-        },
-        {
-          "id": "common_voice_en_18200641-common_voice_en_18200765",
-          "text": "Mrs. Travis, when I leave my kids in kindergarten, I expect you to supervise them.",
-          "promptText": "We can describe the object's movement with a differential equation of second order.",
-          "reference": "audio/reference/common_voice_en_18200641-common_voice_en_18200765.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_18200641-common_voice_en_18200765.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_18200641-common_voice_en_18200765.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_18200641-common_voice_en_18200765.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_18200641-common_voice_en_18200765.wav",
-            "swift": "audio/swift/common_voice_en_18200641-common_voice_en_18200765.wav"
           },
-          "scores": {
-            "utmos": 4.404754638671875,
-            "sim_o": 0.6715198755264282,
-            "utmos_rank": 4,
-            "sim_o_rank": 5,
-            "rank_sum": 9
-          }
-        },
-        {
-          "id": "common_voice_en_19967495-common_voice_en_19967497",
-          "text": "The remaining singles failed to hit the dance chart.",
-          "promptText": "These two engines were nearly identical, except for the induction systems.",
-          "reference": "audio/reference/common_voice_en_19967495-common_voice_en_19967497.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_19967495-common_voice_en_19967497.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_19967495-common_voice_en_19967497.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_19967495-common_voice_en_19967497.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_19967495-common_voice_en_19967497.wav",
-            "swift": "audio/swift/common_voice_en_19967495-common_voice_en_19967497.wav"
-          },
-          "scores": {
-            "utmos": 4.474839210510254,
-            "sim_o": 0.5875024795532227,
-            "utmos_rank": 1,
-            "sim_o_rank": 13,
-            "rank_sum": 14
-          }
-        },
-        {
-          "id": "common_voice_en_28064064-common_voice_en_28064058",
-          "text": "And the phrase has retained its political power for six decades.",
-          "promptText": "The blueprints for the new airport and container port had already been drawn.",
-          "reference": "audio/reference/common_voice_en_28064064-common_voice_en_28064058.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_28064064-common_voice_en_28064058.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_28064064-common_voice_en_28064058.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_28064064-common_voice_en_28064058.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_28064064-common_voice_en_28064058.wav",
-            "swift": "audio/swift/common_voice_en_28064064-common_voice_en_28064058.wav"
-          },
-          "scores": {
-            "utmos": 4.324674606323242,
-            "sim_o": 0.7271379232406616,
-            "utmos_rank": 12,
-            "sim_o_rank": 2,
-            "rank_sum": 14
-          }
-        }
-      ]
-    },
-    {
-      "id": "swift-distill",
-      "label": "Swift-TTS-Distill",
-      "steps": 4,
-      "systems": [
-        {
-          "key": "gt",
-          "label": "GT",
-          "note": "Original recording"
-        },
-        {
-          "key": "reconstruction",
-          "label": "Reconstruction",
-          "note": "Pocket continuous VAE"
-        },
-        {
-          "key": "zipvoice",
-          "label": "ZipVoice",
-          "note": "16 steps"
-        },
-        {
-          "key": "f5-tts",
-          "label": "F5-TTS",
-          "note": "v1 Base · 16 steps"
-        },
-        {
-          "key": "swift-distill",
-          "label": "Swift-TTS-Distill",
-          "note": "4 steps",
-          "ours": true
-        }
-      ],
-      "samples": [
-        {
-          "id": "common_voice_en_18200641-common_voice_en_18200765",
-          "text": "Mrs. Travis, when I leave my kids in kindergarten, I expect you to supervise them.",
-          "promptText": "We can describe the object's movement with a differential equation of second order.",
-          "reference": "audio/reference/common_voice_en_18200641-common_voice_en_18200765.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_18200641-common_voice_en_18200765.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_18200641-common_voice_en_18200765.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_18200641-common_voice_en_18200765.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_18200641-common_voice_en_18200765.wav",
-            "swift-distill": "audio/swift-distill/common_voice_en_18200641-common_voice_en_18200765.wav"
-          },
-          "scores": {
-            "utmos": 4.399116039276123,
-            "sim_o": 0.6788941621780396,
-            "utmos_rank": 1,
-            "sim_o_rank": 5,
-            "rank_sum": 6
-          }
-        },
-        {
-          "id": "common_voice_en_21877403-common_voice_en_21877406",
-          "text": "She leaves abruptly during the meeting, and is never seen again.",
-          "promptText": "The radio show \"About a Dog\" was based on her last comedy proposal.",
-          "reference": "audio/reference/common_voice_en_21877403-common_voice_en_21877406.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_21877403-common_voice_en_21877406.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_21877403-common_voice_en_21877406.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_21877403-common_voice_en_21877406.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_21877403-common_voice_en_21877406.wav",
-            "swift-distill": "audio/swift-distill/common_voice_en_21877403-common_voice_en_21877406.wav"
-          },
-          "scores": {
+          "swift-distill": {
             "utmos": 4.305018424987793,
             "sim_o": 0.671019434928894,
             "utmos_rank": 5,
@@ -224,19 +128,142 @@ window.SWIFT_TTS_DEMO = {
             "rank_sum": 11
           }
         },
-        {
-          "id": "common_voice_en_19397397-common_voice_en_19397407",
-          "text": "After the war, May returned to work in the textiles industry.",
-          "promptText": "The Knights conquered the Prussians and converted them to Christianity.",
-          "reference": "audio/reference/common_voice_en_19397397-common_voice_en_19397407.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_19397397-common_voice_en_19397407.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_19397397-common_voice_en_19397407.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_19397397-common_voice_en_19397407.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_19397397-common_voice_en_19397407.wav",
-            "swift-distill": "audio/swift-distill/common_voice_en_19397397-common_voice_en_19397407.wav"
+        "selectedBy": [
+          "swift",
+          "swift-distill"
+        ]
+      },
+      {
+        "id": "common_voice_en_18200641-common_voice_en_18200765",
+        "text": "Mrs. Travis, when I leave my kids in kindergarten, I expect you to supervise them.",
+        "promptText": "We can describe the object's movement with a differential equation of second order.",
+        "reference": "audio/reference/common_voice_en_18200641-common_voice_en_18200765.wav",
+        "audio": {
+          "gt": "audio/gt/common_voice_en_18200641-common_voice_en_18200765.wav",
+          "reconstruction": "audio/reconstruction/common_voice_en_18200641-common_voice_en_18200765.wav",
+          "zipvoice": "audio/zipvoice/common_voice_en_18200641-common_voice_en_18200765.wav",
+          "zipvoice-distill": "audio/zipvoice-distill/common_voice_en_18200641-common_voice_en_18200765.wav",
+          "pocket-tts": "audio/pocket-tts/common_voice_en_18200641-common_voice_en_18200765.wav",
+          "f5-tts": "audio/f5-tts/common_voice_en_18200641-common_voice_en_18200765.wav",
+          "swift": "audio/swift/common_voice_en_18200641-common_voice_en_18200765.wav",
+          "swift-distill": "audio/swift-distill/common_voice_en_18200641-common_voice_en_18200765.wav"
+        },
+        "scores": {
+          "swift": {
+            "utmos": 4.404754638671875,
+            "sim_o": 0.6715198755264282,
+            "utmos_rank": 4,
+            "sim_o_rank": 5,
+            "rank_sum": 9
           },
-          "scores": {
+          "swift-distill": {
+            "utmos": 4.399116039276123,
+            "sim_o": 0.6788941621780396,
+            "utmos_rank": 1,
+            "sim_o_rank": 5,
+            "rank_sum": 6
+          }
+        },
+        "selectedBy": [
+          "swift",
+          "swift-distill"
+        ]
+      },
+      {
+        "id": "common_voice_en_19967495-common_voice_en_19967497",
+        "text": "The remaining singles failed to hit the dance chart.",
+        "promptText": "These two engines were nearly identical, except for the induction systems.",
+        "reference": "audio/reference/common_voice_en_19967495-common_voice_en_19967497.wav",
+        "audio": {
+          "gt": "audio/gt/common_voice_en_19967495-common_voice_en_19967497.wav",
+          "reconstruction": "audio/reconstruction/common_voice_en_19967495-common_voice_en_19967497.wav",
+          "zipvoice": "audio/zipvoice/common_voice_en_19967495-common_voice_en_19967497.wav",
+          "zipvoice-distill": "audio/zipvoice-distill/common_voice_en_19967495-common_voice_en_19967497.wav",
+          "pocket-tts": "audio/pocket-tts/common_voice_en_19967495-common_voice_en_19967497.wav",
+          "f5-tts": "audio/f5-tts/common_voice_en_19967495-common_voice_en_19967497.wav",
+          "swift": "audio/swift/common_voice_en_19967495-common_voice_en_19967497.wav",
+          "swift-distill": "audio/swift-distill/common_voice_en_19967495-common_voice_en_19967497.wav"
+        },
+        "scores": {
+          "swift": {
+            "utmos": 4.474839210510254,
+            "sim_o": 0.5875024795532227,
+            "utmos_rank": 1,
+            "sim_o_rank": 13,
+            "rank_sum": 14
+          },
+          "swift-distill": {
+            "utmos": 4.26954460144043,
+            "sim_o": 0.62227863073349,
+            "utmos_rank": 7,
+            "sim_o_rank": 10,
+            "rank_sum": 17
+          }
+        },
+        "selectedBy": [
+          "swift"
+        ]
+      },
+      {
+        "id": "common_voice_en_28064064-common_voice_en_28064058",
+        "text": "And the phrase has retained its political power for six decades.",
+        "promptText": "The blueprints for the new airport and container port had already been drawn.",
+        "reference": "audio/reference/common_voice_en_28064064-common_voice_en_28064058.wav",
+        "audio": {
+          "gt": "audio/gt/common_voice_en_28064064-common_voice_en_28064058.wav",
+          "reconstruction": "audio/reconstruction/common_voice_en_28064064-common_voice_en_28064058.wav",
+          "zipvoice": "audio/zipvoice/common_voice_en_28064064-common_voice_en_28064058.wav",
+          "zipvoice-distill": "audio/zipvoice-distill/common_voice_en_28064064-common_voice_en_28064058.wav",
+          "pocket-tts": "audio/pocket-tts/common_voice_en_28064064-common_voice_en_28064058.wav",
+          "f5-tts": "audio/f5-tts/common_voice_en_28064064-common_voice_en_28064058.wav",
+          "swift": "audio/swift/common_voice_en_28064064-common_voice_en_28064058.wav",
+          "swift-distill": "audio/swift-distill/common_voice_en_28064064-common_voice_en_28064058.wav"
+        },
+        "scores": {
+          "swift": {
+            "utmos": 4.324674606323242,
+            "sim_o": 0.7271379232406616,
+            "utmos_rank": 12,
+            "sim_o_rank": 2,
+            "rank_sum": 14
+          },
+          "swift-distill": {
+            "utmos": 4.190171718597412,
+            "sim_o": 0.7167133092880249,
+            "utmos_rank": 12,
+            "sim_o_rank": 3,
+            "rank_sum": 15
+          }
+        },
+        "selectedBy": [
+          "swift",
+          "swift-distill"
+        ]
+      },
+      {
+        "id": "common_voice_en_19397397-common_voice_en_19397407",
+        "text": "After the war, May returned to work in the textiles industry.",
+        "promptText": "The Knights conquered the Prussians and converted them to Christianity.",
+        "reference": "audio/reference/common_voice_en_19397397-common_voice_en_19397407.wav",
+        "audio": {
+          "gt": "audio/gt/common_voice_en_19397397-common_voice_en_19397407.wav",
+          "reconstruction": "audio/reconstruction/common_voice_en_19397397-common_voice_en_19397407.wav",
+          "zipvoice": "audio/zipvoice/common_voice_en_19397397-common_voice_en_19397407.wav",
+          "zipvoice-distill": "audio/zipvoice-distill/common_voice_en_19397397-common_voice_en_19397407.wav",
+          "pocket-tts": "audio/pocket-tts/common_voice_en_19397397-common_voice_en_19397407.wav",
+          "f5-tts": "audio/f5-tts/common_voice_en_19397397-common_voice_en_19397407.wav",
+          "swift": "audio/swift/common_voice_en_19397397-common_voice_en_19397407.wav",
+          "swift-distill": "audio/swift-distill/common_voice_en_19397397-common_voice_en_19397407.wav"
+        },
+        "scores": {
+          "swift": {
+            "utmos": 4.3031325340271,
+            "sim_o": 0.6138695478439331,
+            "utmos_rank": 19,
+            "sim_o_rank": 10,
+            "rank_sum": 29
+          },
+          "swift-distill": {
             "utmos": 4.312839508056641,
             "sim_o": 0.6315823793411255,
             "utmos_rank": 4,
@@ -244,19 +271,34 @@ window.SWIFT_TTS_DEMO = {
             "rank_sum": 13
           }
         },
-        {
-          "id": "common_voice_en_17851231-common_voice_en_17851256",
-          "text": "A rich farm is rare in this sandy waste.",
-          "promptText": "The stems of the tall glasses cracked and broke.",
-          "reference": "audio/reference/common_voice_en_17851231-common_voice_en_17851256.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_17851231-common_voice_en_17851256.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_17851231-common_voice_en_17851256.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_17851231-common_voice_en_17851256.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_17851231-common_voice_en_17851256.wav",
-            "swift-distill": "audio/swift-distill/common_voice_en_17851231-common_voice_en_17851256.wav"
+        "selectedBy": [
+          "swift-distill"
+        ]
+      },
+      {
+        "id": "common_voice_en_17851231-common_voice_en_17851256",
+        "text": "A rich farm is rare in this sandy waste.",
+        "promptText": "The stems of the tall glasses cracked and broke.",
+        "reference": "audio/reference/common_voice_en_17851231-common_voice_en_17851256.wav",
+        "audio": {
+          "gt": "audio/gt/common_voice_en_17851231-common_voice_en_17851256.wav",
+          "reconstruction": "audio/reconstruction/common_voice_en_17851231-common_voice_en_17851256.wav",
+          "zipvoice": "audio/zipvoice/common_voice_en_17851231-common_voice_en_17851256.wav",
+          "zipvoice-distill": "audio/zipvoice-distill/common_voice_en_17851231-common_voice_en_17851256.wav",
+          "pocket-tts": "audio/pocket-tts/common_voice_en_17851231-common_voice_en_17851256.wav",
+          "f5-tts": "audio/f5-tts/common_voice_en_17851231-common_voice_en_17851256.wav",
+          "swift": "audio/swift/common_voice_en_17851231-common_voice_en_17851256.wav",
+          "swift-distill": "audio/swift-distill/common_voice_en_17851231-common_voice_en_17851256.wav"
+        },
+        "scores": {
+          "swift": {
+            "utmos": 4.33236026763916,
+            "sim_o": 0.5990048050880432,
+            "utmos_rank": 11,
+            "sim_o_rank": 11,
+            "rank_sum": 22
           },
-          "scores": {
+          "swift-distill": {
             "utmos": 4.217850685119629,
             "sim_o": 0.7056100964546204,
             "utmos_rank": 10,
@@ -264,28 +306,11 @@ window.SWIFT_TTS_DEMO = {
             "rank_sum": 14
           }
         },
-        {
-          "id": "common_voice_en_28064064-common_voice_en_28064058",
-          "text": "And the phrase has retained its political power for six decades.",
-          "promptText": "The blueprints for the new airport and container port had already been drawn.",
-          "reference": "audio/reference/common_voice_en_28064064-common_voice_en_28064058.wav",
-          "audio": {
-            "gt": "audio/gt/common_voice_en_28064064-common_voice_en_28064058.wav",
-            "reconstruction": "audio/reconstruction/common_voice_en_28064064-common_voice_en_28064058.wav",
-            "zipvoice": "audio/zipvoice/common_voice_en_28064064-common_voice_en_28064058.wav",
-            "f5-tts": "audio/f5-tts/common_voice_en_28064064-common_voice_en_28064058.wav",
-            "swift-distill": "audio/swift-distill/common_voice_en_28064064-common_voice_en_28064058.wav"
-          },
-          "scores": {
-            "utmos": 4.190171718597412,
-            "sim_o": 0.7167133092880249,
-            "utmos_rank": 12,
-            "sim_o_rank": 3,
-            "rank_sum": 15
-          }
-        }
-      ]
-    }
-  ]
+        "selectedBy": [
+          "swift-distill"
+        ]
+      }
+    ]
+  }
 };
 // Swift demo data end
