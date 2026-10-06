@@ -18,6 +18,7 @@ swift-tts/
 │   ├── overall-architecture.png
 │   ├── OverAll_Architecture.pdf
 │   ├── overview.png
+│   ├── overview.pdf
 │   └── table.png
 └── audio/
     ├── reference/
@@ -58,8 +59,12 @@ The title and abstract come from the local `abstract.txt`. Only the LaTeX
 `\url{...}` wrapper is converted to a regular web link. The supplied architecture
 PDF is rendered as a 3200-pixel-wide PNG and also linked in its original format.
 The supplied result-table PNG is copied without modification.
-The supplied `overview.png` follows the architecture in the Model Overview
-section and includes a full-size link for the model-design and training-efficiency comparison.
+<!-- PDF overview source begin -->
+The supplied `overview.pdf` follows the architecture in the Model Overview section.
+Its first page is rendered as a 3200-pixel-wide `pics/overview.png` preview; clicking
+the figure or its caption link opens the original `pics/overview.pdf`.
+The old local `overview_origin.png` is no longer used as the figure source.
+<!-- PDF overview source end -->
 
 <!-- Unified comparison guide begin -->
 One comparison table displays all eight systems for each of seven unique
@@ -108,4 +113,12 @@ listening study at:
 ```bash
 python3 _local/prepare_demo.py
 ```
+<!-- Standalone PDF refresh begin -->
+To update only this figure after replacing the local `overview.pdf`, without
+accessing the original listening-study files:
+
+```bash
+python3 _local/prepare_demo.py --overview-only
+```
+<!-- Standalone PDF refresh end -->
 <!-- Swift demo guide end -->
