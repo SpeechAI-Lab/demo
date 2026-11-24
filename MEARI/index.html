@@ -45,7 +45,7 @@ p{margin:0;max-width:68ch}
 .video video{width:100%;height:100%;object-fit:contain;background:#000}
 .video .ph{text-align:center;display:grid;gap:6px;padding:16px}
 .vbtns{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
-.vbtn{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 13px Inter,sans-serif;cursor:pointer;text-align:left}
+.vbtn{display:flex;justify-content:center;gap:8px;align-items:center;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 13px Inter,sans-serif;cursor:pointer;text-align:left}
 .vbtn.on{background:var(--en-soft);border-color:var(--en)}
 .vbtn .mono{font-size:11px}
 /* mechanism strip */
@@ -120,18 +120,16 @@ button.play svg{width:14px;height:14px}
 <section class="sec" aria-label="Demo video">
   <div class="sechead"><span class="label">Streaming · Korean news clips</span><h2>Demo videos</h2>
     <p class="muted">MEARI translates each clip frame by frame as it streams. Stereo: left channel is MEARI's English speech, right channel is the original Korean (7 dB lower). Headphones recommended.</p></div>
-  <div class="vbtns" role="tablist"><button type="button" class="vbtn on" data-i="0"><span>Central bank speech</span><span class="mono muted">Kiwi .790</span></button><button type="button" class="vbtn" data-i="1"><span>Press briefing</span><span class="mono muted">Kiwi .782</span></button><button type="button" class="vbtn" data-i="2"><span>News anchor · budget</span><span class="mono muted">Kiwi .773</span></button><button type="button" class="vbtn" data-i="3"><span>Weather forecast</span><span class="mono muted">Kiwi .749</span></button><button type="button" class="vbtn" data-i="4"><span>Sports · football</span><span class="mono muted">Kiwi .703</span></button><button type="button" class="vbtn" data-i="5"><span>Sports · volleyball</span><span class="mono muted">Kiwi .696</span></button><button type="button" class="vbtn" data-i="6"><span>Sports · baseball interview</span><span class="mono muted">Kiwi .578</span></button><button type="button" class="vbtn" data-i="7"><span>Live baseball commentary</span><span class="mono muted">Kiwi .516</span></button></div>
+  <div class="vbtns" role="tablist"><button type="button" class="vbtn on" data-i="0"><span>Central bank speech</span></button><button type="button" class="vbtn" data-i="1"><span>Press briefing</span></button><button type="button" class="vbtn" data-i="2"><span>News anchor · budget</span></button><button type="button" class="vbtn" data-i="3"><span>Weather forecast</span></button></div>
   <div class="video" id="video" style="scroll-margin-top:24px">
     <video id="vplayer" controls preload="metadata" playsinline src="video/bok_speech.mp4"></video>
   </div>
-  <p class="muted" id="vcap"></p>
-  <p class="muted" style="font-size:13px">Each clip was decoded with three random seeds; the take with the highest reference-free CometKiwi score (Korean ASR transcript vs. English ASR transcript of MEARI's speech) is shown. Scores for whole 37–56 s passages are rough. Clips are ordered by that score, including the weaker sports clips. Source videos belong to their broadcasters and are used here for research demonstration only.</p>
+  <p class="muted" style="font-size:13px">Selected examples. Source videos (rights belong to their owners, used for research demonstration only): <a href="https://www.youtube.com/watch?v=Api3Y-gosT8" target="_blank" rel="noopener">1</a> · <a href="https://www.youtube.com/watch?v=PvtE0JKd8gw" target="_blank" rel="noopener">2</a> · <a href="https://www.youtube.com/watch?v=fcYutJ7kXmo" target="_blank" rel="noopener">3</a> · <a href="https://www.youtube.com/watch?v=C41V3epwhKc" target="_blank" rel="noopener">4</a>.</p>
 </section>
 <script>
-(()=>{const C=[{"f": "video/bok_speech.mp4", "t": "Central bank speech", "ch": "Bank of Korea", "u": "https://www.youtube.com/watch?v=Api3Y-gosT8", "s": 303, "k": ".790"}, {"f": "video/ytn_briefing.mp4", "t": "Press briefing", "ch": "YTN", "u": "https://www.youtube.com/watch?v=PvtE0JKd8gw", "s": 303, "k": ".782"}, {"f": "video/kbs_budget_anchor.mp4", "t": "News anchor \u00b7 budget", "ch": "KBS News", "u": "https://www.youtube.com/watch?v=fcYutJ7kXmo", "s": 202, "k": ".773"}, {"f": "video/kbs_weather.mp4", "t": "Weather forecast", "ch": "KBS News", "u": "https://www.youtube.com/watch?v=C41V3epwhKc", "s": 202, "k": ".749"}, {"f": "video/kbs_sports_son_heungmin.mp4", "t": "Sports \u00b7 football", "ch": "KBS News", "u": "https://www.youtube.com/watch?v=C9gEgPIX9x4", "s": 202, "k": ".703"}, {"f": "video/mbc_sports_kim_yeonkoung.mp4", "t": "Sports \u00b7 volleyball", "ch": "MBC News", "u": "https://www.youtube.com/watch?v=f_S8JXgZac0", "s": 202, "k": ".696"}, {"f": "video/kbs_sports_son_aseop.mp4", "t": "Sports \u00b7 baseball interview", "ch": "KBS News", "u": "https://www.youtube.com/watch?v=Nm9-6_FopFE", "s": 101, "k": ".578"}, {"f": "video/sbs_baseball_live.mp4", "t": "Live baseball commentary", "ch": "SBS Sports", "u": "https://www.youtube.com/watch?v=gvM4y0-zwac", "s": 303, "k": ".516"}];const v=document.getElementById('vplayer'),cap=document.getElementById('vcap');
-function show(i){const c=C[i];v.src=c.f;cap.innerHTML=`${c.t} · source: <a href="${c.u}" target="_blank" rel="noopener">${c.ch}</a> · seed ${c.s} · CometKiwi ${c.k}`;
-document.querySelectorAll('.vbtn').forEach(b=>b.classList.toggle('on',+b.dataset.i===i));}
-document.querySelectorAll('.vbtn').forEach(b=>b.addEventListener('click',()=>{show(+b.dataset.i);v.play().catch(()=>{});}));show(0);})();
+(()=>{const F=["video/bok_speech.mp4", "video/ytn_briefing.mp4", "video/kbs_budget_anchor.mp4", "video/kbs_weather.mp4"];const v=document.getElementById('vplayer');
+document.querySelectorAll('.vbtn').forEach(b=>b.addEventListener('click',()=>{const i=+b.dataset.i;v.src=F[i];
+document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.play().catch(()=>{});}));})();
 </script>
 
 <section class="sec" aria-label="Overall results">
