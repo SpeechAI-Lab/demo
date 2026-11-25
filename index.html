@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>SpeechAI Lab Demos</title>
+<title>SAIL Demos</title>
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+KR:wght@400&display=swap">
 <style>
 :root{
   --bg-l:#f7f8f8;   --bg-d:#0f1312;
@@ -39,8 +39,12 @@ h1,h2{font-family:"Space Grotesk",Inter,sans-serif;margin:0;text-wrap:balance}
 p{margin:0}
 .wrap{max-width:1120px;margin-inline:auto;padding-block:56px 80px;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));display:grid;gap:32px}
 
-header{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px}
-h1{font-size:clamp(28px,4.5vw,40px);letter-spacing:-.02em;line-height:1.1}
+header{display:grid;gap:10px}
+.eyebrow{font:500 12px/1 "JetBrains Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(28px,4.5vw,40px);letter-spacing:-.02em;line-height:1.15}
+.nw{white-space:nowrap}
+footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 10px}
+footer .ko{font-family:"Noto Sans KR",Inter,sans-serif}
 
 .list{display:grid;gap:16px;list-style:none;margin:0;padding:0}
 .list > li > a{display:block;color:inherit;text-decoration:none;border-radius:16px}
@@ -69,7 +73,8 @@ a:hover > .card{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));bo
 <body>
 <div class="wrap">
   <header>
-    <h1>SpeechAI Lab Demos</h1>
+    <p class="eyebrow">Demos</p>
+    <h1>Speech Artificial Intelligence Lab. <span class="nw">(SAIL)</span></h1>
   </header>
 
   <main>
@@ -121,6 +126,14 @@ a:hover > .card{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));bo
       </li>
     </ul>
   </main>
+
+  <footer>
+    <span>Speech Artificial Intelligence Laboratory</span>
+    <span aria-hidden="true">·</span>
+    <span class="ko" lang="ko">음성 인공지능 연구실</span>
+    <span aria-hidden="true">·</span>
+    <span>Ajou University</span>
+  </footer>
 </div>
 </body>
 </html>
