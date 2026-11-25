@@ -149,7 +149,7 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
     <thead><tr><th data-i18n="sys">System</th><th>ASR-COMET <span class="arrow">↑</span><span class="help" tabindex="0" data-tip="comet">?</span></th><th>LAAL (s) <span class="arrow">↓</span><span class="help" tabindex="0" data-tip="laal">?</span></th><th><span data-i18n="ne">Phonetic NE Acc.</span> <span class="arrow">↑</span><span class="help" tabindex="0" data-tip="ne">?</span></th></tr></thead>
     <tbody>
       <tr class="us"><td>MEARI</td><td>.791</td><td>4.94</td><td>.602</td></tr>
-      <tr><td data-i18n="sftrow">Corpus SFT (before MEARI)</td><td>.749</td><td>6.15</td><td>.455</td></tr>
+      <tr><td data-i18n="sftrow">ST SFT (before MEARI)</td><td>.749</td><td>6.15</td><td>.455</td></tr>
       <tr><td>GPT API</td><td>.776</td><td>4.45</td><td>.644</td></tr>
       <tr><td>Gemini API</td><td>.796</td><td>3.52</td><td>.648</td></tr>
     </tbody>
@@ -157,10 +157,10 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
 </section>
 
 <section class="sec" id="names"><div class="sechead"><span class="label" data-i18n="s1">Section 1</span><h2 data-i18n="s1h">Names the others miss</h2>
-  <p class="muted" data-i18n="s1p">MEARI keeps the name; Corpus SFT and the Gemini API lose it.</p></div><div class="cards"></div></section>
+  <p class="muted" data-i18n="s1p">MEARI keeps the name; ST SFT and the Gemini API lose it.</p></div><div class="cards"></div></section>
 
-<section class="sec" id="rl"><div class="sechead"><span class="label" data-i18n="s2">Section 2</span><h2 data-i18n="s2h">What MEARI adds over Corpus SFT</h2>
-  <p class="muted" data-i18n="s2p">Same backbone. Corpus SFT is the starting point; MEARI adds the name switch and reinforcement learning.</p></div><div class="cards"></div></section>
+<section class="sec" id="rl"><div class="sechead"><span class="label" data-i18n="s2">Section 2</span><h2 data-i18n="s2h">What MEARI adds over ST SFT</h2>
+  <p class="muted" data-i18n="s2p">Same backbone. ST SFT is the starting point; MEARI adds the name switch and reinforcement learning.</p></div><div class="cards"></div></section>
 
 <section class="sec" id="quality"><div class="sechead"><span class="label" data-i18n="s3">Section 3</span><h2 data-i18n="s3h">Meaning kept, against the APIs</h2>
   <p class="muted" data-i18n="s3p">Sentences where the commercial systems change the meaning.</p></div><div class="cards"></div></section>
@@ -175,7 +175,7 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
 <script src="cards.js"></script>
 <script>
 (function(){
-  const NAMES={meari:["MEARI","ours"],sft:["Corpus SFT","before MEARI"],gpt:["GPT API","commercial"],gemini:["Gemini API","commercial"]};
+  const NAMES={meari:["MEARI","ours"],sft:["ST SFT","before MEARI"],gpt:["GPT API","commercial"],gemini:["Gemini API","commercial"]};
   const SET={fleurs:"FLEURS",kosp2e:"kosp2e"};
   const PLAY='<svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9.5-5.5z"/></svg>';
   const STOP='<svg viewBox="0 0 16 16" fill="currentColor"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5"/></svg>';
@@ -220,9 +220,9 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
     vsrc:"골라 놓은 예시입니다. 원본 영상 (권리는 원 저작자에게 있으며, 연구 시연 용도로만 사용):",
     olab:"FLEURS 시험 세트 · 270문장 전체", oh:"전체 결과",
     op:"아래 예시는 골라 놓은 것이고, 이 표는 시험 세트 전체의 평균입니다.",
-    sys:"시스템", ne:"이름 소리 정확도", sftrow:"Corpus SFT (MEARI 이전)",
-    s1:"예시 1", s1h:"다른 시스템이 놓치는 이름", s1p:"MEARI는 이름을 살리고, Corpus SFT와 Gemini API는 놓칩니다.",
-    s2:"예시 2", s2h:"Corpus SFT에 MEARI가 더하는 것", s2p:"같은 모델입니다. Corpus SFT에서 출발해, MEARI가 이름 스위치와 강화학습을 더합니다.",
+    sys:"시스템", ne:"이름 소리 정확도", sftrow:"ST SFT (MEARI 이전)",
+    s1:"예시 1", s1h:"다른 시스템이 놓치는 이름", s1p:"MEARI는 이름을 살리고, ST SFT와 Gemini API는 놓칩니다.",
+    s2:"예시 2", s2h:"ST SFT에 MEARI가 더하는 것", s2p:"같은 모델입니다. ST SFT에서 출발해, MEARI가 이름 스위치와 강화학습을 더합니다.",
     s3:"예시 3", s3h:"상용 API와 비교한 뜻 보존", s3p:"상용 시스템이 뜻을 바꾼 문장들입니다.",
     fl:"음성 출처",
     fp:"한국어 원음은 FLEURS (Conneau et al., 2022; CC BY 4.0)와 kosp2e (Cho et al., 2021; StyleKQC CC BY-SA 4.0, Covid-ED CC BY-NC-SA 4.0, 학술 용도 한정) 시험 세트에서 가져왔습니다. 비상업적 학술 시연에만 사용합니다.",
