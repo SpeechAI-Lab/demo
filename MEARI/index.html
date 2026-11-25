@@ -94,6 +94,14 @@ button.play.on{background:var(--en);border-color:var(--en);color:var(--surface)}
 button.play.src.on{background:var(--ko);border-color:var(--ko)}
 button.play svg{width:14px;height:14px}
 .fine{font-size:13px;color:var(--muted);display:grid;gap:8px;max-width:72ch}
+/* language toggle + help tips */
+.lang{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));z-index:20;display:flex;border:1px solid var(--line);border-radius:999px;background:var(--surface);box-shadow:0 4px 14px -8px rgba(20,40,36,.3);overflow:hidden}
+.lang button{border:0;background:none;padding:6px 12px;font:500 12px Inter,"Noto Sans KR",sans-serif;color:var(--muted);cursor:pointer}
+.lang button.on{background:var(--ink);color:var(--bg)}
+.help{display:inline-grid;place-items:center;width:15px;height:15px;margin-left:5px;border-radius:50%;border:1px solid var(--muted);color:var(--muted);font:600 10px/1 Inter,sans-serif;cursor:help;vertical-align:1px;text-transform:none;letter-spacing:0}
+.help:hover,.help:focus{border-color:var(--en);color:var(--en);outline:none}
+#tip{position:fixed;z-index:30;max-width:min(300px,calc(100vw - 24px));padding:10px 12px;border-radius:10px;background:var(--ink);color:var(--bg);font:400 13px/1.5 Inter,"Noto Sans KR",sans-serif;text-align:left;box-shadow:0 10px 28px -12px rgba(0,0,0,.45);pointer-events:none}
+#tip b{font-weight:600}
 @media (max-width:640px){
   .mech{grid-template-columns:1fr}
   .row{grid-template-columns:auto minmax(0,1fr);row-gap:6px}
@@ -105,26 +113,28 @@ button.play svg{width:14px;height:14px}
 </style>
 </head>
 <body>
+<div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="ko">한국어</button></div>
+<div id="tip" role="tooltip" hidden></div>
 <div class="wrap">
 
 <header class="hero">
-  <span class="label">Audio samples</span>
+  <span class="label" data-i18n="hero">Audio samples</span>
   <h1>MEARI</h1>
-  <p class="subtitle">Shadowing Unknown Names in Korean-to-English Simultaneous Speech Translation</p>
+  <p class="subtitle" data-i18n="subtitle">Shadowing Unknown Names in Korean-to-English Simultaneous Speech Translation</p>
   <div class="streams">
-    <span class="stream"><span class="dot" style="background:var(--ko)"></span>Korean input</span>
-    <span class="stream"><span class="dot" style="background:var(--en)"></span>English output</span>
+    <span class="stream"><span class="dot" style="background:var(--ko)"></span><span data-i18n="kin">Korean input</span></span>
+    <span class="stream"><span class="dot" style="background:var(--en)"></span><span data-i18n="eout">English output</span></span>
   </div>
 </header>
 
 <section class="sec" aria-label="Demo video">
-  <div class="sechead"><span class="label">Streaming · Korean news clips</span><h2>Demo videos</h2>
-    <p class="muted">MEARI translates each clip frame by frame as it streams. Stereo: left channel is MEARI's English speech, right channel is the original Korean (7 dB lower). Headphones recommended.</p></div>
-  <div class="vbtns" role="tablist"><button type="button" class="vbtn on" data-i="0"><span>Central bank speech</span></button><button type="button" class="vbtn" data-i="1"><span>Press briefing</span></button><button type="button" class="vbtn" data-i="2"><span>News anchor · budget</span></button><button type="button" class="vbtn" data-i="3"><span>Weather forecast</span></button></div>
+  <div class="sechead"><span class="label" data-i18n="vlab">Streaming · Korean news clips</span><h2 data-i18n="vh">Demo videos</h2>
+    <p class="muted" data-i18n="vp">MEARI translates each clip frame by frame as it streams. Stereo: left channel is MEARI's English speech, right channel is the original Korean (7 dB lower). Headphones recommended.</p></div>
+  <div class="vbtns" role="tablist"><button type="button" class="vbtn on" data-i="0"><span data-i18n="v0">Central bank speech</span></button><button type="button" class="vbtn" data-i="1"><span data-i18n="v1">Press briefing</span></button><button type="button" class="vbtn" data-i="2"><span data-i18n="v2">News anchor · budget</span></button><button type="button" class="vbtn" data-i="3"><span data-i18n="v3">Weather forecast</span></button></div>
   <div class="video" id="video" style="scroll-margin-top:24px">
     <video id="vplayer" controls preload="metadata" playsinline src="video/bok_speech.mp4"></video>
   </div>
-  <p class="muted" style="font-size:13px">Selected examples. Source videos (rights belong to their owners, used for research demonstration only): <a href="https://www.youtube.com/watch?v=Api3Y-gosT8" target="_blank" rel="noopener">1</a> · <a href="https://www.youtube.com/watch?v=PvtE0JKd8gw" target="_blank" rel="noopener">2</a> · <a href="https://www.youtube.com/watch?v=fcYutJ7kXmo" target="_blank" rel="noopener">3</a> · <a href="https://www.youtube.com/watch?v=C41V3epwhKc" target="_blank" rel="noopener">4</a>.</p>
+  <p class="muted" style="font-size:13px"><span data-i18n="vsrc">Selected examples. Source videos (rights belong to their owners, used for research demonstration only):</span> <a href="https://www.youtube.com/watch?v=Api3Y-gosT8" target="_blank" rel="noopener">1</a> · <a href="https://www.youtube.com/watch?v=PvtE0JKd8gw" target="_blank" rel="noopener">2</a> · <a href="https://www.youtube.com/watch?v=fcYutJ7kXmo" target="_blank" rel="noopener">3</a> · <a href="https://www.youtube.com/watch?v=C41V3epwhKc" target="_blank" rel="noopener">4</a>.</p>
 </section>
 <script>
 (()=>{const F=["video/bok_speech.mp4", "video/ytn_briefing.mp4", "video/kbs_budget_anchor.mp4", "video/kbs_weather.mp4"];const v=document.getElementById('vplayer');
@@ -133,32 +143,32 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
 </script>
 
 <section class="sec" aria-label="Overall results">
-  <div class="sechead"><span class="label">FLEURS test · all 270 sentences</span><h2>Overall results</h2>
-    <p class="muted">The examples below are selected. These are the averages over the whole test set.</p></div>
+  <div class="sechead"><span class="label" data-i18n="olab">FLEURS test · all 270 sentences</span><h2 data-i18n="oh">Overall results</h2>
+    <p class="muted" data-i18n="op">The examples below are selected. These are the averages over the whole test set.</p></div>
   <div class="tablebox"><table>
-    <thead><tr><th>System</th><th>ASR-COMET <span class="arrow">↑</span></th><th>LAAL (s) <span class="arrow">↓</span></th><th>Phonetic NE Acc. <span class="arrow">↑</span></th></tr></thead>
+    <thead><tr><th data-i18n="sys">System</th><th>ASR-COMET <span class="arrow">↑</span><span class="help" tabindex="0" data-tip="comet">?</span></th><th>LAAL (s) <span class="arrow">↓</span><span class="help" tabindex="0" data-tip="laal">?</span></th><th><span data-i18n="ne">Phonetic NE Acc.</span> <span class="arrow">↑</span><span class="help" tabindex="0" data-tip="ne">?</span></th></tr></thead>
     <tbody>
       <tr class="us"><td>MEARI</td><td>.791</td><td>4.94</td><td>.602</td></tr>
-      <tr><td>Corpus SFT (before MEARI)</td><td>.749</td><td>6.15</td><td>.455</td></tr>
+      <tr><td data-i18n="sftrow">Corpus SFT (before MEARI)</td><td>.749</td><td>6.15</td><td>.455</td></tr>
       <tr><td>GPT API</td><td>.776</td><td>4.45</td><td>.644</td></tr>
       <tr><td>Gemini API</td><td>.796</td><td>3.52</td><td>.648</td></tr>
     </tbody>
   </table></div>
 </section>
 
-<section class="sec" id="names"><div class="sechead"><span class="label">Section 1</span><h2>Names the others miss</h2>
-  <p class="muted">MEARI keeps the name; Corpus SFT and the Gemini API lose it.</p></div><div class="cards"></div></section>
+<section class="sec" id="names"><div class="sechead"><span class="label" data-i18n="s1">Section 1</span><h2 data-i18n="s1h">Names the others miss</h2>
+  <p class="muted" data-i18n="s1p">MEARI keeps the name; Corpus SFT and the Gemini API lose it.</p></div><div class="cards"></div></section>
 
-<section class="sec" id="rl"><div class="sechead"><span class="label">Section 2</span><h2>What MEARI adds over Corpus SFT</h2>
-  <p class="muted">Same backbone. Corpus SFT is the starting point; MEARI adds the name switch and reinforcement learning.</p></div><div class="cards"></div></section>
+<section class="sec" id="rl"><div class="sechead"><span class="label" data-i18n="s2">Section 2</span><h2 data-i18n="s2h">What MEARI adds over Corpus SFT</h2>
+  <p class="muted" data-i18n="s2p">Same backbone. Corpus SFT is the starting point; MEARI adds the name switch and reinforcement learning.</p></div><div class="cards"></div></section>
 
-<section class="sec" id="quality"><div class="sechead"><span class="label">Section 3</span><h2>Meaning kept, against the APIs</h2>
-  <p class="muted">Sentences where the commercial systems change the meaning.</p></div><div class="cards"></div></section>
+<section class="sec" id="quality"><div class="sechead"><span class="label" data-i18n="s3">Section 3</span><h2 data-i18n="s3h">Meaning kept, against the APIs</h2>
+  <p class="muted" data-i18n="s3p">Sentences where the commercial systems change the meaning.</p></div><div class="cards"></div></section>
 
 
 <footer class="fine" id="credits">
-  <span class="label">Audio sources</span>
-  <p>Korean source clips are from the test sets of FLEURS (Conneau et al., 2022; CC BY 4.0) and kosp2e (Cho et al., 2021; StyleKQC CC BY-SA 4.0, Covid-ED CC BY-NC-SA 4.0, academic use only). Used here for non-commercial academic demonstration.</p>
+  <span class="label" data-i18n="fl">Audio sources</span>
+  <p data-i18n="fp">Korean source clips are from the test sets of FLEURS (Conneau et al., 2022; CC BY 4.0) and kosp2e (Cho et al., 2021; StyleKQC CC BY-SA 4.0, Covid-ED CC BY-NC-SA 4.0, academic use only). Used here for non-commercial academic demonstration.</p>
 </footer>
 </div>
 <audio id="player" preload="none"></audio>
@@ -186,16 +196,71 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
     const host=document.querySelector(`#${c.section} .cards`);if(!host)return;
     const el=document.createElement("article");el.className="card";
     el.innerHTML=`<div class="top"><div class="titlerow"><h3>${esc(c.title)}</h3><span class="label">${SET[c.set]} · ${esc(c.id.replace(/^(fleurs|kosp2e)_/,""))}</span></div>
-      <div class="src"><span class="b"></span><div class="txt"><span class="label">Korean source</span><span class="ko">${esc(c.ko)}</span><span class="ref">Reference: ${esc(c.ref)}</span></div></div></div>
+      <div class="src"><span class="b"></span><div class="txt"><span class="label" data-i18n="ksrc">Korean source</span><span class="ko">${esc(c.ko)}</span><span class="ref"><span data-i18n="refl">Reference:</span> ${esc(c.ref)}</span></div></div></div>
       <div class="rows"></div>`;
     el.querySelector(".src .b").replaceWith(btn(c.source,"src"));
     const rows=el.querySelector(".rows");
     c.rows.forEach(r=>{const d=document.createElement("div");d.className="row "+r.sys;
       const nothing=!r.good.length&&!r.bad.length&&c.section!=="quality";
-      d.innerHTML=`<span class="b"></span><span class="who">${NAMES[r.sys][0]}<small>${NAMES[r.sys][1]}</small></span>
-        <span class="asr">${hl(r.asr,r.good,r.bad)}${nothing?' <span class="dropped">· name dropped</span>':""}</span><span class="score"><small>COMET</small><b>${r.comet.toFixed(3)}</b></span>`;
+      d.innerHTML=`<span class="b"></span><span class="who">${NAMES[r.sys][0]}<small data-i18n="n_${r.sys}">${NAMES[r.sys][1]}</small></span>
+        <span class="asr">${hl(r.asr,r.good,r.bad)}${nothing?' <span class="dropped" data-i18n="drop">· name dropped</span>':""}</span><span class="score"><small>COMET<span class="help" tabindex="0" data-tip="scomet">?</span></small><b>${r.comet.toFixed(3)}</b></span>`;
       d.querySelector(".b").replaceWith(btn(r.audio));rows.appendChild(d)});
     host.appendChild(el)});
+})();
+</script>
+<script>
+(function(){
+  const KO={
+    hero:"오디오 예시",
+    subtitle:"한국어→영어 동시통역에서 처음 듣는 이름을 그대로 따라 말하기",
+    kin:"한국어 입력", eout:"영어 출력",
+    vlab:"실시간 · 한국어 뉴스 영상", vh:"데모 영상",
+    vp:"MEARI는 영상이 흘러가는 동안 실시간으로 번역합니다. 스테레오로, 왼쪽 채널은 MEARI의 영어 음성, 오른쪽 채널은 원래 한국어 음성(7 dB 낮춤)입니다. 이어폰으로 들으시길 권합니다.",
+    v0:"중앙은행 연설", v1:"정부 브리핑", v2:"뉴스 · 예산", v3:"일기예보",
+    vsrc:"골라 놓은 예시입니다. 원본 영상 (권리는 원 저작자에게 있으며, 연구 시연 용도로만 사용):",
+    olab:"FLEURS 시험 세트 · 270문장 전체", oh:"전체 결과",
+    op:"아래 예시는 골라 놓은 것이고, 이 표는 시험 세트 전체의 평균입니다.",
+    sys:"시스템", ne:"이름 소리 정확도", sftrow:"Corpus SFT (MEARI 이전)",
+    s1:"예시 1", s1h:"다른 시스템이 놓치는 이름", s1p:"MEARI는 이름을 살리고, Corpus SFT와 Gemini API는 놓칩니다.",
+    s2:"예시 2", s2h:"Corpus SFT에 MEARI가 더하는 것", s2p:"같은 모델입니다. Corpus SFT에서 출발해, MEARI가 이름 스위치와 강화학습을 더합니다.",
+    s3:"예시 3", s3h:"상용 API와 비교한 뜻 보존", s3p:"상용 시스템이 뜻을 바꾼 문장들입니다.",
+    fl:"음성 출처",
+    fp:"한국어 원음은 FLEURS (Conneau et al., 2022; CC BY 4.0)와 kosp2e (Cho et al., 2021; StyleKQC CC BY-SA 4.0, Covid-ED CC BY-NC-SA 4.0, 학술 용도 한정) 시험 세트에서 가져왔습니다. 비상업적 학술 시연에만 사용합니다.",
+    ksrc:"한국어 원문", refl:"정답 번역:", drop:"· 이름 빠짐",
+    n_meari:"우리 모델", n_sft:"MEARI 이전", n_gpt:"상용", n_gemini:"상용"
+  };
+  const TIP={
+    en:{comet:"<b>Translation quality.</b> The English speech is transcribed by an ASR model (Whisper) and scored against the reference translation with COMET. Range 0–1 (often read as 0–100); higher is better.",
+        laal:"<b>Delay.</b> How many seconds, on average, the English speech lags behind the Korean speaker (length-adaptive average lagging). Lower is faster.",
+        ne:"<b>Names heard.</b> Share of names in the Korean input whose sound can be heard in the English speech, checked by a phoneme recogniser. Range 0–1; higher is better.",
+        scomet:"<b>Translation quality of this sentence</b> (COMET on the ASR transcript of the speech). Range 0–1; higher is better."},
+    ko:{comet:"<b>번역 품질.</b> 영어 음성을 음성 인식(Whisper)으로 받아 적은 뒤, 정답 번역과 COMET으로 비교한 점수입니다. 0–1 범위(100을 곱해 0–100으로 읽기도 함)이고 높을수록 좋습니다.",
+        laal:"<b>지연.</b> 영어 음성이 한국어 화자보다 평균 몇 초 늦게 나오는지입니다(LAAL). 낮을수록 빠릅니다.",
+        ne:"<b>이름이 들리는 비율.</b> 한국어 입력의 이름 가운데, 그 소리가 영어 음성에서 들리는 비율입니다. 음소 인식기로 확인합니다. 0–1 범위이고 높을수록 좋습니다.",
+        scomet:"<b>이 문장의 번역 품질</b> (음성을 받아 적은 글에 매긴 COMET). 0–1 범위이고 높을수록 좋습니다."}
+  };
+  let lang="en";
+  function apply(){
+    document.documentElement.lang=lang;
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      if(el.dataset.en===undefined) el.dataset.en=el.innerHTML;
+      const k=el.dataset.i18n; el.innerHTML=(lang==="ko"&&KO[k]!==undefined)?KO[k]:el.dataset.en;
+    });
+    document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.lang===lang));
+  }
+  document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("meari_lang",lang)}catch(e){}apply();}));
+  try{const s=localStorage.getItem("meari_lang");if(s==="ko"||s==="en")lang=s}catch(e){}
+  apply();
+  const tip=document.getElementById("tip");
+  function show(h){tip.innerHTML=TIP[lang][h.dataset.tip];tip.hidden=false;
+    const r=h.getBoundingClientRect(),w=tip.offsetWidth,t=tip.offsetHeight;
+    let x=Math.min(Math.max(12,r.left+r.width/2-w/2),innerWidth-w-12),y=r.bottom+8;if(y+t>innerHeight-8)y=r.top-t-8;
+    tip.style.left=x+"px";tip.style.top=y+"px";}
+  function hide(){tip.hidden=true}
+  document.addEventListener("mouseover",e=>{const h=e.target.closest(".help");h?show(h):hide()});
+  document.addEventListener("focusin",e=>{const h=e.target.closest(".help");h?show(h):hide()});
+  document.addEventListener("click",e=>{const h=e.target.closest(".help");h?show(h):hide()});
+  addEventListener("scroll",hide,{passive:true});
 })();
 </script>
 </body>
