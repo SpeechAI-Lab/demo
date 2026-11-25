@@ -50,10 +50,6 @@ html[lang="ko"] body{word-break:keep-all}
 .vbtn{display:flex;justify-content:center;gap:8px;align-items:center;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 13px Inter,sans-serif;cursor:pointer;text-align:left}
 .vbtn.on{background:var(--en-soft);border-color:var(--en)}
 .vbtn .mono{font-size:11px}
-.mbtns{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
-.mbtn{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 13px Inter,sans-serif;cursor:pointer}
-.mbtn.on{background:var(--ko-soft,var(--en-soft));border-color:var(--ko,var(--en))}
-.mnote{font-size:12.5px;flex:1 1 240px;min-width:0}
 /* mechanism strip */
 .mech{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .mech div{background:var(--tint);border-color:transparent!important;border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px;min-width:0}
@@ -137,19 +133,15 @@ button.play svg{width:14px;height:14px}
   <div class="sechead"><span class="label" data-i18n="vlab">Streaming · Korean news clips</span><h2 data-i18n="vh">Demo videos</h2>
     <p class="muted" data-i18n="vp">MEARI translates each clip frame by frame as it streams. Stereo: left channel is MEARI's English speech, right channel is the original Korean (7 dB lower). Headphones recommended.</p></div>
   <div class="vbtns" role="tablist"><button type="button" class="vbtn on" data-i="0"><span data-i18n="v0">Central bank speech</span></button><button type="button" class="vbtn" data-i="1"><span data-i18n="v1">Press briefing</span></button><button type="button" class="vbtn" data-i="2"><span data-i18n="v2">News anchor · budget</span></button><button type="button" class="vbtn" data-i="3"><span data-i18n="v3">Weather forecast</span></button></div>
-  <div class="mbtns" role="tablist"><button type="button" class="mbtn on" data-m="clause"><span data-i18n="mcl">Clause mode</span></button><button type="button" class="mbtn" data-m="word"><span data-i18n="mwd">Word mode</span></button><span class="muted mnote" data-i18n="mnote">Word mode starts speaking earlier (about 2 s sooner on these clips); Clause mode waits for a clause and is the mode of all test results.</span></div>
   <div class="video" id="video" style="scroll-margin-top:24px">
     <video id="vplayer" controls preload="metadata" playsinline src="video/bok_speech.mp4"></video>
   </div>
   <p class="muted" style="font-size:13px"><span data-i18n="vsrc">Selected examples. Source videos (rights belong to their owners, used for research demonstration only):</span> <a href="https://www.youtube.com/watch?v=Api3Y-gosT8" target="_blank" rel="noopener">1</a> · <a href="https://www.youtube.com/watch?v=PvtE0JKd8gw" target="_blank" rel="noopener">2</a> · <a href="https://www.youtube.com/watch?v=fcYutJ7kXmo" target="_blank" rel="noopener">3</a> · <a href="https://www.youtube.com/watch?v=C41V3epwhKc" target="_blank" rel="noopener">4</a>.</p>
 </section>
 <script>
-(()=>{const F=["bok_speech", "ytn_briefing", "kbs_budget_anchor", "kbs_weather"];const v=document.getElementById('vplayer');let i=0,m='clause';
-const go=play=>{v.src='video/'+F[i]+(m==='word'?'_word':'')+'.mp4';if(play)v.play().catch(()=>{});};
-document.querySelectorAll('.vbtn').forEach(b=>b.addEventListener('click',()=>{i=+b.dataset.i;
-document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));go(true);}));
-document.querySelectorAll('.mbtn').forEach(b=>b.addEventListener('click',()=>{m=b.dataset.m;
-document.querySelectorAll('.mbtn').forEach(x=>x.classList.toggle('on',x===b));go(true);}));})();
+(()=>{const F=["video/bok_speech.mp4", "video/ytn_briefing.mp4", "video/kbs_budget_anchor.mp4", "video/kbs_weather.mp4"];const v=document.getElementById('vplayer');
+document.querySelectorAll('.vbtn').forEach(b=>b.addEventListener('click',()=>{const i=+b.dataset.i;v.src=F[i];
+document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.play().catch(()=>{});}));})();
 </script>
 
 <section class="sec" aria-label="Overall results">
@@ -226,7 +218,6 @@ document.querySelectorAll('.mbtn').forEach(x=>x.classList.toggle('on',x===b));go
     kin:"한국어 입력", eout:"영어 출력",
     vlab:"실시간 · 한국어 뉴스 영상", vh:"데모 영상",
     vp:"MEARI는 영상이 흘러가는 동안 실시간으로 번역합니다. 스테레오로, 왼쪽 채널은 MEARI의 영어 음성, 오른쪽 채널은 원래 한국어 음성(7 dB 낮춤)입니다. 이어폰으로 들으시길 권합니다.",
-    mcl:"Clause 모드", mwd:"Word 모드", mnote:"Word 모드는 더 일찍 말하기 시작합니다(이 영상들에서 약 2초). Clause 모드는 절이 끝날 때까지 기다리며, 모든 시험 결과는 Clause 모드입니다.",
     v0:"중앙은행 연설", v1:"정부 브리핑", v2:"뉴스 · 예산", v3:"일기예보",
     vsrc:"골라 놓은 예시입니다. 원본 영상 (권리는 원 저작자에게 있으며, 연구 시연 용도로만 사용):",
     olab:"FLEURS 시험 세트 · 270문장 전체", oh:"전체 결과",
