@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>SpeechAI Lab Demos</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg-l:#f7f8f8;   --bg-d:#0f1312;
+  --card-l:#ffffff; --card-d:#171c1b;
+  --ink-l:#18201f;  --ink-d:#e8edeb;
+  --muted-l:#5d6966;--muted-d:#9aa6a2;
+  --line-l:#e1e5e3; --line-d:#2a3230;
+  --accent-l:#16897b; --accent-d:#4fc3b0;
+  --ko:#d9654b; --en:#16897b;
+
+  --bg:var(--bg-l); --card:var(--card-l); --ink:var(--ink-l); --muted:var(--muted-l);
+  --line:var(--line-l); --accent:var(--accent-l);
+  @media (prefers-color-scheme: dark){
+    --bg:var(--bg-d); --card:var(--card-d); --ink:var(--ink-d); --muted:var(--muted-d);
+    --line:var(--line-d); --accent:var(--accent-d);
+  }
+  @supports (color: light-dark(white, black)){
+    --bg:light-dark(var(--bg-l),var(--bg-d)); --card:light-dark(var(--card-l),var(--card-d));
+    --ink:light-dark(var(--ink-l),var(--ink-d)); --muted:light-dark(var(--muted-l),var(--muted-d));
+    --line:light-dark(var(--line-l),var(--line-d)); --accent:light-dark(var(--accent-l),var(--accent-d));
+  }
+  color-scheme:light dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2{font-family:"Space Grotesk",Inter,sans-serif;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1120px;margin-inline:auto;padding-block:56px 80px;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));display:grid;gap:32px}
+
+header{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px}
+h1{font-size:clamp(28px,4.5vw,40px);letter-spacing:-.02em;line-height:1.1}
+
+.list{display:grid;gap:16px;list-style:none;margin:0;padding:0}
+.list > li > a{display:block;color:inherit;text-decoration:none;border-radius:16px}
+.list > li > a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.card{container-type:inline-size;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .15s,box-shadow .15s}
+a:hover > .card{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));box-shadow:0 14px 32px -22px rgb(10 40 36 / .45)}
+.row{display:grid}
+@container (min-width:640px){
+  .row{grid-template-columns:minmax(240px,36%) 1fr}
+  .row > img,.row > .media{border-bottom:0!important;border-right:1px solid var(--line)}
+}
+
+.row > img,.row > .media{display:block;width:100%;height:100%;min-height:0;aspect-ratio:16/9;border-bottom:1px solid var(--line)}
+.row > img{object-fit:contain;background:#fff;padding:14px;color-scheme:light}
+.media.meari{display:grid;place-content:center;background:linear-gradient(135deg,#fbe9e3,#dcf1ed)}
+.media.meari span{font:700 clamp(34px,5vw,52px)/1 "Space Grotesk",sans-serif;letter-spacing:-.02em;background:linear-gradient(90deg,var(--ko),var(--en));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.body{padding:18px 22px 22px;display:grid;gap:8px;align-content:center}
+.tag{justify-self:start;font:500 11px/1 "JetBrains Mono",ui-monospace,monospace;letter-spacing:.04em;padding:5px 8px;border-radius:6px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent)}
+.card h2{font-size:22px;letter-spacing:-.01em}
+.card .title{font-weight:500;line-height:1.45}
+.card .abs{color:var(--muted);font-size:14px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>SpeechAI Lab Demos</h1>
+  </header>
+
+  <main>
+    <ul class="list">
+      <li>
+        <a href="MEARI/">
+          <article class="card">
+            <div class="row">
+              <div class="media meari" aria-hidden="true"><span>MEARI</span></div>
+              <div class="body">
+                <span class="tag">Speech Translation</span>
+                <h2>MEARI</h2>
+                <p class="title">Shadowing Unknown Names in Korean-to-English Simultaneous Speech Translation</p>
+                <p class="abs">MEARI translates each clip frame by frame as it streams.</p>
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+      <li>
+        <a href="clid-tts/">
+          <article class="card">
+            <div class="row">
+              <img src="clid-tts/pics/clid_tts_overview.svg?v=16" width="954" height="411" alt="">
+              <div class="body">
+                <span class="tag">Text-to-Speech</span>
+                <h2>CLID-TTS</h2>
+                <p class="title">Cross-Lingual Instruction Distillation for Low-Resource Expressive Emotional Text-to-Speech</p>
+                <p class="abs">Despite rapid progress, instruction-guided text-to-speech (TTS) systems still rely on paired expressive speech-instruction datasets for emotional speech generation. To alleviate this burden, we introduce a cross-lingual instruction distillation (CLID) method, which transfers the instruction-following capability of a pretrained TTS model across different instruction languages. Using semantically aligned English-Korean instructions with the same spoken text, CLID distills the teacher’s speech-token distributions into a student.</p>
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+      <li>
+        <a href="swift-tts/">
+          <article class="card">
+            <div class="row">
+              <img src="swift-tts/pics/overview.png?v=pdf-20261006" width="3200" height="2109" alt="">
+              <div class="body">
+                <span class="tag">Text-to-Speech</span>
+                <h2>Swift-TTS</h2>
+                <p class="title">Efficient Text-to-Speech via Self-supervised Flow Matching</p>
+                <p class="abs">Recently, latent diffusion models (LDMs) and representation alignment (REPA) have each been shown to improve the efficiency of text-to-speech (TTS) training. However, incorporating REPA into LDM-based TTS diminishes these efficiency gains by requiring either online self-supervised learning feature extraction from waveforms or substantial storage for precomputed features. To address this limitation, we propose Swift-TTS, an efficient latent diffusion TTS model that uses self-supervised flow matching (Self-Flow) to integrate representation learning into flow-matching training.</p>
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>
