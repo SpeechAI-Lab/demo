@@ -95,6 +95,17 @@ button.play.src{border-color:var(--ko);color:var(--ko)}
 button.play.on{background:var(--en);border-color:var(--en);color:var(--surface)}
 button.play.src.on{background:var(--ko);border-color:var(--ko)}
 button.play svg{width:14px;height:14px}
+/* waveform player */
+.wave{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;min-width:0;outline:none}
+.wave canvas{width:100%;height:34px;display:block;cursor:pointer;touch-action:none}
+.wave:focus-visible canvas{outline:2px solid var(--en);outline-offset:2px;border-radius:4px}
+.wave .t{font:500 11px/1 "JetBrains Mono",monospace;color:var(--muted);white-space:nowrap;min-width:9.5ch;text-align:right}
+.wave .cvw{position:relative;min-width:0}
+.wave .wait{position:absolute;left:0;top:0;height:12px;display:flex;justify-content:center;font:500 10px/12px "JetBrains Mono",monospace;color:var(--muted);letter-spacing:.02em;pointer-events:none;white-space:nowrap;overflow:hidden}
+.wave.loading .t::after{content:" …"}
+.row .wave{grid-column:2/-1;padding-top:6px}
+.src .wave{margin-top:4px}
+.hint{font-size:13px}
 .fine{font-size:13px;color:var(--muted);display:grid;gap:8px;max-width:72ch}
 /* language toggle + help tips */
 .lang{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));z-index:20;display:flex;border:1px solid var(--line);border-radius:999px;background:var(--surface);box-shadow:0 4px 14px -8px rgba(20,40,36,.3);overflow:hidden}
@@ -159,7 +170,8 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
 </section>
 
 <section class="sec" id="names"><div class="sechead"><span class="label" data-i18n="s1">Section 1</span><h2 data-i18n="s1h">Names the others miss</h2>
-  <p class="muted" data-i18n="s1p">MEARI keeps the name; ST SFT and the Gemini API lose it.</p></div><div class="cards"></div></section>
+  <p class="muted" data-i18n="s1p">MEARI keeps the name; ST SFT and the Gemini API lose it.</p>
+  <p class="muted hint" data-i18n="wh">Each waveform shows the whole clip on the Korean source's clock. The flat stretch at the start is the system listening before it speaks, so the first sound can come several seconds in. Click or drag on a waveform to jump to that point.</p></div><div class="cards"></div></section>
 
 <section class="sec" id="rl"><div class="sechead"><span class="label" data-i18n="s2">Section 2</span><h2 data-i18n="s2h">What MEARI adds over ST SFT</h2>
   <p class="muted" data-i18n="s2p">Same backbone. ST SFT is the starting point; MEARI adds the name switch and reinforcement learning.</p></div><div class="cards"></div></section>
@@ -175,6 +187,7 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
 </div>
 <audio id="player" preload="none"></audio>
 <script src="cards.js"></script>
+<script src="peaks.js"></script>
 <script>
 (function(){
   const NAMES={meari:["MEARI","ours"],sft:["ST SFT","before MEARI"],gpt:["GPT API","commercial"],gemini:["Gemini API","commercial"]};
@@ -188,25 +201,77 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
     const mk=(arr,cls)=>arr.forEach(p=>{if(!p)return;h=h.replace(new RegExp(rx(esc(p)),"i"),m=>`<mark class="${cls}">${m}</mark>`)});
     mk(bad,"b");mk(good,"g");return h;
   }
-  const player=document.getElementById("player");let cur=null;
-  function btn(src,cls){const b=document.createElement("button");b.className="play"+(cls?" "+cls:"");b.innerHTML=PLAY;b.setAttribute("aria-label","Play");
-    b.onclick=()=>{if(cur===b){player.pause();return}
-      if(cur){cur.classList.remove("on");cur.innerHTML=PLAY}
-      cur=b;b.classList.add("on");b.innerHTML=STOP;player.src=src;player.play().catch(()=>{})};return b}
-  player.onpause=player.onended=()=>{if(cur){cur.classList.remove("on");cur.innerHTML=PLAY;cur=null}};
+  const PAUSE='<svg viewBox="0 0 16 16" fill="currentColor"><rect x="3.5" y="3" width="3.2" height="10" rx="1"/><rect x="9.3" y="3" width="3.2" height="10" rx="1"/></svg>';
+  const PEAKS=window.PEAKS||{};
+  const player=document.getElementById("player");player.preload="metadata";
+  let cur=null,drag=null,raf=0,skipPause=false;const pos={};
+  const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const fmt=t=>(Math.max(0,t)||0).toFixed(1);
+  function draw(o,t){
+    const cv=o.cv,w=cv.clientWidth,h=cv.clientHeight;if(!w)return;
+    const r=devicePixelRatio||1;if(cv.width!==Math.round(w*r)){cv.width=Math.round(w*r);cv.height=Math.round(h*r)}
+    const g=cv.getContext("2d");g.setTransform(r,0,0,r,0,0);g.clearRect(0,0,w,h);
+    const p=o.pk.p,n=p.length,d=o.pk.d||1,f=Math.min(1,t/d),bw=w/n,on=css(o.cls==="src"?"--ko":"--en"),off="#c3cbc8";
+    for(let i=0;i<n;i++){const v=(p.charCodeAt(i)-48)/60,bh=Math.max(1.5,v*(h-6));
+      g.fillStyle=(i+.5)/n<=f?on:off;g.fillRect(i*bw+(bw>2.5?.5:0),(h-bh)/2,Math.max(1,bw-(bw>2.5?1:0)),bh)}
+    if(o.cls!=="src"&&o.pk.o>0.3){const x=o.pk.o/d*w;g.strokeStyle=css("--muted");g.setLineDash([2,3]);g.lineWidth=1;
+      g.beginPath();g.moveTo(x+.5,2);g.lineTo(x+.5,h-2);g.stroke();g.setLineDash([])}
+    if(cur===o||t>0){const x=f*w;g.fillStyle=css("--ink");g.fillRect(Math.min(w-1.5,x),0,1.5,h)}
+  }
+  function setBtn(o,on){o.b.classList.toggle("on",on);o.b.innerHTML=on?PAUSE:PLAY;o.b.setAttribute("aria-label",on?"Pause":"Play")}
+  function show(o,t){o.tc.textContent=fmt(t);o.w.setAttribute("aria-valuenow",fmt(t));draw(o,t)}
+  function seekTo(t){if(player.readyState>=1)player.currentTime=t;else player.addEventListener("loadedmetadata",()=>{player.currentTime=t},{once:true})}
+  function take(o){if(cur===o)return;
+    if(cur){pos[cur.src]=player.currentTime;if(!player.paused){skipPause=true;player.pause()}setBtn(cur,false);cur.w.classList.remove("loading");const c=cur;cur=null;show(c,pos[c.src]||0)}
+    cur=o;player.src=o.src}
+  function toggle(o){
+    if(cur===o&&!player.paused){player.pause();return}
+    if(cur!==o){take(o);let t=pos[o.src]||0;if(t>=o.pk.d-.05)t=0;seekTo(t)}
+    else if(player.ended)seekTo(0);
+    player.play().catch(()=>{})}
+  function jump(o,t){t=Math.min(Math.max(0,t),o.pk.d);pos[o.src]=t;
+    if(cur!==o)take(o);seekTo(t);show(o,t);if(player.paused)player.play().catch(()=>{})}
+  function tick(){if(cur&&!player.paused&&!drag)show(cur,player.currentTime);raf=requestAnimationFrame(tick)}
+  player.addEventListener("play",()=>{if(cur)setBtn(cur,true);cancelAnimationFrame(raf);tick()});
+  player.addEventListener("pause",()=>{cancelAnimationFrame(raf);if(skipPause){skipPause=false;return}if(cur){setBtn(cur,false);pos[cur.src]=player.currentTime;show(cur,player.currentTime)}});
+  player.addEventListener("ended",()=>{if(cur){pos[cur.src]=0;show(cur,cur.pk.d)}});
+  player.addEventListener("waiting",()=>{if(cur)cur.w.classList.add("loading")});
+  player.addEventListener("playing",()=>{if(cur)cur.w.classList.remove("loading")});
+  const ALL=[];
+  function mk(src,cls){
+    const pk=PEAKS[src]||{d:0,o:0,p:""};
+    const b=document.createElement("button");b.className="play"+(cls?" "+cls:"");b.innerHTML=PLAY;b.setAttribute("aria-label","Play");
+    const w=document.createElement("div");w.className="wave"+(cls?" "+cls:"");w.tabIndex=0;w.setAttribute("role","slider");
+    w.setAttribute("aria-label","Seek");w.setAttribute("aria-valuemin","0");w.setAttribute("aria-valuemax",String(pk.d));
+    const wait=cls!=="src"&&pk.d&&pk.o/pk.d>.18?`<span class="wait" style="width:${(pk.o/pk.d*100).toFixed(2)}%"><span data-i18n="wait">listening</span>&nbsp;${fmt(pk.o)} s</span>`:"";
+    w.innerHTML=`<div class="cvw"><canvas></canvas>${wait}</div><span class="t"><span class="c">0.0</span> / ${fmt(pk.d)} s</span>`;
+    const o={src,cls,pk,b,w,cv:w.querySelector("canvas"),tc:w.querySelector(".c")};
+    b.onclick=()=>toggle(o);
+    const at=e=>{const r=o.cv.getBoundingClientRect();return (e.clientX-r.left)/r.width*pk.d};
+    o.cv.addEventListener("pointerdown",e=>{e.preventDefault();drag=o;o.cv.setPointerCapture(e.pointerId);const t=Math.min(Math.max(0,at(e)),pk.d);pos[src]=t;show(o,t)});
+    o.cv.addEventListener("pointermove",e=>{if(drag===o){const t=Math.min(Math.max(0,at(e)),pk.d);pos[src]=t;show(o,t)}});
+    const up=e=>{if(drag!==o)return;drag=null;jump(o,pos[src]||0)};
+    o.cv.addEventListener("pointerup",up);o.cv.addEventListener("pointercancel",up);
+    w.addEventListener("keydown",e=>{const t=cur===o?player.currentTime:(pos[src]||0);
+      if(e.key==="ArrowRight"){e.preventDefault();jump(o,t+1)}else if(e.key==="ArrowLeft"){e.preventDefault();jump(o,t-1)}
+      else if(e.key===" "||e.key==="Enter"){e.preventDefault();toggle(o)}});
+    ALL.push(o);return o}
+  const redraw=()=>ALL.forEach(o=>draw(o,cur===o?player.currentTime:(pos[o.src]||0)));
+  if(window.ResizeObserver){const ro=new ResizeObserver(redraw);requestAnimationFrame(()=>ALL.forEach(o=>ro.observe(o.cv)))}else addEventListener("resize",redraw);
+  requestAnimationFrame(redraw);
   (window.CARDS||[]).forEach(c=>{
     const host=document.querySelector(`#${c.section} .cards`);if(!host)return;
     const el=document.createElement("article");el.className="card";
     el.innerHTML=`<div class="top"><div class="titlerow"><h3>${esc(c.title)}</h3><span class="label">${SET[c.set]} · ${esc(c.id.replace(/^(fleurs|kosp2e)_/,""))}</span></div>
       <div class="src"><span class="b"></span><div class="txt"><span class="label" data-i18n="ksrc">Korean source</span><span class="ko">${esc(c.ko)}</span><span class="ref"><span data-i18n="refl">Reference:</span> ${esc(c.ref)}</span></div></div></div>
       <div class="rows"></div>`;
-    el.querySelector(".src .b").replaceWith(btn(c.source,"src"));
+    const so=mk(c.source,"src");el.querySelector(".src .b").replaceWith(so.b);el.querySelector(".src .txt").appendChild(so.w);
     const rows=el.querySelector(".rows");
     c.rows.forEach(r=>{const d=document.createElement("div");d.className="row "+r.sys;
       const nothing=!r.good.length&&!r.bad.length&&c.section!=="quality";
       d.innerHTML=`<span class="b"></span><span class="who">${NAMES[r.sys][0]}<small data-i18n="n_${r.sys}">${NAMES[r.sys][1]}</small></span>
         <span class="asr">${hl(r.asr,r.good,r.bad)}${nothing?' <span class="dropped" data-i18n="drop">· name dropped</span>':""}</span><span class="score"><small>COMET<span class="help" tabindex="0" data-tip="scomet">?</span></small><b>${r.comet.toFixed(3)}</b></span>`;
-      d.querySelector(".b").replaceWith(btn(r.audio));rows.appendChild(d)});
+      const ro=mk(r.audio);d.querySelector(".b").replaceWith(ro.b);d.appendChild(ro.w);rows.appendChild(d)});
     host.appendChild(el)});
 })();
 </script>
@@ -229,6 +294,8 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
     fl:"음성 출처",
     fp:"한국어 원음은 FLEURS (Conneau et al., 2022; CC BY 4.0)와 kosp2e (Cho et al., 2021; StyleKQC CC BY-SA 4.0, Covid-ED CC BY-NC-SA 4.0, 학술 용도 한정) 시험 세트에서 가져왔습니다. 비상업적 학술 시연에만 사용합니다.",
     ksrc:"한국어 원문", refl:"정답 번역:", drop:"· 이름 빠짐",
+    wh:"각 파형은 한국어 원음과 같은 시간축으로 전체 클립을 보여 줍니다. 앞쪽의 평평한 구간은 시스템이 듣기만 하고 아직 말하지 않는 시간이라, 첫 소리가 몇 초 뒤에 나올 수 있습니다. 파형을 누르거나 끌면 그 위치로 이동합니다.",
+    wait:"듣는 중",
     n_meari:"우리 모델", n_sft:"MEARI 이전", n_gpt:"상용", n_gemini:"상용"
   };
   const TIP={
