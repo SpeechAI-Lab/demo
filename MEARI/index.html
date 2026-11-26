@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>MEARI Demo</title>
+<title>Meari: Simultaneous Speech-to-Speech Translation with Transcription-Free Shadowing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+KR:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -121,8 +121,8 @@ button.play svg{width:14px;height:14px}
 
 <header class="hero">
   <span class="label" data-i18n="hero">Audio samples</span>
-  <h1>MEARI</h1>
-  <p class="subtitle" data-i18n="subtitle">Shadowing Unknown Names in <span class="nw">Korean-to-English</span> Simultaneous Speech Translation</p>
+  <h1>Meari</h1>
+  <p class="subtitle" data-i18n="subtitle">Simultaneous Speech-to-Speech Translation with Transcription-Free Shadowing</p>
   <div class="streams">
     <span class="stream"><span class="dot" style="background:var(--ko)"></span><span data-i18n="kin">Korean input</span></span>
     <span class="stream"><span class="dot" style="background:var(--en)"></span><span data-i18n="eout">English output</span></span>
@@ -214,7 +214,7 @@ document.querySelectorAll('.vbtn').forEach(x=>x.classList.toggle('on',x===b));v.
 (function(){
   const KO={
     hero:"오디오 예시",
-    subtitle:"<span class=\"nw\">한국어→영어</span> 동시통역에서 처음 듣는 이름을 그대로 따라 말하기",
+    subtitle:"받아쓰기 없이 소리를 따라 말하는 동시 음성-음성 번역",
     kin:"한국어 입력", eout:"영어 출력",
     vlab:"실시간 · 한국어 뉴스 영상", vh:"데모 영상",
     vp:"MEARI는 영상이 흘러가는 동안 실시간으로 번역합니다. 스테레오로, 왼쪽 채널은 MEARI의 영어 음성, 오른쪽 채널은 원래 한국어 음성(7 dB 낮춤)입니다. 이어폰으로 들으시길 권합니다.",
